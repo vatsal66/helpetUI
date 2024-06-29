@@ -12,7 +12,7 @@ export const ItemWrapper = styled.div`
 `;
 
 export const TagWrapper = styled.div`
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: #00B388;
   bottom: -130px;
   height: 100px;
   position: absolute;
