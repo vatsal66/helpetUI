@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="157.665" height="147.554" viewBox="0 0 157.665 147.554">
+  <defs>
+    <style>
+      .slick-active .veterinary-a,
+      .slick-active .veterinary-b {
+        fill: #9c2585;
+      }
+
+      .slick-active .veterinary-b,
+      .slick-active .veterinary-c,
+      .slick-active .veterinary-d {
+        fill-rule: evenodd;
+      }
+
+      .slick-active .veterinary-c {
+        fill: #70115d;
+      }
+
+      .slick-active .veterinary-d,
+      .slick-active .veterinary-e {
+        fill: #fff;
+      }
+
+      .veterinary-green {
+        fill: #3ccc94;
+      }
+    </style>
+  </defs>
+  <g transform="translate(0)">
+    <g transform="translate(8.491 75.7)">
+      <path class="veterinary-a veterinary-green"
+        d="M-298.428,1674.489V1731.1a4.924,4.924,0,0,1-4.931,4.931h-15.489a.307.307,0,0,0,.057.071h-62.254a4.566,4.566,0,0,1-4.226-2.8v-47.916a2.911,2.911,0,0,0-2.922-2.91H-420a2.911,2.911,0,0,0-2.922,2.91v46.129a4.586,4.586,0,0,1-4.6,4.586h-6.5a4.586,4.586,0,0,1-4.6-4.586V1674.3a1.41,1.41,0,0,1,1.581-1.427c3.5.417,9.792.014,13.491-2.257a19.069,19.069,0,0,0,5.389-4.973,1.371,1.371,0,0,1,2.174-.014,18.857,18.857,0,0,0,18.411,7.4,18.342,18.342,0,0,0,7.606-3.3,39.935,39.935,0,0,0,4.363-4.031,1.361,1.361,0,0,1,2.106.041,18.846,18.846,0,0,0,10.652,7.036,17.941,17.941,0,0,0,13.991-2.16c3.324-2.217,6.179-5.861,6.746-5.916.4,0,6.345,8.575,16.956,8.631,3.755,0,8.187-2.01,11.262-4.211,2.868-2.051,4.266-4.848,4.641-4.848.249,0,.9,1.315,3.713,4.073a16.98,16.98,0,0,0,5.3,3.615,17.306,17.306,0,0,0,9.946.957A1.6,1.6,0,0,1-298.428,1674.489Z"
+        transform="translate(438.618 -1664.267)" />
+    </g>
+    <g transform="translate(16.681)">
+      <path class="veterinary-b veterinary-green"
+        d="M-433.878,1643.482H-309.83v-4.4c0-10.288-6.6-18.628-14.73-18.628H-419.15c-8.135,0-14.728,8.34-14.728,18.628Z"
+        transform="translate(433.878 -1620.456)" />
+    </g>
+    <g transform="translate(29.376 99.427)">
+      <path class="veterinary-c veterinary-green"
+        d="M-426.531,1680.269v45.856h27.394v-45.856a2.27,2.27,0,0,0-2.27-2.27h-22.853A2.27,2.27,0,0,0-426.531,1680.269Zm19.466,26.124a4.4,4.4,0,0,1-5.374-4.28,4.378,4.378,0,0,1,4.387-4.373,4.386,4.386,0,0,1,4.256,5.457A4.366,4.366,0,0,1-407.065,1706.393Z"
+        transform="translate(426.531 -1677.999)" />
+    </g>
+    <g transform="translate(43.468 119.168)">
+      <path class="veterinary-d veterinary-green"
+        d="M-409.777,1695.057a4.3,4.3,0,0,1-3.046,2.977,4.4,4.4,0,0,1-5.552-4.237,4.378,4.378,0,0,1,4.387-4.373A4.39,4.39,0,0,1-409.777,1695.057Z"
+        transform="translate(418.375 -1689.424)" />
+    </g>
+    <g transform="translate(75.265 94.047)">
+      <rect class="veterinary-e veterinary-green" width="59.959" height="40.623" rx="2.494" />
+    </g>
+    <g transform="translate(0 28.24)">
+      <g transform="translate(92.204)">
+        <path class="veterinary-c veterinary-green" d="M-385.442,1660.779l-4.727-23.979h22.507l8.954,23.979Z"
+          transform="translate(390.169 -1636.8)" />
+      </g>
+      <g transform="translate(33.605 0)">
+        <path class="veterinary-c veterinary-green" d="M-392.622,1636.8l-4.728,23.979h-26.734l8.954-23.979Z"
+          transform="translate(424.083 -1636.8)" />
+      </g>
+      <g transform="translate(65.383 0)">
+        <path class="veterinary-b veterinary-green" d="M-400.965,1636.8h17.05l4.728,23.979h-26.505Z"
+          transform="translate(405.692 -1636.8)" />
+      </g>
+      <g transform="translate(130.282 29.194)">
+        <path class="veterinary-b veterinary-green"
+          d="M-340.749,1662.708a13.7,13.7,0,0,1-13.692,13.668h0a13.7,13.7,0,0,1-13.692-13.668V1653.7h27.383Z"
+          transform="translate(368.132 -1653.696)" />
+      </g>
+      <g transform="translate(0.902 0)">
+        <path class="veterinary-b veterinary-green"
+          d="M-424.053,1636.8H-407.7l-8.954,23.979H-443.01l11.062-19.4A9.09,9.09,0,0,1-424.053,1636.8Z"
+          transform="translate(443.01 -1636.8)" />
+      </g>
+      <g transform="translate(64.847 28.918)">
+        <path class="veterinary-b veterinary-green"
+          d="M-392.309,1676.216h0A13.7,13.7,0,0,1-406,1662.551v-9.015h27.383v9.015a13.693,13.693,0,0,1-13.69,13.666"
+          transform="translate(406.002 -1653.536)" />
+      </g>
+      <g transform="translate(0 28.918)">
+        <path class="veterinary-b veterinary-green"
+          d="M-429.84,1676.216h0a13.7,13.7,0,0,1-13.692-13.666v-9.015h27.383v9.015a13.7,13.7,0,0,1-13.692,13.666"
+          transform="translate(443.532 -1653.536)" />
+      </g>
+      <g transform="translate(121.577 0)">
+        <path class="veterinary-b veterinary-green"
+          d="M-338.091,1660.779h-26.124l-8.956-23.979h17.839a5.721,5.721,0,0,1,4.944,2.844Z"
+          transform="translate(373.17 -1636.8)" />
+      </g>
+      <g transform="translate(32.517 28.918)">
+        <path class="veterinary-c veterinary-green"
+          d="M-411.021,1676.216h0a13.693,13.693,0,0,1-13.69-13.666v-9.015h27.382v9.015a13.693,13.693,0,0,1-13.69,13.666"
+          transform="translate(424.713 -1653.536)" />
+      </g>
+      <g transform="translate(97.179 28.918)">
+        <path class="veterinary-c veterinary-green"
+          d="M-373.6,1676.216h0a13.7,13.7,0,0,1-13.692-13.666v-9.015h27.383v9.015a13.693,13.693,0,0,1-13.692,13.666"
+          transform="translate(387.29 -1653.536)" />
+      </g>
+    </g>
+  </g>
+</svg>

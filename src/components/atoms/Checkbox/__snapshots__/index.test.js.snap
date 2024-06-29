@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Checkbox /> should match snapshot 1`] = `
+<DocumentFragment>
+  <label
+    class="sc-AxjAm gBKCgr"
+  >
+    A Labeled Checkbox
+    <input
+      class="sc-AxirZ iSLBsk"
+      type="checkbox"
+    />
+    <span
+      class="sc-AxiKw ftWzRO"
+    />
+  </label>
+</DocumentFragment>
+`;

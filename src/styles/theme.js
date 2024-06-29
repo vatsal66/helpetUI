@@ -1,0 +1,31 @@
+const theme = {
+  colors: {
+    primary: '#9C2E85',
+    background: '#F0F0F0',
+    greenBackground: '#25B77F',
+    darkGreenBackground: '#014643',
+    title: '#151515',
+    subtitle: '#2C2C2C',
+    salmon: '#FF9191',
+    description: '#707070',
+    fill: '#B9B9B9',
+    gray: '#767676',
+    white: '#FFF',
+    health: '#4020bb',
+    education: '#1a36d3',
+    petShop: '#653708',
+    adoption: '#d92981',
+    beach: '#2ba7d6',
+    gastronomy: '#dd5d22',
+    veterinary: '#9C2E85',
+    park: '#377904',
+    transport: '#feb400',
+    emergency: '#ba2520',
+    grooming: '#009d8f',
+    lightButton: '#ed81b9',
+    error: '#FF4646',
+    disabled: '#C6C6C6',
+  },
+};
+
+export default theme;

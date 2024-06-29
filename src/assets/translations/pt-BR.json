@@ -1,0 +1,101 @@
+{
+  "sendButtonValue": "Enviar",
+  "downloadApp": "Baixar App",
+  "title": "um novo App para o seu pet",
+  "inputs": {
+    "name": "Nome",
+    "surname": "Sobrenome",
+    "business": "Nome da empresa",
+    "phone": "Telefone",
+    "address": "Endereço",
+    "email": "E-mail"
+  },
+  "cards": {
+    "petId": {
+      "type": "Documentação",
+      "title": "Pet ID e Passaporte",
+      "description": "Toda a documentação do seu melhor amigo em um único aplicativo"
+    },
+    "prescription": {
+      "type": "Cartão de Saúde",
+      "title": "Receita Eletrônica",
+      "description": "Receitas diretamente no seu próprio celular"
+    },
+    "vaccine": {
+      "type": "Cartão de Saúde",
+      "title": "Vacina",
+      "description": "Mantenha todas as vacinas para cães ou gatos ou apenas a próxima registrada"
+    }
+  },
+  "tags": {
+    "health": "Saúde",
+    "education": "Educação",
+    "petShop": "Pet Shop",
+    "adoption": "Adoção",
+    "beach": "Praia",
+    "gastronomy": "Gastronomia",
+    "veterinary": "Veterinário",
+    "park": "Parque",
+    "transport": "Transporte",
+    "emergency": "Emergência",
+    "grooming": "Tosa"
+  },
+  "carousel": {
+    "title": "Near Me",
+    "description": "Todos os serviços ao seu redor! Qualquer local e serviço para seu animal de estimação a qualquer hora, em qualquer lugar em segundos."
+  },
+  "headerSection": {
+    "title": "Uma nova qualidade de vida para nosso melhor amigo",
+    "subtitle": "Os serviços da Helpet irão ajudá-lo a lidar com quaisquer imprevistos e a organizar melhor o dia a dia do seu melhor amigo",
+    "subtitleTwo": "Venha viver esta experiência incrível",
+    "buttonHeader": "Descubra mais",
+    "callToAction": "Baixe o nosso App"
+  },
+  "benefits": {
+    "title": "Estamos aqui para lhe ajudar e simplificar a sua vida.",
+    "subtitle": "Tenha em mãos tudo relacionacionado ao seu pet, sem preocupações",
+    "callToAction": "Baixe o nosso App",
+    "pins": {
+      "document": {
+        "title": "Praticidade",
+        "description": "Documentação, histórico, serviços, tudo em um só app."
+      },
+      "calendar": {
+        "title": "Lembretes",
+        "description": "Nunca mais se esqueça de nenhuma informação sobre a saúde do seu animal e armazene tudo de forma digital."
+      },
+      "clock": {
+        "title": "Monitoramento",
+        "description": "Controle o histórico seu animal de forma digital"
+      },
+      "phone": {
+        "title": "Conveniência",
+        "description": "Acesse onde estiver e encontre os melhores lugares para seu pet."
+      }
+    }
+  },
+  "formSection": {
+    "title": "Seja um parceiro e mostre sua empresa aos clientes",
+    "subtitle": "Partnership",
+    "description": "Registre-se de graça e aumente a visibilidade da sua empresa aparecendo no mapa."
+  },
+  "newsletter": {
+    "subtitle": "Assine a nossa newsletter e saiba mais",
+    "checkboxTermsOfUse": "Declaro que li e concordo com os termos de uso",
+    "button": "Inscrever-se"
+  },
+  "cookies": {
+    "warning": "Usaremos cookies para melhorar e personalizar sua experiência se você continuar navegando. Podemos também usar cookies para exibir anúncios personalizados.",
+    "confirmButton": "Sim, aceitar cookies",
+    "refuseButton": "Não, não aceitar cookies",
+    "policyLink": "Saiba mais e gerencie seus cookies"
+  },
+  "footer": {
+    "description": "A Helpet cria soluções inovadoras para facilitar a vida dos amantes de cães e gatos.",
+    "privacyPolicy": "Políticas de privacidade",
+    "terms": "Termos e Condições",
+    "copyright": "All Copyrights reserved - HelpetApp@2020",
+    "contact": "Contato",
+    "support": "Suporte"
+  }
+}

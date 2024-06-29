@@ -1,0 +1,101 @@
+{
+  "sendButtonValue": "Invia",
+  "downloadApp": "Scarica",
+  "title": "la nuova App per i tuoi Pet",
+  "inputs": {
+    "name": "Nome",
+    "surname": "Cognome",
+    "business": "Nome struttura",
+    "phone": "Recapito telefonico",
+    "address": "Indirizzo",
+    "email": "Email"
+  },
+  "cards": {
+    "petId": {
+      "type": "Documentazione",
+      "title": "Pet ID e Passaporto",
+      "description": "Tutta la documentazione del tuo miglior amico all’interno di un’unica app"
+    },
+    "prescription": {
+      "type": "Libretto Sanitario",
+      "title": "Ricetta Elettronica",
+      "description": "La ricetta direttamente sul proprio cellulare"
+    },
+    "vaccine": {
+      "type": "Libretto Sanitario",
+      "title": "Vaccini",
+      "description": "Tieni registrati tutti i vaccini dei tuoi cani e gatti effettuati e i prossimi richiami. Registra tutti i vaccini fatti e programma i prossimi richiami"
+    }
+  },
+  "tags": {
+    "health": "Salute",
+    "education": "Educazione",
+    "petShop": "Pet Shop",
+    "adoption": "Adozione",
+    "beach": "Spiagge",
+    "gastronomy": "Gastronomia",
+    "veterinary": "Veterinario",
+    "park": "Parco",
+    "transport": "Trasporto",
+    "emergency": "Emergenza",
+    "grooming": "Toelettature"
+  },
+  "carousel": {
+    "title": "Near Me",
+    "description": "Tutti i servizi intorno a te! Qualsiasi struttura o servizio per il tuo Pet sempre e ovunque in pochi secondi."
+  },
+  "headerSection": {
+    "title": "Una nuova qualità di vita per il nostro Pet.",
+    "subtitle": "I servizi Helpet ti aiuteranno ad affrontare ogni imprevisto e ad organizzare al meglio la vita quotidiana del tuo migliore amico",
+    "subtitleTwo": "Vieni a vivere questa incredibile esperienza",
+    "buttonHeader": "Scopri di più",
+    "callToAction": "Scarica la nostra App"
+  },
+  "benefits": {
+    "title": "Siamo qui per aiutarti e semplicificarti la vita.",
+    "subtitle": "Tieni a portata di mano tutto ciò che riguarda il tuo animale domestico, senza preoccupazioni",
+    "callToAction": "Scarica la nostra App",
+    "pins": {
+      "document": {
+        "title": "Praticità",
+        "description": "Documentazione, libretto sanitario e ogni servizio in un'unica app"
+      },
+      "calendar": {
+        "title": "Promemoria",
+        "description": "Un pratico calendario dove poter registrare tutti gli avvisi, le scadenze e gli appuntamenti del tuo migliore amico"
+      },
+      "clock": {
+        "title": "Monitoraggio",
+        "description": "Tieni sotto controllo e sempre con te tutta la storia clinica del tuo amico a 4 zampe"
+      },
+      "phone": {
+        "title": "Convenienza",
+        "description": "Accedi ovunque sei e trova subito tutti i migliori servizi per il tuo animale domestico"
+      }
+    }
+  },
+  "formSection": {
+    "title": "Non sei ancora presente nella nostra mappa?",
+    "subtitle": "Partnership",
+    "description": "Entra in contatto con il nostro  team compilando il format accanto."
+  },
+  "newsletter": {
+    "subtitle": "Iscriviti per ricevere aggiornamenti, offerte e tanto altro.",
+    "checkboxTermsOfUse": "Dichiaro di aver letto e di accettare i termini di utilizzo",
+    "button": "Iscriviti"
+  },
+  "cookies": {
+    "warning": "Il presente sito web utilizza cookie di profilazione di terzi per inviare pubblicità in linea con le preferenze dell'utente. Per saperne di più consulta la nostra cookie policy oppure per rifiutare il consenso all'utilizzo di tutti i cookie o alcuni di essi, fare click qui. Chiudendo questo banner, acconsenti al loro utilizzo.",
+    "confirmButton": "Sì, accetta i cookie",
+    "refuseButton": "No, non acceta i cookie",
+    "policyLink": "Scopri di più e gestisci i tuoi cookie"
+  },
+  "footer": {
+    "description": "Helpet crea soluzioni innovative per rendere la vita più facile agli amanti dei cani e dei gatti.",
+    "privacyPolicy": "Informativa sulla Privacy",
+    "terms": "Termini di Utilizzo",
+    "copyright": "Tutti i diritti riservati - HelpetApp@2020",
+    "contact": "Contatti",
+    "support": "Supporto"
+  }
+}

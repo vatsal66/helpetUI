@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Card /> should match snapshot file 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-AxheI dLGpGh"
+  >
+    <p
+      class="sc-Axmtr lkqzQX"
+    >
+      Documentazione
+    </p>
+    <test-file-stub
+      width="140"
+    />
+    <h1
+      class="sc-AxmLO dheAqI"
+    >
+      Pet ID e Passaporto
+    </h1>
+    <h2
+      class="sc-fzozJi kNXHwV"
+    >
+      Tutta la documentazione del tuo miglior amico racchiusa all’interno di un’unica app
+    </h2>
+    <button
+      class="sc-AxjAm ALgEm"
+    >
+      Download App
+    </button>
+  </div>
+</DocumentFragment>
+`;

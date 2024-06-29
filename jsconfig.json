@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@components/*": ["./components/*"],
+      "@assets/*": ["./assets/*"],
+      "@mocks/*": ["./../__mocks__/*"],
+      "@helpers/*": ["./helpers/*"],
+      "@styles/*": ["./styles/*"],
+      "@config/*": ["./config"],
+      "@hooks/*": ["./hooks/*"],
+      "@services/*": ["./services/*"],
+      "@lang": ["./../lang/index.js"],
+    }
+  }
+}

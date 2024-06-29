@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="159.786" height="154.466" viewBox="0 0 159.786 154.466">
+  <defs>
+    <style>
+      .slick-active .gastronomy-a {
+        fill: #de5c21;
+      }
+
+      .slick-active .gastronomy-b {
+        fill: #a74416;
+      }
+
+      .gastronomy-green {
+        fill: #3ccc94;
+      }
+    </style>
+  </defs>
+  <g transform="translate(135.811 21.297)">
+    <path class="gastronomy-a gastronomy-green"
+      d="M-50.019,1628.54v5.323a8.008,8.008,0,0,1-7.986,8,8.013,8.013,0,0,1-8-8v-5.323Z"
+      transform="translate(66.009 -1628.54)" />
+  </g>
+  <g transform="translate(133.493)">
+    <path class="gastronomy-a gastronomy-green" d="M-49.8,1632.187H-65.341l-2.009-15.972h13.567Z"
+      transform="translate(67.35 -1616.215)" />
+  </g>
+  <g transform="translate(114.515 21.297)">
+    <path class="gastronomy-b gastronomy-green" d="M-62.361,1628.54v5.323a8,8,0,0,1-7.986,8,8,8,0,0,1-7.986-8v-5.323Z"
+      transform="translate(78.334 -1628.54)" />
+  </g>
+  <g transform="translate(114.516)">
+    <path class="gastronomy-b gastronomy-green" d="M-62.705,1632.187H-78.334v-15.972H-64.7Z"
+      transform="translate(78.334 -1616.215)" />
+  </g>
+  <g transform="translate(93.202 21.297)">
+    <path class="gastronomy-a gastronomy-green"
+      d="M-74.679,1628.54v5.323a8.012,8.012,0,0,1-8,8,8,8,0,0,1-7.986-8v-5.323Z"
+      transform="translate(90.669 -1628.54)" />
+  </g>
+  <g transform="translate(93.202)">
+    <rect class="gastronomy-a gastronomy-green" width="15.989" height="15.972" />
+  </g>
+  <g transform="translate(71.906 21.297)">
+    <path class="gastronomy-b gastronomy-green" d="M-87.021,1628.54v5.323a8,8,0,0,1-7.986,8,8,8,0,0,1-7.986-8v-5.323Z"
+      transform="translate(102.994 -1628.54)" />
+  </g>
+  <g transform="translate(71.906)">
+    <rect class="gastronomy-b gastronomy-green" width="15.972" height="15.972" />
+  </g>
+  <g transform="translate(50.594 21.297)">
+    <path class="gastronomy-a gastronomy-green" d="M-99.357,1628.54v5.323a8,8,0,0,1-7.986,8,8,8,0,0,1-7.985-8v-5.323Z"
+      transform="translate(115.328 -1628.54)" />
+  </g>
+  <g transform="translate(50.593)">
+    <rect class="gastronomy-a gastronomy-green" width="15.972" height="15.972" />
+  </g>
+  <g transform="translate(29.281 21.297)">
+    <path class="gastronomy-b gastronomy-green"
+      d="M-111.675,1628.54v5.323a8,8,0,0,1-7.986,8,8.011,8.011,0,0,1-8-8v-5.323Z"
+      transform="translate(127.663 -1628.54)" />
+  </g>
+  <g transform="translate(29.64)">
+    <path class="gastronomy-b gastronomy-green" d="M-111.826,1616.215v15.972h-15.629l1.992-15.972Z"
+      transform="translate(127.455 -1616.215)" />
+  </g>
+  <g transform="translate(7.985 21.297)">
+    <path class="gastronomy-a gastronomy-green" d="M-124.017,1628.54v5.323a8,8,0,0,1-7.986,8,8,8,0,0,1-7.985-8v-5.323Z"
+      transform="translate(139.988 -1628.54)" />
+  </g>
+  <g transform="translate(8.722)">
+    <path class="gastronomy-a gastronomy-green" d="M-122.009,1616.215-124,1632.187h-15.56l4-15.972Z"
+      transform="translate(139.561 -1616.215)" />
+  </g>
+  <g transform="translate(101.865 79.892)">
+    <path class="gastronomy-a gastronomy-green"
+      d="M-40.077,1662.5a9.385,9.385,0,0,0-.959-.052,8.009,8.009,0,0,0-8.016,6.82l-4.276,27.8H-77.674a7.99,7.99,0,0,0-7.981,8,7.976,7.976,0,0,0,7.981,7.981h1.633l-6.2,18.638h5.607l6.279-18.638h20.138L-44,1731.687h5.623l-6.331-18.638a7.951,7.951,0,0,0,7.509-7.021l4.092-34.618A8.006,8.006,0,0,0-40.077,1662.5Z"
+      transform="translate(85.655 -1662.452)" />
+  </g>
+  <g transform="translate(39.938 90.55)">
+    <path class="gastronomy-b gastronomy-green"
+      d="M-41.586,1681.938v-10.657a2.681,2.681,0,0,0-2.678-2.661h-74.555a2.669,2.669,0,0,0-2.676,2.661v10.657a2.669,2.669,0,0,0,2.676,2.661h29.3v42.6H-73.56v-42.6h29.3A2.681,2.681,0,0,0-41.586,1681.938Z"
+      transform="translate(121.495 -1668.62)" />
+  </g>
+  <g transform="translate(5.253 79.892)">
+    <path class="gastronomy-a gastronomy-green"
+      d="M-96.9,1697.07h-24.33l-4.294-27.8a7.991,7.991,0,0,0-8-6.82,7.991,7.991,0,0,0-8.048,7.931,7.722,7.722,0,0,0,.067,1.061l4.074,34.616a7.967,7.967,0,0,0,7.559,6.988l-6.314,18.638h5.709l6.194-18.638h20.071l6.2,18.638h5.69l-6.194-18.638H-96.9a7.976,7.976,0,0,0,7.981-7.981A7.99,7.99,0,0,0-96.9,1697.07Z"
+      transform="translate(141.569 -1662.452)" />
+  </g>
+  <g transform="translate(0 148.202)">
+    <path class="gastronomy-b gastronomy-green"
+      d="M15.177,1705.127h0a3.122,3.122,0,0,1-3.122,3.122H-141.487a3.122,3.122,0,0,1-3.122-3.122h0a3.122,3.122,0,0,1,3.122-3.122h7.518v-.019h5.709v.019H-95.8v-.019h5.69v.019H-72.7v-.019h15.962v.019h17.41v-.019h5.607v.019H-1.088v-.019H4.535v.019h7.52A3.122,3.122,0,0,1,15.177,1705.127Z"
+      transform="translate(144.609 -1701.986)" />
+  </g>
+</svg>

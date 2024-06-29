@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tag /> should match snapshot file 1`] = `
+<DocumentFragment>
+  <span
+    class="sc-AxjAm hSugdZ"
+    color="veterinary"
+  >
+    Veterinário
+  </span>
+</DocumentFragment>
+`;

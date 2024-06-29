@@ -1,0 +1,101 @@
+{
+  "sendButtonValue": "Send",
+  "downloadApp": "Download App",
+  "title": "a new App for your pet",
+  "inputs": {
+    "name": "Name",
+    "surname": "Surname",
+    "business": "Company",
+    "phone": "Phone number",
+    "address": "Adress",
+    "email": "Email"
+  },
+  "cards": {
+    "petId": {
+      "type": "Documentation",
+      "title": "Pet ID and Passport",
+      "description": "All pet's documentation in only one app."
+    },
+    "prescription": {
+      "type": "Health Card",
+      "title": "Electronic Prescription",
+      "description": "The veterinary electronic prescription in your phone"
+    },
+    "vaccine": {
+      "type": "Health Card",
+      "title": "Vaccine",
+      "description": "Keep on track on dog or cat vaccines and set reminders for the new ones."
+    }
+  },
+  "tags": {
+    "health": "Health",
+    "education": "Education",
+    "petShop": "Pet Shop",
+    "adoption": "Adoption",
+    "beach": "Beach",
+    "gastronomy": "Gastronomy",
+    "veterinary": "Veterinary",
+    "park": "Park",
+    "transport": "Transport",
+    "emergency": "Emergency",
+    "grooming": "Grooming"
+  },
+  "carousel": {
+    "title": "Near me",
+    "description": "Find services around you! Any places and services for your pet in a one second."
+  },
+  "headerSection": {
+    "title": "A new quality life for our best friend",
+    "subtitle": "Helpet services will help you to deal with any unforeseen events and to organize the daily life of your best friend",
+    "subtitleTwo": "Live this incredible experience",
+    "buttonHeader": "Learn more",
+    "callToAction": "Download our App"
+  },
+  "benefits": {
+    "title": "We are here to help you and to make your life easier.",
+    "subtitle": "Have everything related to your pet in the palm of your hand, no more worries",
+    "callToAction": "Download our App",
+    "pins": {
+      "document": {
+        "title": "Practicality",
+        "description": "Documentation, medical history, services, all in one app."
+      },
+      "calendar": {
+        "title": "Reminder",
+        "description": "Don't forget any information for your pets health."
+      },
+      "clock": {
+        "title": "Monitor",
+        "description": "Manage pets history in a digital way."
+      },
+      "phone": {
+        "title": "Convenience",
+        "description": "Access where you are and find de best places for your pet."
+      }
+    }
+  },
+  "formSection": {
+    "title": "Be a partner and show your company to customers",
+    "subtitle": "Partnership",
+    "description": "Register for free and increase the visibility of your company by appearing on the map."
+  },
+  "newsletter": {
+    "subtitle": "Subscribe to our newsletter and learn more",
+    "checkboxTermsOfUse": "I declare that I have read and agree with the terms of use",
+    "button": "Subscribe"
+  },
+  "cookies": {
+    "warning": "We will use cookies to improve and personalize your experience if you continue browsing. Can we also use cookies to display personalized ads?",
+    "confirmButton": "Yes, I accept cookies",
+    "refuseButton": "No, I don't accept cookies",
+    "policyLink": "Read more and manage your cookies"
+  },
+  "footer": {
+    "description": "Helpet creates innovative solutions to make life easier for dog and cat lovers.",
+    "privacyPolicy": "Privacy Policy",
+    "terms": "Terms and Conditions",
+    "copyright": "All Copyrights reserved - HelpetApp@2020",
+    "contact": "Contact",
+    "support": "Suport"
+  }
+}
