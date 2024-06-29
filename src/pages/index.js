@@ -6,6 +6,7 @@ import { Helmet } from 'react-helmet';
 import {
   Header,
   Carousel,
+  CarouselNew,
   FormSection,
   Benefits,
   Newsletter,
@@ -58,7 +59,8 @@ const IndexPage = () => {
         </Helmet>
         <Header onChangeLanguage={(lang) => setLocale(lang)} />
         <Main />
-        <Carousel />
+        {/* <Carousel /> */}
+        <CarouselNew />
         <Benefits />
         <FormSection />
         <Newsletter />

@@ -8,6 +8,8 @@ import HeaderGrassRight from '@assets/images/header-grass-right.svg';
 import HeaderLightGrassLeft from '@assets/images/header-light-grass-left.svg';
 import SmallCloud from '@assets/images/cloud-small.svg';
 import BigCloud from '@assets/images/cloud-big.svg';
+import trainBottom from '@assets/images/HomePage/trainBottom.svg';
+import trainBottomHome from '@assets/images/HomePage/trainHomeBottom.svg';
 
 export const CallToAction = styled.h2`
   && {
@@ -275,6 +277,42 @@ export const StyledBigCloud = styled(BigCloud)`
       animation-name: ${rightToLeft};
       right: calc(-5% - 160px);
     `}
+`;
+
+export const StyledBottomTrain = styled(trainBottom)`
+  position: absolute;
+  bottom: ${({ bottom }) => bottom};
+
+  @media (max-width: 375px) {
+    animation-duration: ${({ duration }) => duration / 8}s;
+  }
+
+  @media (min-width: 376px and max-width: 559px) {
+    animation-duration: ${({ duration }) => duration / 5}s;
+  }
+
+  @media (min-width: 560px and max-width: 919px) {
+    animation-duration: ${({ duration }) => duration / 3}s;
+  }
+`;
+
+
+export const StyledBottomTrainHome = styled(trainBottomHome)`
+  position: absolute;
+  bottom: ${({ bottom }) => bottom};
+  z-index: 1;
+
+  @media (max-width: 375px) {
+    animation-duration: ${({ duration }) => duration / 8}s;
+  }
+
+  @media (min-width: 376px and max-width: 559px) {
+    animation-duration: ${({ duration }) => duration / 5}s;
+  }
+
+  @media (min-width: 560px and max-width: 919px) {
+    animation-duration: ${({ duration }) => duration / 3}s;
+  }
 `;
 
 const leftToRight = keyframes`
