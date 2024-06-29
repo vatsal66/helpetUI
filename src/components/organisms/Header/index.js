@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
 
-import { LanguageFlag } from '@components/quarks';
 import { StoreBadges } from '@components/molecules';
+import { LanguageFlag } from '@components/quarks';
 
 import HelpetLogo from '@assets/images/helpet-logo.svg';
 import BrazilFlagSvg from '@assets/icons/brazil-flag.svg';
@@ -38,25 +38,7 @@ const Header = ({ onChangeLanguage }) => {
   return (
     <StyledHeader>
       <StyledContentSection>
-        <FlagsContainer>
-          <LanguageFlag
-            Svg={BrazilFlagSvg}
-            selected={locale === 'pt-BR'}
-            onClick={() => onChangeLanguage('pt-BR')}
-          />
-          <LanguageFlag
-            Svg={UKFlagSvg}
-            selected={locale === 'en'}
-            onClick={() => onChangeLanguage('en')}
-          />
-          <LanguageFlag
-            Svg={ItalyFlagSvg}
-            selected={locale === 'it'}
-            onClick={() => onChangeLanguage('it')}
-          />
-        </FlagsContainer>
         <TitleContainer>
-          <HelpetLogo height={60} />
           <Title>{messages['headerSection.title']}</Title>
           <Subtitle>{messages['headerSection.subtitle']}</Subtitle>
           <Subtitle>{messages['headerSection.subtitleTwo']}</Subtitle>

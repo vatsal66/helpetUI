@@ -13,13 +13,13 @@ import {
   CookiesWarning,
   Footer,
   Main,
+  Navbar,
 } from '@components/organisms';
 
 import useLanguage from '@hooks/useLanguage';
 
 import theme from '@styles/theme';
 import GlobalStyle from '@styles/GlobalStyle';
-
 const IndexPage = () => {
   const [messages, { locale, setLocale }] = useLanguage();
 
@@ -57,6 +57,7 @@ const IndexPage = () => {
           />
           <meta name="twitter:image" content="/assets/images/og-image.png" />
         </Helmet>
+        <Navbar onChangeLanguage={(lang) => setLocale(lang)}/>
         <Header onChangeLanguage={(lang) => setLocale(lang)} />
         <Main />
         {/* <Carousel /> */}

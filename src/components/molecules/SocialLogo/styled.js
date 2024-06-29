@@ -16,9 +16,9 @@ export const SocialWrapper = styled.div`
 `;
 
 export const Label = styled.div`
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 2px;
+  font-size: 20px;
+  font-weight: 700;
+  Line-height: 28.37px;
   margin-bottom: 20px;
   margin-top: 36px;
   text-transform: uppercase;

@@ -24,6 +24,7 @@ import {
 
 const Main = () => {
   const [showDog, setShowDog] = useState(false);
+  
   return (
     <Container className="main-section">
       <Bike {...{ setShowDog }} />

@@ -6,10 +6,10 @@ import Apple from '@assets/icons/apple_icon.svg';
 import Play from '@assets/icons/play_icon.svg';
 
 export const ContentWrapper = styled.div`
-  max-width: 1120px;
+  max-width: 1300px;
 
   @media (min-width: 800px) {
-    margin: 150px auto 0;
+    margin: 50px auto 0;
   }
 
   @media (max-width: 799px) {
@@ -43,9 +43,9 @@ export const Center = styled.div`
 `;
 
 export const Text = styled.p`
-  color: ${({ theme }) => theme.colors.description};
+  color: #000000;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.7;
 `;
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useIntl } from 'react-intl';
 
 import {
@@ -20,8 +20,16 @@ import {
   Contact,
 } from './styled';
 
+import Collapse from '@assets/images/Footer/collapse.svg'
+import Expand from '@assets/images/Footer/expand.svg'
+
 const Footer = () => {
   const { messages } = useIntl();
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const handleToggle = () => {
+    setIsExpanded(!isExpanded);
+  };
 
   return (
     <div id="footer">
@@ -32,7 +40,12 @@ const Footer = () => {
             <Text>{messages['footer.description']}</Text>
             <ContactWrapper>
               <Contact>
-                <Label>{messages['footer.contact']}</Label>
+                <p style={{
+                    color: '#000000',
+                    fontSize: '18px',
+                    fontWeight: 700,
+                    lineHeight: 1.7,
+                }}>{messages['footer.contact']}</p>
                 <Text>Helpet Italia Srl</Text>
                 <Text>Via Po 31D, 00198 Roma</Text>
                 <Text>P.IVA 15386071003</Text>
@@ -45,6 +58,29 @@ const Footer = () => {
               </Contact>
             </ContactWrapper>
           </Center>
+          <Right>
+              Chi siamo
+              {isExpanded ? (
+                <Collapse />
+              ) : (
+                <Collapse />
+              )}
+            {isExpanded && (
+              <ul>
+                <li><Link href="#">Storia</Link></li>
+                <li><Link href="#">Mission</Link></li>
+                <li><Link href="#">Valori</Link></li>
+                <li><Link href="#">Team</Link></li>
+              </ul>
+            )}
+            <Link href="#">Servizi</Link>
+            <Link href="#">My Insurance</Link>
+            <Link href="#">Pet ID</Link>
+            <Link href="#">Libretto sanitario</Link>
+            <Link href="#">Near me</Link>
+            <Link href="#">Account</Link>
+            <Link href="#">Supporto</Link>
+          </Right>
           <Right>
             <Label>Download</Label>
             <IconsWrapper>

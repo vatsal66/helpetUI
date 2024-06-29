@@ -27,7 +27,7 @@ export const StyledHeader = styled.header`
   background-position: center bottom;
   min-height: 900px;
   min-width: 100%;
-  padding: 18px 0;
+  padding: 236px 0 18px 0;
 
   @media (max-width: 799px) {
     min-height: 0;
@@ -39,7 +39,6 @@ export const StyledContentSection = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 42px;
   width: 1120px;
   max-width: 100%;
   z-index: 10;

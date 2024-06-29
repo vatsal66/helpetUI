@@ -97,5 +97,21 @@
     "copyright": "Tutti i diritti riservati - HelpetApp@2020",
     "contact": "Contatti",
     "support": "Supporto"
+  },
+  "header": {
+    "header1": "Home",
+    "header2": "Chi siamo",
+    "header3": "Servizi",
+    "header31":{
+      "value1": "My Insurance",
+      "value2": "Pet ID",
+      "value3": "Libretto Sanitario",
+      "value4": "Near Me"
+    },
+    "header4": "Blog",
+    "header5": "Contatti",
+    "header6": "Sei un professionista?",
+    "login": "Login"
   }
+
 }

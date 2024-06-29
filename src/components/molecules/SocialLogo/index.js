@@ -2,8 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import FooterLogo from '@assets/images/footer_logo.svg';
-import FBIcon from '@assets/icons/fb_icon.svg';
-import InstagramIcon from '@assets/icons/ig_icon.svg';
+import FaceBookIcon from '@assets/images/Footer/facebook.svg';
+import InstragramIcon from '@assets/images/Footer/instagram.svg';
+import LinkdinIcon from '@assets/images/Footer/linkdin.svg';
+import TiktokIcon from '@assets/images/Footer/tiktok.svg';
+import YoutubeIcon from '@assets/images/Footer/youtube.svg';
 
 import { Left, SocialWrapper, Label } from './styled';
 
@@ -11,13 +14,22 @@ const SocialLogo = ({ className }) => {
   return (
     <Left className={className}>
       <FooterLogo />
-      <Label>Follow us on</Label>
+      <Label>I NOSTRI SOCIAL</Label>
       <SocialWrapper>
-        <a href="https://www.facebook.com/Helpetapp-114572646991770">
-          <FBIcon />
+        <a>
+          <FaceBookIcon />
         </a>
-        <a href="https://instagram.com/helpet.app/">
-          <InstagramIcon />
+        <a>
+          <InstragramIcon />
+        </a>
+        <a>
+          <LinkdinIcon />
+        </a>
+        <a>
+          <TiktokIcon />
+        </a>
+        <a>
+          <YoutubeIcon />
         </a>
       </SocialWrapper>
     </Left>
