@@ -29,7 +29,8 @@ export const Content = styled.div`
 
 export const Center = styled.div`
   @media (min-width: 1024px) {
-    padding: 0 9%;
+    padding: 0 15% 0 0;
+    min-width: 950px;
   }
 
   @media (min-width: 800px) and (max-width: 1023px) {
@@ -49,6 +50,21 @@ export const Text = styled.p`
   line-height: 1.7;
 `;
 
+export const DropDownList = styled.p`
+  color: #343434;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 20px;
+  margin-left: 15px;
+`;
+
+export const TextInside = styled.p`
+  color: #343434;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+`;
+
 export const Right = styled.div`
   min-width: 161px;
   width: 16%;
@@ -66,10 +82,12 @@ export const Right = styled.div`
 export const FooterBottom = styled.div`
   border-top: 1px solid ${({ theme }) => theme.colors.fill};
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   font-size: 12px;
-  justify-content: space-between;
   margin-top: 56px;
   padding: 25px 16px;
+  gap: 5px;
 
   @media (max-width: 567px) {
     align-items: center;
@@ -91,9 +109,22 @@ export const Link = styled.a`
 `;
 
 export const Copyright = styled.div`
-  color: ${({ theme }) => theme.colors.description};
-  font-weight: 600;
+  color: #000000;
+  font-weight: 700;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
 `;
+
+export const CopyrightDetails = styled.div`
+  color: ${({ theme }) => theme.colors.description};
+  font-weight: 700;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  padding: 0 10%;
+`;
+
 
 export const StoreIcon = styled.a`
   align-items: center;
@@ -113,7 +144,7 @@ export const IconsWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 40px;
-
+  gap: 20px;
   @media (max-width: 799px) {
     > a {
       margin: 0 16px;
@@ -153,9 +184,12 @@ export const ContactWrapper = styled.div`
 `;
 
 export const Contact = styled.div`
-  margin-bottom: 36px;
-
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   @media (max-width: 799px) {
     width: 100%;
   }
 `;
+
+
