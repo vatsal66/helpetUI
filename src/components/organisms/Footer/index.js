@@ -40,7 +40,9 @@ const Footer = () => {
   };
 
   return (
-    <div id="footer">
+    <div id="footer" style={{
+      background: '#ffffff'
+    }}>
       <ContentWrapper>
         <Content>
           <StyledSocialLogo />
@@ -118,7 +120,7 @@ const Footer = () => {
                 </div>
               </Contact>
               <Contact>
-              <p style={{
+                <p style={{
                   color: '#000000',
                   fontSize: '20px',
                   fontWeight: 700,

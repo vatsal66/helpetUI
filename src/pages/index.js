@@ -57,7 +57,7 @@ const IndexPage = () => {
           />
           <meta name="twitter:image" content="/assets/images/og-image.png" />
         </Helmet>
-        <Navbar onChangeLanguage={(lang) => setLocale(lang)}/>
+        <Navbar onChangeLanguage={(lang) => setLocale(lang)} />
         <Header onChangeLanguage={(lang) => setLocale(lang)} />
         <Main />
         {/* <Carousel /> */}
