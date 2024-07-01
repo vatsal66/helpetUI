@@ -6,7 +6,7 @@ import theme from '@styles/theme';
 import GlobalStyle from '@styles/GlobalStyle';
 import useLanguage from '@hooks/useLanguage';
 import { Footer, Navbar } from '@components/organisms';
-import { CartPetId, HeaderPetId } from '@components/petId';
+import { CartPetId, HeaderPetId, Carousel } from '@components/petId';
 
 const index3 = () => {
   const [messages, { locale, setLocale }] = useLanguage();
@@ -21,6 +21,7 @@ const index3 = () => {
 				<Navbar />
 				<HeaderPetId />
 				<CartPetId />
+				<Carousel />
 				<Footer />
 			</IntlProvider>
 		</ThemeProvider>

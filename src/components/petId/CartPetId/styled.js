@@ -1,4 +1,4 @@
-import styled, { css, keyframes } from 'styled-components';
+import styled from 'styled-components';
 
 export const TitleContainer = styled.div`
   display: flex;
@@ -36,4 +36,68 @@ export const Subtitle = styled.h2`
   @media (max-width: 799px) {
     font-size: 16px;
   }
+`;
+
+export const CardPetId = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  width: 100%;
+  height: 215px;
+`;
+
+export const CardDetailsLeft = styled.div`
+  background-color: #A00483;
+  border-radius: 65px;  
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: space-around;
+  padding: 30px 50px;
+  cursor: pointer;
+`;
+
+export const CardDetailsRight = styled.div`
+  background-color: #F76908;
+  border-radius: 65px;
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: space-around;
+  padding: 30px 50px;
+  cursor: pointer;
+`;
+
+export const CardDetailsLeftActive = styled.div`
+  background-color: #A00483;
+  border-radius: 65px;  
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: flex-start;
+  padding: 30px 50px;
+  cursor: pointer;
+  `;
+  
+  export const CardDetailsRightActive = styled.div`
+  background-color: #F76908;
+  border-radius: 65px;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: flex-start;
+  padding: 30px 50px;
+  cursor: pointer;
+`;
+
+export const HeaderText = styled.div`
+  font-size: 28px;
+  color: #ffffff;
+  font-weight: bold;
+`;
+
+export const HeaderSubText = styled.div`
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: medium;
 `;
