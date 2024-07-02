@@ -11,25 +11,29 @@ export const CarouselCard = styled.div`
   height: 518px;
 `;
 
-export const CarouselCardLeft = styled.div`
-  width: 7%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
 
 export const CarouselCardCenter = styled.div`
   width: 86%;
   display: flex;
-  align-items: center;
   justify-content: center;
+  margin: 0 auto;
+  height: 100%;
 `;
 
 export const InsideLeft = styled.div`
   display: flex;
   flex-direction: column;
   width: 60%;
-  gap: 40px
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: space-around;
+`;
+
+export const InsideLeftTop = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 80px;
 `;
 
 export const UpperSide = styled.div`
@@ -46,30 +50,25 @@ export const UpperSide = styled.div`
 export const CenterSide = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 20px;
 `;
 
 export const HeaderText = styled.div`
   color: #C17400;
-  font-side: 28px;
-  font-weight: extra-bold;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 35px;
 `;
   
   export const HeaderSubText = styled.div`
-  color: #C17400;
-`;
-
-export const BottomSide = styled.div`
-  display: flex;
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
 `;
 
 export const InsideRight = styled.div`
   display: flex;
   width: 40%;
-`;
-
-export const CarouselCardRight = styled.div`
-  width: 7%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
 `;

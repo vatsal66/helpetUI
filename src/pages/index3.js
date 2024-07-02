@@ -7,6 +7,7 @@ import GlobalStyle from '@styles/GlobalStyle';
 import useLanguage from '@hooks/useLanguage';
 import { Footer, Navbar } from '@components/organisms';
 import { CartPetId, HeaderPetId, Carousel } from '@components/petId';
+import CardAfterCarousel from '@components/petId/CardAfterCarousel';
 
 const index3 = () => {
   const [messages, { locale, setLocale }] = useLanguage();
@@ -22,6 +23,7 @@ const index3 = () => {
 				<HeaderPetId />
 				<CartPetId />
 				<Carousel />
+				<CardAfterCarousel />
 				<Footer />
 			</IntlProvider>
 		</ThemeProvider>
