@@ -11,6 +11,26 @@ export const CarouselCard = styled.div`
   height: 518px;
 `;
 
+export const Title = styled.h1`
+  color: #000000;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 38.19px;
+
+  @media (max-width: 799px) {
+    font-size: 26px;
+  }
+`;
+export const Subtitle = styled.h2`
+  color: #343434;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 27px;
+  padding: 0 125px 0 0;
+  @media (max-width: 799px) {
+    font-size: 16px;
+  }
+`;
 
 export const CarouselCardCenter = styled.div`
   width: 86%;

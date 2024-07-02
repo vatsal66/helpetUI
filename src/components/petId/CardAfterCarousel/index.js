@@ -37,12 +37,19 @@ const CardAfterCarousel = () => {
   return (
     <div style={{
       width: '80%',
-      margin: '0 auto'
+      margin: '0 auto',
+      paddingTop: '50px'
     }}>
       <TitleContainer>
-        <Title>Vantaggi</Title>
-        <Subtitle>Quaerat sodales sapien euismod purus blandit a purus ipsum primis sodales sapien euismod purus blandit a purus sapien euismod purus blandit a purus blandit a purus sapien euismod purus blandit
-          a purus</Subtitle>
+        <div style={{
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '10px'
+        }}>
+          <Title>Vantaggi</Title>
+          <Subtitle>Quaerat sodales sapien euismod purus blandit a purus ipsum primis sodales sapien euismod purus blandit a purus sapien euismod purus blandit a purus blandit a purus sapien euismod purus blandit
+            a purus</Subtitle>
+        </div>
         <CardPetId>
           {firstCardActive ? (
             <CardDetailsLeftActive onMouseEnter={handleMouseEnter}

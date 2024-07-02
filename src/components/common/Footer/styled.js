@@ -7,9 +7,10 @@ import Play from '@assets/icons/play_icon.svg';
 
 export const ContentWrapper = styled.div`
   max-width: 1300px;
+  padding-top: 40px;
 
   @media (min-width: 800px) {
-    margin: 50px auto 0;
+    margin: 0 auto 0;
   }
 
   @media (max-width: 799px) {

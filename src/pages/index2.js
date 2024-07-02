@@ -5,7 +5,7 @@ import { IntlProvider } from 'react-intl';
 import theme from '@styles/theme';
 import GlobalStyle from '@styles/GlobalStyle';
 import useLanguage from '@hooks/useLanguage';
-import { Footer, Navbar } from '@components/organisms';
+import { Footer, Navbar } from '@components/common';
 import { CardLibretto, HeaderLibretto } from '@components/LibrettoSanitario';
 
 const index2 = () => {

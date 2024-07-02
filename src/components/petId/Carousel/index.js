@@ -15,6 +15,8 @@ import {
   InsideLeft,
   InsideLeftTop,
   InsideRight,
+  Subtitle,
+  Title,
   UpperSide
 } from './styled'
 import Slider from "react-slick";
@@ -61,70 +63,96 @@ const Carousel = () => {
   return (
     <div style={{
       display: 'flex',
+      flexDirection: 'column',
+      gap: '35px'
     }}>
-        <img 
-          src={LeftRoad} 
-          style={{
-            width: '10%',
-            height: 'fit-content',
-            margin: 0,
-            position: 'relative',
-            left: '5px',
-            top: '252px',
-            zIndex: 1
-          }} />
-      <div 
-        className="slider-container"
-        style={{
+      <div style={{
+        display: 'flex',
+        width: '100%',
+        gap: '10px',
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingTop: '85px'
+      }}>
+        <div style={{
+          display: 'flex',
+          flexDirection: 'column',
           width: '80%',
+          gap: '10px'
         }}>
-        <Slider 
-         {...settings}
-          nextArrow={<Arrow type="next" />}
-          prevArrow={<Arrow type="prev" />}
-        >
-          {dataJson?.map((item, index) => {
-            return (
-              <CarouselCard>
-                <CarouselCardCenter>
-                  <InsideLeft>
-                    <InsideLeftTop>
-                      <UpperSide>
-                        {index + 1}
-                      </UpperSide>
-                      <CenterSide>
-                        <HeaderText>
-                          {item?.title}
-                        </HeaderText>
-                        <HeaderSubText>
-                          {item?.subTitle}
-                        </HeaderSubText>
-                      </CenterSide>
-                    </InsideLeftTop>
-                  </InsideLeft>
-                  <InsideRight>
-                    <img src={item?.Image} style={{
-                      height: 'auto',
-                      width: '100%'
-                    }} />
-                  </InsideRight>
-                </CarouselCardCenter>
-              </CarouselCard>
-            )
-          })}
-
-        </Slider>
+        <Title>Cos’è il Pet ID</Title>
+        <Subtitle>Quaerat sodales sapien euismod purus blandit a purus ipsum primis sodales sapien euismod purus blandit a purus sapien euismod purus blandit a purus blandit a purus sapien euismod purus blandit
+          a purus </Subtitle>
+        </div>
       </div>
-        <img src={RightRoad} style={{
-            width: '10%',
-            height: 'fit-content',
-            margin: 0,
-            position: 'relative',
-            right: '5px',
-            top: '252px',
-            zIndex: 1
-          }} />
+      <div style={{
+        display: 'flex',
+      }}>
+          <img 
+            src={LeftRoad} 
+            style={{
+              width: '10%',
+              height: 'fit-content',
+              margin: 0,
+              position: 'relative',
+              left: '5px',
+              top: '252px',
+              zIndex: 1
+            }} />
+        <div 
+          className="slider-container"
+          style={{
+            width: '80%',
+          }}>
+          <Slider 
+          {...settings}
+            nextArrow={<Arrow type="next" />}
+            prevArrow={<Arrow type="prev" />}
+          >
+            {dataJson?.map((item, index) => {
+              return (
+                <CarouselCard>
+                  <CarouselCardCenter>
+                    <InsideLeft>
+                      <InsideLeftTop>
+                        <UpperSide>
+                          {index + 1}
+                        </UpperSide>
+                        <CenterSide>
+                          <HeaderText>
+                            {item?.title}
+                          </HeaderText>
+                          <HeaderSubText>
+                            {item?.subTitle}
+                          </HeaderSubText>
+                        </CenterSide>
+                      </InsideLeftTop>
+                    </InsideLeft>
+                    <InsideRight>
+                      <img src={item?.Image} style={{
+                        height: 'auto',
+                        width: '100%'
+                      }} />
+                    </InsideRight>
+                  </CarouselCardCenter>
+                </CarouselCard>
+              )
+            })}
+
+          </Slider>
+        </div>
+          <img src={RightRoad} style={{
+              width: '10%',
+              height: 'fit-content',
+              margin: 0,
+              position: 'relative',
+              right: '5px',
+              top: '252px',
+              zIndex: 1
+            }} />
+      </div>
     </div>
+
   )
 }
 

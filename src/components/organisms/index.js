@@ -5,6 +5,4 @@ export { default as Benefits } from './Benefits';
 export { default as FormSection } from './FormSection';
 export { default as Newsletter } from './Newsletter';
 export { default as CookiesWarning } from './CookiesWarning';
-export { default as Footer } from './Footer';
 export { default as Main } from './Main';
-export { default as Navbar } from './Navbar';

@@ -5,6 +5,7 @@ export const TitleContainer = styled.div`
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
+  gap: 35px;
 
   @media (max-width: 799px) {
     padding: 0 16px;

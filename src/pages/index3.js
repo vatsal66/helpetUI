@@ -5,9 +5,10 @@ import { IntlProvider } from 'react-intl';
 import theme from '@styles/theme';
 import GlobalStyle from '@styles/GlobalStyle';
 import useLanguage from '@hooks/useLanguage';
-import { Footer, Navbar } from '@components/organisms';
+import { Footer, Navbar } from '@components/common';
 import { CartPetId, HeaderPetId, Carousel } from '@components/petId';
 import CardAfterCarousel from '@components/petId/CardAfterCarousel';
+import Download from '@components/common/Download';
 
 const index3 = () => {
   const [messages, { locale, setLocale }] = useLanguage();
@@ -24,6 +25,11 @@ const index3 = () => {
 				<CartPetId />
 				<Carousel />
 				<CardAfterCarousel />
+				<div style={{
+					padding: '100px 0'
+				}}>
+					<Download />
+				</div>
 				<Footer />
 			</IntlProvider>
 		</ThemeProvider>

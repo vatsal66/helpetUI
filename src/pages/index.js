@@ -11,10 +11,13 @@ import {
   Benefits,
   Newsletter,
   CookiesWarning,
-  Footer,
   Main,
-  Navbar,
 } from '@components/organisms';
+
+import {
+  Footer,
+  Navbar,
+} from '@components/common';
 
 import useLanguage from '@hooks/useLanguage';
 
