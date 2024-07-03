@@ -5,8 +5,8 @@ import { IntlProvider } from 'react-intl';
 import theme from '@styles/theme';
 import GlobalStyle from '@styles/GlobalStyle';
 import useLanguage from '@hooks/useLanguage';
-import { Footer, Navbar } from '@components/organisms';
-import NavbarHome from '@components/organisms/NavbarHome';
+import { Footer } from '@components/common';
+import { CardLibretto, HeaderLibretto } from '@components/LibrettoSanitario';
 
 const homeBlog = () => {
   const [messages, { locale, setLocale }] = useLanguage();
@@ -18,8 +18,8 @@ const homeBlog = () => {
 		<ThemeProvider theme={theme}>
 			<GlobalStyle />
 			<IntlProvider defaultLocale="it" locale={locale} messages={messages}>
-				<NavbarHome />
-                Start
+			
+				<HeaderLibretto />
 				<Footer />
 			</IntlProvider>
 		</ThemeProvider>
