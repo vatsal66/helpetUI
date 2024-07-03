@@ -6,7 +6,7 @@ import theme from '@styles/theme';
 import GlobalStyle from '@styles/GlobalStyle';
 import useLanguage from '@hooks/useLanguage';
 import { Footer } from '@components/common';
-import { FirstHomeBlog } from '@components/HomeBlog';
+import { FirstHomeBlog } from '@components/homeBlog';
 
 const homeBlog = () => {
   const [messages, { locale, setLocale }] = useLanguage();

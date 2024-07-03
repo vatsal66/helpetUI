@@ -1,12 +1,12 @@
 import React from 'react'
-import { Container, Grid, StyledContentSection } from './styled'
+import { Container, StartComponents, StyledContentSection } from './styled'
 
 const HeaderPetId = () => {
   return (
     <div>
       <StyledContentSection>
         <Container>
-          <Grid>
+          <StartComponents>
             {/* 1 */}
             <Col-span-1>
               <h5>Categorie</h5>
@@ -66,7 +66,7 @@ const HeaderPetId = () => {
               <h2>Cintura di sicurezza per cani:Che cos'e cosa dica la legge?</h2>
               <p>Stai per intraprendere un viaggio in auto con il tuo pelosetto? Se non puoi farlo viaggiare nel vano bagagliaio, allora è bene assicurarti di utilizzare una cintura di sicurezza per cani in modo da ancorarlo ai sedili posteriori.</p>
             </Col-span-3>
-          </Grid>
+          </StartComponents>
         </Container>
 
       </StyledContentSection>

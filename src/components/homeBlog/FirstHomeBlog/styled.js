@@ -9,24 +9,12 @@ export const StyledContentSection = styled.div`
   margin-top: 75px;
 `;
 
-
-export const Title = styled.h1`
-  color: #064641;
-  font-size: 32px;
-  font-weight: 800;
-  line-height: 43.65px;
-
-  @media (max-width: 799px) {
-    font-size: 26px;
-  }
-`;
-
 export const Container = styled.div`
  max-width: 100%;
  margin-left: 75px;
  margin-right: 75px;
  `;
-export const Grid = styled.div`
+export const StartComponents = styled.div`
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
 
