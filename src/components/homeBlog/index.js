@@ -1,1 +1,1 @@
-export { default as FirstBlog } from './FirstBlog';
+export { default as FirstHomeBlog } from './FirstHomeBlog';

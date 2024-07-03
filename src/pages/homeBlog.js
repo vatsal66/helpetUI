@@ -6,7 +6,7 @@ import theme from '@styles/theme';
 import GlobalStyle from '@styles/GlobalStyle';
 import useLanguage from '@hooks/useLanguage';
 import { Footer } from '@components/common';
-import { CardLibretto, HeaderLibretto } from '@components/LibrettoSanitario';
+import { FirstHomeBlog } from '@components/HomeBlog';
 
 const homeBlog = () => {
   const [messages, { locale, setLocale }] = useLanguage();
@@ -19,7 +19,7 @@ const homeBlog = () => {
 			<GlobalStyle />
 			<IntlProvider defaultLocale="it" locale={locale} messages={messages}>
 			
-				<HeaderLibretto />
+				<FirstHomeBlog />
 				<Footer />
 			</IntlProvider>
 		</ThemeProvider>
