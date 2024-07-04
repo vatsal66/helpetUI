@@ -3,8 +3,8 @@ import styled from 'styled-components';
 export const CarouselCard = styled.div`
   display: flex;
   flex-direction: row;
-  background-color: #FCC80F;
-  border: 5px solid #C17400;
+  background-color: #FF8310;
+  border: 5px solid #AC4800;
   border-radius: 65px;  
   width: 100%;
   padding: 0 50px;
@@ -74,7 +74,7 @@ export const CenterSide = styled.div`
 `;
 
 export const HeaderText = styled.div`
-  color: #C17400;
+  color: #AC4800;
   font-size: 28px;
   font-weight: 800;
   line-height: 35px;

@@ -79,8 +79,8 @@ export const CardDetailsLeftActive = styled.div`
   padding: 30px 50px;
   cursor: pointer;
   `;
-  
-  export const CardDetailsRightActive = styled.div`
+
+export const CardDetailsRightActive = styled.div`
   background-color: #F76908;
   border-radius: 65px;
   display: flex;

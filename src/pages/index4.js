@@ -5,10 +5,13 @@ import { IntlProvider } from 'react-intl';
 import theme from '@styles/theme';
 import GlobalStyle from '@styles/GlobalStyle';
 import useLanguage from '@hooks/useLanguage';
-import { Footer } from '@components/common';
-import { FirstHomeBlog } from '@components/homeBlog';
 
-const homeBlog = () => {
+import { Carousel, DropDownValue } from '@components/nearMe';
+import { Footer, Navbar } from '@components/common';
+import { HeaderPetId } from '@components/petId';
+import PlayStore from '@components/nearMe/PlayStore';
+
+const index4 = () => {
 	const [messages, { locale, setLocale }] = useLanguage();
 
 	return (
@@ -18,8 +21,15 @@ const homeBlog = () => {
 			<ThemeProvider theme={theme}>
 				<GlobalStyle />
 				<IntlProvider defaultLocale="it" locale={locale} messages={messages}>
-
-					<FirstHomeBlog />
+					<Navbar />
+					<HeaderPetId />
+					<DropDownValue />
+					<Carousel />
+					<div style={{
+						padding: '100px 0'
+					}}>
+						<PlayStore />
+					</div>
 					<Footer />
 				</IntlProvider>
 			</ThemeProvider>
@@ -27,4 +37,4 @@ const homeBlog = () => {
 	)
 }
 
-export default homeBlog
+export default index4

@@ -1,11 +1,12 @@
 import React from 'react'
 import ArrowLeftSvg from '@assets/images/PetId/arrowLeft.svg'
 import ArrowRighttSvg from '@assets/images/PetId/arrowRight.svg'
-import CarouselImage1 from '@assets/images/PetId/carosal1.png'
-import CarouselImage2 from '@assets/images/PetId/carosal2.png'
-import CarouselImage3 from '@assets/images/PetId/carosal3.png'
+import CarouselImage1 from '@assets/images/NearMe/carosal1.png'
+import CarouselImage2 from '@assets/images/NearMe/carosal2.png'
+import CarouselImage3 from '@assets/images/NearMe/carosal3.png'
+import CarouselImage4 from '@assets/images/NearMe/carosal4.png'
 import LeftRoad from '@assets/images/PetId/LeftRoadCarousel.png'
-import RightRoad from '@assets/images/PetId/RightRoadCarousel.png'
+
 import {
   CarouselCard,
   CarouselCardCenter,
@@ -34,17 +35,21 @@ function Arrow(props) {
 }
 
 const dataJson = [{
-  title: 'Apri la sezione Pet ID in Helpet App',
-  subTitle: 'Nella sezione dedicata al Pet ID in basso a sinistra nella barra di navigazione avrai accesso a tutta la documentazione relativa al tuo amico a quattro zampe.',
+  title: 'Apri la Mappa nell’app di Helpet',
+  subTitle: 'Quaerat sodales sapien euismod purus blandit a purus ipsum primis in cubilia laoreet, sodales sapien euismod purus blandit a purus ipsum primis in cubilia laoreet',
   Image: CarouselImage1,
 }, {
-  title: 'Aggiungi il codice del Microchip',
-  subTitle: 'Nella sezione dedicata al Pet ID in basso a sinistra nella barra di navigazione avrai accesso a tutta la documentazione relativa al tuo amico a quattro zampe.',
+  title: 'Cerca nella Mappa il nome del servizio desiderato',
+  subTitle: 'Quaerat sodales sapien euismod purus blandit a purus ipsum primis in cubilia laoreet, sodales sapien euismod purus blandit a purus ipsum primis in cubilia laoreet',
   Image: CarouselImage2,
 }, {
-  title: 'Aggiungi il passaporto del tuo pet',
+  title: 'Apri la scheda descrittiva e prenota il servizio più adatto alle tue esigenze',
   subTitle: 'Quaerat sodales sapien euismod purus blandit a purus ipsum primis in cubilia laoreet, sodales sapien euismod purus blandit a purus ipsum primis in cubilia laoreet',
   Image: CarouselImage3,
+}, {
+  title: 'Compila i dati della prenotazione e ricevi la conferma direttamente in App',
+  subTitle: 'Quaerat sodales sapien euismod purus blandit a purus ipsum primis in cubilia laoreet, sodales sapien euismod purus blandit a purus ipsum primis in cubilia laoreet',
+  Image: CarouselImage4,
 }]
 
 const Carousel = () => {
@@ -79,7 +84,7 @@ const Carousel = () => {
           width: '80%',
           gap: '10px'
         }}>
-          <Title>Cos’è il Pet ID</Title>
+          <Title>Come prenotare un servizio in App</Title>
           <Subtitle>Quaerat sodales sapien euismod purus blandit a purus ipsum primis sodales sapien euismod purus blandit a purus sapien euismod purus blandit a purus blandit a purus sapien euismod purus blandit
             a purus </Subtitle>
         </div>
@@ -140,13 +145,14 @@ const Carousel = () => {
 
           </Slider>
         </div>
-        <img src={RightRoad} style={{
+        <img src={LeftRoad} style={{
           width: '10%',
           height: 'fit-content',
           margin: 0,
           position: 'relative',
           right: '5px',
           top: '252px',
+          transform: 'rotate(180deg)',
         }} />
       </div>
       <style>
@@ -179,7 +185,7 @@ const Carousel = () => {
           }
 
           .slick-dots li.slick-active button {
-            background-color: #CC7E09!important;
+            background-color: #AC4800!important;
             width: 25px;
             border-radius: 30px;
           }
