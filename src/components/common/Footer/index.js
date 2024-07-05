@@ -41,7 +41,9 @@ const Footer = () => {
 
   return (
     <div id="footer" style={{
-      background: '#ffffff'
+      background: '#ffffff',
+      position: 'relative',
+      zIndex: 2
     }}>
       <ContentWrapper>
         <Content>

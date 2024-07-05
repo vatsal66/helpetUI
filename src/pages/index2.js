@@ -6,7 +6,12 @@ import theme from '@styles/theme';
 import GlobalStyle from '@styles/GlobalStyle';
 import useLanguage from '@hooks/useLanguage';
 import { Footer, Navbar } from '@components/common';
-import { CardLibretto, HeaderLibretto } from '@components/LibrettoSanitario';
+import { 
+		CardLibretto,
+		CarouselLibretto,
+		HeaderLibretto,
+		PlayStore
+	} from '@components/LibrettoSanitario';
 
 const index2 = () => {
 	const [messages, { locale, setLocale }] = useLanguage();
@@ -20,7 +25,9 @@ const index2 = () => {
 				<IntlProvider defaultLocale="it" locale={locale} messages={messages}>
 					<Navbar />
 					<HeaderLibretto />
+					<CarouselLibretto />
 					<CardLibretto />
+					<PlayStore />
 					<Footer />
 				</IntlProvider>
 			</ThemeProvider>
