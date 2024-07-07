@@ -102,3 +102,9 @@ export const HeaderSubText = styled.div`
   color: #ffffff;
   font-weight: medium;
 `;
+
+export const SmallGraceStyle = {
+  position: 'absolute',
+  top: '-21px',
+  left: '35%',
+}

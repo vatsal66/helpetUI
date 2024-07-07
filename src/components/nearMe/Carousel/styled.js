@@ -92,3 +92,15 @@ export const InsideRight = styled.div`
   width: 40%;
   align-items: flex-end;
 `;
+
+export const RightRoadStyle = {
+  position: 'absolute',
+  right: 0,
+  bottom: '-300px'
+}
+
+export const TreeStyle = {
+  position: 'absolute',
+  right: '2%',
+  top: '40px',
+}

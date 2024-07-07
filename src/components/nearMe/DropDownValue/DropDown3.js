@@ -3,7 +3,7 @@ import CloseIcon from '@assets/images/NearMe/close.svg'
 import OpenIcon from '@assets/images/NearMe/open.svg'
 import { DropDownContainer, DropDownList, InputBox, InputMenu, ListData } from "./styled";
 
-const DropDown3 = ({ suggestionsList }) => {
+const DropDown2 = ({ suggestionsList }) => {
   const [keyword, setKeyword] = useState("");
   const [openState, setOpenState] = useState(false)
 
@@ -22,7 +22,7 @@ const DropDown3 = ({ suggestionsList }) => {
         <input
           value={keyword}
           onChange={getSearchTerm}
-          placeholder="Gatto"
+          placeholder="Rieti"
           className="custom-placeholder"
           style={{
             backgroundColor: 'unset',
@@ -56,4 +56,4 @@ const DropDown3 = ({ suggestionsList }) => {
   );
 };
 
-export default DropDown3;
+export default DropDown2;

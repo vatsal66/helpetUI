@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-import { Subtitle, Title, TitleContainer, CardPetId, CardDetailsLeft, CardDetailsRight, CardDetailsLeftActive, CardDetailsRightActive, HeaderText, HeaderSubText } from './styled'
+import { Subtitle, Title, TitleContainer, CardPetId, CardDetailsLeft, CardDetailsRight, CardDetailsLeftActive, CardDetailsRightActive, HeaderText, HeaderSubText, SmallGraceStyle } from './styled'
 import ScannerIcon from '@assets/images/PetId/microchip.svg'
 import PlaneIcon from '@assets/images/PetId/union.svg'
+import SmallGrace from '@assets/images/common/smallGrace.svg';
 
 const CartPetId = () => {
   const [firstCardActive, setFirstCardActive] = useState(false);
@@ -33,8 +34,10 @@ const CartPetId = () => {
         <div style={{
           display: 'flex',
           flexDirection: 'column',
-          gap: '10px'
+          gap: '10px',
+          position: 'relative',
         }}>
+          <SmallGrace style={SmallGraceStyle} />
           <Title>Cos’è il Pet ID</Title>
           <Subtitle>Quaerat sodales sapien euismod purus blandit a purus ipsum primis sodales sapien euismod purus blandit a purus sapien euismod purus blandit a purus blandit a purus sapien euismod purus blandit
             a purus </Subtitle>

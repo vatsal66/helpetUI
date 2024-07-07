@@ -1,7 +1,10 @@
 import React from 'react'
-import { Thirdtitle, Title } from './styled'
+import { leftImageStyle, RightRoadStyle, SmallGraceStyle, Thirdtitle, Title } from './styled'
 import { StoreBadges } from '@components/molecules'
 import { useIntl } from 'react-intl';
+
+import LeftImage from '@assets/images/NearMe/LeftImagePlayStore.svg'
+import SmallGrace from '@assets/images/common/smallGrace.svg';
 
 const PlayStore = () => {
   const { messages, locale } = useIntl();
@@ -9,15 +12,17 @@ const PlayStore = () => {
   return (
     <div style={{
       width: '80%',
-      margin: '0 auto'
+      margin: '0 auto',
+      position: 'relative',
     }}>
       <Thirdtitle>
         <Title>Per usufruire anche tu</Title>
-        <Title>del servizio di Libretto sanitario scarica l’app </Title>
+        <Title>del servizio Near me scarica l’app </Title>
         {StoreBadges[locale]()}
       </Thirdtitle>
+      <LeftImage style={leftImageStyle} />
+      <SmallGrace style={SmallGraceStyle} />
     </div>
-
   )
 }
 

@@ -6,10 +6,8 @@ import theme from '@styles/theme';
 import GlobalStyle from '@styles/GlobalStyle';
 import useLanguage from '@hooks/useLanguage';
 
-import { Carousel, DropDownValue } from '@components/nearMe';
+import { Carousel, DropDownValue, HeaderPetId, PlayStore } from '@components/nearMe';
 import { Footer, Navbar } from '@components/common';
-import { HeaderPetId } from '@components/petId';
-import PlayStore from '@components/nearMe/PlayStore';
 
 const index4 = () => {
 	const [messages, { locale, setLocale }] = useLanguage();
@@ -25,11 +23,7 @@ const index4 = () => {
 					<HeaderPetId />
 					<DropDownValue />
 					<Carousel />
-					<div style={{
-						padding: '100px 0'
-					}}>
-						<PlayStore />
-					</div>
+					<PlayStore />
 					<Footer />
 				</IntlProvider>
 			</ThemeProvider>

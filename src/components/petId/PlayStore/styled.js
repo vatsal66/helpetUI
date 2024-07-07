@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Thirdtitle = styled.h2`
   text-align: center;
-  margin: 260px 0 220px 0;
+  margin: 280px 0 220px 0;
 `
 
 export const Title = styled.h1`
@@ -16,13 +16,26 @@ export const Title = styled.h1`
   }
 `;
 
-export const leftImageStyle = {
+export const LeftTruck = {
+  left: '-13%',
   position: 'absolute',
-  top: '-145px',
+  top: 0,
+};
+
+export const RightTruck = {
+  right: '-7%',
+  position: 'absolute',
+  top: '15px',
+}
+
+export const TreeStyle = {
+  position: 'absolute',
+  top: '25px',
+  left: '8%',
 }
 
 export const SmallGraceStyle = {
   position: 'absolute',
-  bottom: '-100px',
-  right: '20%',
+  top: '-180px',
+  right: '15%',
 }

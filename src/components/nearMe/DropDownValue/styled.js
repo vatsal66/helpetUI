@@ -118,3 +118,14 @@ export const SubmitButton = styled.button`
   justify-content: center;
   padding: 23px 0;
 `
+
+export const SmallGraceStyle = {
+  position: 'absolute',
+  right: '10%'
+}
+
+export const SmallGrace2Style = {
+  position: 'absolute',
+  left: '-8%',
+  bottom: '-50px'
+}

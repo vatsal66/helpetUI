@@ -1,8 +1,18 @@
 import React, { useState } from 'react'
-import { Subtitle, Title, TitleContainer, CardPetId, CardDetailsLeft, CardDetailsRight, CardDetailsLeftActive, CardDetailsRightActive, HeaderText, HeaderSubText, CardDetailsThirdActive, CardDetailsThird } from './styled'
+import { 
+  Subtitle, Title, TitleContainer,
+  CardPetId, CardDetailsLeft, CardDetailsRight,
+  CardDetailsLeftActive, CardDetailsRightActive,
+  HeaderText, HeaderSubText,
+  CardDetailsThirdActive, CardDetailsThird,
+  SmallGraceStyle, TreeStyle
+} from './styled'
+
 import Card1Icon from '@assets/images/PetId/Card1Icon.svg'
 import Card2Icon from '@assets/images/PetId/Card2Icon.svg'
 import Card3Icon from '@assets/images/PetId/Card3Icon.svg'
+import SmallGrace from '@assets/images/common/smallGrace.svg';
+import Tree from '@assets/images/common/Tree.svg';
 
 const CardAfterCarousel = () => {
   const [firstCardActive, setFirstCardActive] = useState(false);
@@ -38,20 +48,23 @@ const CardAfterCarousel = () => {
     <div style={{
       width: '80%',
       margin: '0 auto',
-      paddingTop: '50px'
+      paddingTop: '75px'
     }}>
       <TitleContainer>
         <div style={{
           display: 'flex',
           flexDirection: 'column',
-          gap: '10px'
+          gap: '10px',
+          position: 'relative'
         }}>
+          <Tree style={TreeStyle} />
+          <SmallGrace style={SmallGraceStyle} />
           <Title>Vantaggi</Title>
           <Subtitle>Quaerat sodales sapien euismod purus blandit a purus ipsum primis sodales sapien euismod purus blandit a purus sapien euismod purus blandit a purus blandit a purus sapien euismod purus blandit
             a purus</Subtitle>
         </div>
         <CardPetId>
-          {firstCardActive ? (
+          {!firstCardActive ? (
             <CardDetailsLeftActive onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}>
               <HeaderText>
@@ -71,7 +84,7 @@ const CardAfterCarousel = () => {
             </CardDetailsLeft>
           )}
 
-          {secondCardActive ? (
+          {!secondCardActive ? (
             <CardDetailsRightActive onMouseEnter={handleMouseEnterSecond}
               onMouseLeave={handleMouseLeaveSecond}>
               <HeaderText>
@@ -93,7 +106,7 @@ const CardAfterCarousel = () => {
             </CardDetailsRight>
           )}
 
-          {thirdCardActive
+          {!thirdCardActive
             ? (
               <CardDetailsThirdActive onMouseEnter={handleMouseEnterThird}
                 onMouseLeave={handleMouseLeaveThird}>

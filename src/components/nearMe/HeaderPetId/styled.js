@@ -107,7 +107,7 @@ export const StyledHeader = styled.header`
   position: relative;
   display: flex;
   justify-content: center;
-  background-image: url(../assets/images/mainImagePetId.svg);
+  background-image: url(../assets/images/NearMeHeaderBackground.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;

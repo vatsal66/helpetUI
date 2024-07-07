@@ -16,11 +16,16 @@ import {
   InsideLeft,
   InsideLeftTop,
   InsideRight,
+  RightRoadStyle,
   Subtitle,
   Title,
+  TreeStyle,
   UpperSide
 } from './styled'
 import Slider from "react-slick";
+
+import RightRoad from '@assets/images/NearMe/RightRoadPlayStore.svg'
+import ThreeTree from '@assets/images/common/LargeThreeTree.svg'
 
 function Arrow(props) {
   let className = props.type === "next" ? "nextArrow" : "prevArrow";
@@ -68,7 +73,8 @@ const Carousel = () => {
     <div style={{
       display: 'flex',
       flexDirection: 'column',
-      gap: '35px'
+      gap: '35px',
+      position: 'relative'
     }}>
       <div style={{
         display: 'flex',
@@ -200,6 +206,8 @@ const Carousel = () => {
           }
         `}
       </style>
+      <ThreeTree style={TreeStyle} />
+      <RightRoad style={RightRoadStyle} />
     </div>
 
   )

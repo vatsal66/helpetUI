@@ -15,11 +15,14 @@ import {
   InsideLeft,
   InsideLeftTop,
   InsideRight,
+  SmallGraceStyle,
   Subtitle,
   Title,
   UpperSide
 } from './styled'
 import Slider from "react-slick";
+
+import SmallGrace from '@assets/images/common/smallGrace.svg';
 
 function Arrow(props) {
   let className = props.type === "next" ? "nextArrow" : "prevArrow";
@@ -71,14 +74,16 @@ const Carousel = () => {
         gap: '10px',
         alignItems: 'center',
         justifyContent: 'center',
-        paddingTop: '85px'
+        paddingTop: '100px'
       }}>
         <div style={{
           display: 'flex',
           flexDirection: 'column',
           width: '80%',
-          gap: '10px'
+          gap: '10px',
+          position: 'relative',
         }}>
+          <SmallGrace style={SmallGraceStyle} />
           <Title>Cos’è il Pet ID</Title>
           <Subtitle>Quaerat sodales sapien euismod purus blandit a purus ipsum primis sodales sapien euismod purus blandit a purus sapien euismod purus blandit a purus blandit a purus sapien euismod purus blandit
             a purus </Subtitle>
