@@ -63,6 +63,7 @@ const IndexPage = () => {
         <Navbar onChangeLanguage={(lang) => setLocale(lang)} />
         <Header onChangeLanguage={(lang) => setLocale(lang)} />
         <Main />
+
         {/* <Carousel /> */}
         <CarouselNew />
         <Benefits />
