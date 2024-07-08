@@ -22,28 +22,62 @@ export const Subtitle = styled.h2`
 `;
 
 export const CardSection = styled.div`
-  disply: flex;
+  display: flex;
   flex-direction: column;
 `
 
 export const Card = styled.div`
-  disply: flex;
+  display: flex;
   flex-direction: column;
   border-radius: 45px;
   border: 5px solid #001A75;
   overflow: hidden;
+  background-color: #0017E5;
 `
 
 export const CardHeader = styled.div`
-  border-bottom: 5px solid #001A75;
-  background-color: #0017E5;
-`
-export const CardTitle = styled.h1`
+  padding: 22px 25px 22px 30px;
+  `
+  export const CardTitle = styled.h1`
   font-size: 24px;
   font-weight: 700;
   color: #ffffff;
-`  
-
+  `  
+  
 export const CardDetails = styled.div`
+  display: flex;
+  flex-direction: column;
   background-color: #ffffff;
+  padding: 15px 25px 22px 30px;
+  border-top: 5px solid #001A75;
+  gap: 5px;
+`
+
+export const CardDetailsTitle = styled.h1`
+  color: #343434;
+  font-size: 20px;
+  font-weight: 800;
+`
+
+export const CardDetailsDesc = styled.h2`
+  color: #343434;
+  font-size: 16px;
+  font-weight: 700;
+`
+
+export const CardRated = styled.div`
+  display: flex;
+  gap: 2px;
+`
+
+export const LocationDetailsText = styled.p`
+  color: #343434;
+  font-size: 14px;
+  font-weight: 600;
+`
+
+export const ClockDetailsText = styled.p`
+  color: #343434;
+  font-size: 14px;
+  font-weight: 600;
 `
