@@ -19,20 +19,20 @@ const index5 = () => {
 			<ThemeProvider theme={theme}>
 				<GlobalStyle />
 				<IntlProvider defaultLocale="it" locale={locale} messages={messages}>
-					{/* <Navbar />
+					<Navbar />
           <div style={{
             paddingTop: '200px'
           }}>
   					<DropDownValueNearMe />
-          </div> */}
+          </div>
 					<div>
 						<NearMeSelectionSection />
 					</div>
-					{/* <Footer /> */}
+					<Footer />
 				</IntlProvider>
 			</ThemeProvider>
 		</div>
 	)
 }
 
-export default index5
+export default index5		

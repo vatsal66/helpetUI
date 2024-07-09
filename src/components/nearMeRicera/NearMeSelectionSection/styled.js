@@ -37,20 +37,30 @@ export const Card = styled.div`
 
 export const CardHeader = styled.div`
   padding: 22px 25px 22px 30px;
-  `
-  export const CardTitle = styled.h1`
+`
+export const CardTitle = styled.h1`
   font-size: 24px;
   font-weight: 700;
   color: #ffffff;
-  `  
-  
+`  
 export const CardDetails = styled.div`
   display: flex;
-  flex-direction: column;
   background-color: #ffffff;
-  padding: 15px 25px 22px 30px;
+  width: 100%;
   border-top: 5px solid #001A75;
+`
+  
+export const CardDetailsLeft = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 15px 25px 22px 30px;
   gap: 5px;
+  width: 72%;
+`
+export const CardDetailsRight = styled.div`
+  display: flex;
+  width: 28%;
+  position: relative;
 `
 
 export const CardDetailsTitle = styled.h1`
@@ -81,3 +91,24 @@ export const ClockDetailsText = styled.p`
   font-size: 14px;
   font-weight: 600;
 `
+
+export const InlineCard = styled.p`
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 45px;
+`
+
+export const doctorStyle = {
+  position: 'absolute',
+  borderRadius: '50%',
+  border: '4px solid #001A75',
+  right: '10px',
+  bottom: '25px',
+}
+
+export const doctorBackgroundStyle = {
+  position: 'absolute',
+  borderRadius: '23px',
+  bottom: '50px',
+}
