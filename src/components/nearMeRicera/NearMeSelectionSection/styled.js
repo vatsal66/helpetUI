@@ -21,9 +21,38 @@ export const Subtitle = styled.h2`
   }
 `;
 
+export const FilterHeader = styled.p`
+  color: #000000;
+  font-size: 28px;
+  font-weight: 700;
+  margin-top: 28px;
+  `
+  
+export const FilterTitle = styled.p`
+  color: #000000;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 40px 0 20px 0;
+`
+
+export const FilterValue = styled.p`
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+`
+
+export const SliderHeader = styled.p`
+  color: #000000;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 30px 0 20px 0;
+`
+
 export const CardSection = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 30px;
 `
 
 export const Card = styled.div`
@@ -42,14 +71,14 @@ export const CardTitle = styled.h1`
   font-size: 24px;
   font-weight: 700;
   color: #ffffff;
-`  
+`
 export const CardDetails = styled.div`
   display: flex;
   background-color: #ffffff;
   width: 100%;
   border-top: 5px solid #001A75;
 `
-  
+
 export const CardDetailsLeft = styled.div`
   display: flex;
   flex-direction: column;
@@ -103,12 +132,40 @@ export const doctorStyle = {
   position: 'absolute',
   borderRadius: '50%',
   border: '4px solid #001A75',
-  right: '10px',
-  bottom: '25px',
+  right: '-10px',
+  bottom: '-15px',
 }
 
 export const doctorBackgroundStyle = {
-  position: 'absolute',
   borderRadius: '23px',
-  bottom: '50px',
+}
+
+export const PaginationText = styled.p`
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 45px;
+  font-weight: 700;
+`
+
+export const LeftTruck = {
+  position: 'absolute',
+  top: '75px',
+};
+
+export const RightTruck = {
+  right: '6%',
+  position: 'absolute',
+  bottom: '40%',
+}
+
+export const smallGraceStyle = {
+  right: '-5%',
+  position: 'absolute',
+  top: '-25px',
+}
+
+export const smallGraceStyleFilte = {
+  right: 0,
+  position: 'absolute',
+  top: '10px',
 }

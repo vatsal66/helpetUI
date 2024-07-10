@@ -1,10 +1,8 @@
 import React from 'react';
 import DropDown from './DropDown';
-import { Subtitle, Title, TitleContainer, SubmitButton, SmallGraceStyle, SmallGrace2Style } from './styled';
+import { Subtitle, Title, TitleContainer, SubmitButton } from './styled';
 import DropDown2 from './DropDown2';
 import DropDown3 from './DropDown3';
-
-import SmallGrace from '@assets/images/common/smallGrace.svg';
 
 const List1 = [
   { id: 1, suggestion: "Dentista veterinario" },
@@ -31,7 +29,6 @@ const DropDownValueNearMe = () => {
       display: 'flex',
       width: '80%',
       margin: '0 auto',
-      position: 'relative'
     }}>
       <TitleContainer>
         <div style={{
@@ -65,8 +62,6 @@ const DropDownValueNearMe = () => {
           </div>
         </div>
       </TitleContainer>
-      <SmallGrace style={SmallGraceStyle} />
-      <SmallGrace style={SmallGrace2Style} />
     </div>
   );
 }
