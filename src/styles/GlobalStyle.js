@@ -8,9 +8,6 @@ const GlobalStyle = createGlobalStyle`
     outline: 0;
   }
 
-  html {
-    overflow-x: hidden;
-  }
 
   html,
   body,
@@ -183,3 +180,8 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 export default GlobalStyle;
+
+
+  // html {
+  //   overflow-x: hidden;
+  // }

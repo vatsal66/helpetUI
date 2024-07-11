@@ -29,6 +29,7 @@ const DropDownValueNearMe = () => {
       display: 'flex',
       width: '80%',
       margin: '0 auto',
+      paddingTop: '200px'
     }}>
       <TitleContainer>
         <div style={{

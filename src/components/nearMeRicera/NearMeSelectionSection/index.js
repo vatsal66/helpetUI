@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
   Card,
   CardDetailsLeft, CardDetailsDesc,
@@ -58,8 +58,11 @@ import RightImage from '@assets/images/PetId/PetIdRight.svg'
 import SmallGrace from '@assets/images/common/smallGrace.svg';
 
 import RangeSlider from '../RangeSlider';
+import NearMeDialog from '../NearMeDialog';
 
 const NearMeSelectionSection = () => {
+
+  const [mapDialog, setMapDialog] = useState(false);
 
   const CardData = [{
     cardTitle: 'Clinica Polivet',
@@ -180,204 +183,212 @@ const NearMeSelectionSection = () => {
     titleSvg: <TaxiDog />,
     borderColor: '#CC7E09',
     backgroundColor: '#FCC80F',
-  }]
+  }];
+
+  const handleDialogOpen = () => {
+    setMapDialog(true);
+  }
 
   return (
-    <div style={{
-      display: 'flex',
-      flexDirection: 'column',
-    }}>
+    <>
       <div style={{
-        width: '80%',
-        margin: '80px auto 0 auto',
         display: 'flex',
-        gap: '70px',
-        position: 'relative'
-      }}>
-        <div style={{
-          width: '40%',
-          display: 'flex',
-          flexDirection: 'column'
-        }}>
-          <div>
-            <img src={SmallMap} alt="" />
-          </div>
-          <div>
-            <FilterHeader style={{position: 'relative'}}>
-              Filtri:
-              <SmallGrace style={smallGraceStyleFilte} />
-            </FilterHeader>
-            <FilterTitle>
-              Categorie
-            </FilterTitle>
-            <div style={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              gap: '18px',
-              width: '90%',
-            }}>
-              {filterData?.map((item) => (
-                <div style={{
-                  border: `5px solid ${item?.borderColor}`,
-                  background: item?.backgroundColor,
-                  display: 'flex',
-                  gap: '12px',
-                  borderRadius: '45px',
-                  padding: '12px 15px',
-                  alignItems: 'center'
-                }}>
-                  {item?.titleSvg}
-                  <FilterValue>
-                    {item?.title}
-                  </FilterValue>
-                </div>
-              ))}
-
-            </div>
-          </div>
-          <div>
-            <SliderHeader>
-              Il tuo budget
-            </SliderHeader>
-            <div>
-              <RangeSlider />
-            </div>
-          </div>
-        </div>
-        <div style={{
-          width: '60%'
-        }}>
-          <Title>Dentista veterinario: 18 risultati trovati</Title>
-          <CardSection>
-            {CardData?.map((item) => (
-              <Card>
-                <CardHeader>
-                  <CardTitle>
-                    {item?.cardTitle}
-                  </CardTitle>
-                </CardHeader>
-                <CardDetails>
-                  <CardDetailsLeft>
-                    <CardDetailsTitle>
-                      {item?.cardName}
-                    </CardDetailsTitle>
-                    <CardDetailsDesc>
-                      {item?.cardNameDetail}
-                    </CardDetailsDesc>
-                    <div style={{
-                      display: 'flex',
-                      justifyContent: 'space-between',
-                    }}>
-                      <div>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '5px', }}>
-                          <CardRated>
-                            {renderRating(item.rating)}
-                          </CardRated>
-                          <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
-                              <LocationSvg />
-                              <LocationDetailsText>
-                                {item?.location}
-                              </LocationDetailsText>
-                            </div>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
-                              <ClockSvg />
-                              <ClockDetailsText>
-                                {item?.time}
-                              </ClockDetailsText>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div>
-                        <div style={{
-                          border: '5px solid #001A75',
-                          backgroundColor: '#0017E5',
-                          padding: '3px 16px',
-                          borderRadius: '25px',
-                        }}>
-                          <InlineCard>
-                            {item?.middleContent}
-                          </InlineCard>
-                        </div>
-                      </div>
-                    </div>
-                  </CardDetailsLeft>
-                  <CardDetailsRight>
-                    <div style={{
-                      position: 'absolute',
-                      bottom: '50px',
-                    }}>
-                      {item?.storeBackground}
-                      {item?.doctorImage}
-                    </div>
-                  </CardDetailsRight>
-                </CardDetails>
-              </Card>
-            ))}
-          </CardSection>
-        </div>
-        <SmallGrace style={smallGraceStyle} />
-      </div>
-      <div style={{
-        position: 'relative'
+        flexDirection: 'column',
       }}>
         <div style={{
           width: '80%',
-          margin: '180px auto 210px auto',
+          margin: '80px auto 0 auto',
           display: 'flex',
-          justifyContent: 'center',
+          gap: '70px',
+          position: 'relative'
         }}>
           <div style={{
-            border: '4px solid #007E60',
-            background: '#44D3A8',
-            borderRadius: '20px',
-            padding: '0 10px',
+            width: '40%',
             display: 'flex',
-            width: 'fit-content'
-          }}>            
-            <div style={{
-              display: 'flex',
-              alignItems: 'center',
-              borderRight: '4px solid #007E60',
-              gap: '10px',
-              paddingRight: '10px'
-            }}>
-              <LeftArrow />
-              <PaginationText>
-                Precedente
-              </PaginationText>
+            flexDirection: 'column'
+          }}>
+            <div>
+              <img src={SmallMap} alt="" onClick={() => handleDialogOpen()} />
             </div>
-            <PaginationText style={{ padding: '0 25px', borderRight: '4px solid #007E60' }}>
-              1
-            </PaginationText>
-            <PaginationText style={{ padding: '0 25px', borderRight: '4px solid #007E60' }}>
-              2
-            </PaginationText>
-            <PaginationText style={{ padding: '0 25px', borderRight: '4px solid #007E60' }}>
-              ...
-            </PaginationText>
-            <PaginationText style={{ padding: '0 25px', borderRight: '4px solid #007E60' }}>
-              5
-            </PaginationText>
-            <div style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '10px',
-              paddingLeft: '10px'
-            }}>
-              <PaginationText>
-                Successivo
-              </PaginationText>
-              <RightArrow />
+            <div>
+              <FilterHeader style={{position: 'relative'}}>
+                Filtri:
+                <SmallGrace style={smallGraceStyleFilte} />
+              </FilterHeader>
+              <FilterTitle>
+                Categorie
+              </FilterTitle>
+              <div style={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                gap: '18px',
+                width: '90%',
+              }}>
+                {filterData?.map((item) => (
+                  <div style={{
+                    border: `5px solid ${item?.borderColor}`,
+                    background: item?.backgroundColor,
+                    display: 'flex',
+                    gap: '12px',
+                    borderRadius: '45px',
+                    padding: '12px 15px',
+                    alignItems: 'center'
+                  }}>
+                    {item?.titleSvg}
+                    <FilterValue>
+                      {item?.title}
+                    </FilterValue>
+                  </div>
+                ))}
+
+              </div>
+            </div>
+            <div>
+              <SliderHeader>
+                Il tuo budget
+              </SliderHeader>
+              <div>
+                <RangeSlider />
+              </div>
             </div>
           </div>
+          <div style={{
+            width: '60%'
+          }}>
+            <Title>Dentista veterinario: 18 risultati trovati</Title>
+            <CardSection>
+              {CardData?.map((item) => (
+                <Card>
+                  <CardHeader>
+                    <CardTitle>
+                      {item?.cardTitle}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardDetails>
+                    <CardDetailsLeft>
+                      <CardDetailsTitle>
+                        {item?.cardName}
+                      </CardDetailsTitle>
+                      <CardDetailsDesc>
+                        {item?.cardNameDetail}
+                      </CardDetailsDesc>
+                      <div style={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                      }}>
+                        <div>
+                          <div style={{ display: 'flex', flexDirection: 'column', gap: '5px', }}>
+                            <CardRated>
+                              {renderRating(item.rating)}
+                            </CardRated>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
+                              <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
+                                <LocationSvg />
+                                <LocationDetailsText>
+                                  {item?.location}
+                                </LocationDetailsText>
+                              </div>
+                              <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
+                                <ClockSvg />
+                                <ClockDetailsText>
+                                  {item?.time}
+                                </ClockDetailsText>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div>
+                          <div style={{
+                            border: '5px solid #001A75',
+                            backgroundColor: '#0017E5',
+                            padding: '3px 16px',
+                            borderRadius: '25px',
+                          }}>
+                            <InlineCard>
+                              {item?.middleContent}
+                            </InlineCard>
+                          </div>
+                        </div>
+                      </div>
+                    </CardDetailsLeft>
+                    <CardDetailsRight>
+                      <div style={{
+                        position: 'absolute',
+                        bottom: '50px',
+                      }}>
+                        {item?.storeBackground}
+                        {item?.doctorImage}
+                      </div>
+                    </CardDetailsRight>
+                  </CardDetails>
+                </Card>
+              ))}
+            </CardSection>
+          </div>
+          <SmallGrace style={smallGraceStyle} />
         </div>
+        <div style={{
+          position: 'relative'
+        }}>
+          <div style={{
+            width: '80%',
+            margin: '180px auto 210px auto',
+            display: 'flex',
+            justifyContent: 'center',
+          }}>
+            <div style={{
+              border: '4px solid #007E60',
+              background: '#44D3A8',
+              borderRadius: '20px',
+              padding: '0 10px',
+              display: 'flex',
+              width: 'fit-content'
+            }}>            
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                borderRight: '4px solid #007E60',
+                gap: '10px',
+                paddingRight: '10px'
+              }}>
+                <LeftArrow />
+                <PaginationText>
+                  Precedente
+                </PaginationText>
+              </div>
+              <PaginationText style={{ padding: '0 25px', borderRight: '4px solid #007E60' }}>
+                1
+              </PaginationText>
+              <PaginationText style={{ padding: '0 25px', borderRight: '4px solid #007E60' }}>
+                2
+              </PaginationText>
+              <PaginationText style={{ padding: '0 25px', borderRight: '4px solid #007E60' }}>
+                ...
+              </PaginationText>
+              <PaginationText style={{ padding: '0 25px', borderRight: '4px solid #007E60' }}>
+                5
+              </PaginationText>
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '10px',
+                paddingLeft: '10px'
+              }}>
+                <PaginationText>
+                  Successivo
+                </PaginationText>
+                <RightArrow />
+              </div>
+            </div>
+          </div>
 
-        <LeftRoad style={LeftTruck} />
-        <RightImage style={RightTruck} />
+          <LeftRoad style={LeftTruck} />
+          <RightImage style={RightTruck} />
+        </div>
+        {mapDialog && <NearMeDialog mapDialog={mapDialog} setMapDialog={setMapDialog} CardData={CardData} renderRating={renderRating} />}
       </div>
-    </div>
+    </>
+
   )
 }
 

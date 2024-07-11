@@ -7,9 +7,9 @@ import GlobalStyle from '@styles/GlobalStyle';
 import useLanguage from '@hooks/useLanguage';
 
 import { Footer, Navbar } from '@components/common';
-import { DropDownValueNearMe, NearMeSelectionSection } from '@components/nearMeRicera';
+import { MainCard } from '@components/nearMeCardDetail';
 
-const index5 = () => {
+const index6 = () => {
 	const [messages, { locale }] = useLanguage();
 
 	return (
@@ -20,8 +20,7 @@ const index5 = () => {
 				<GlobalStyle />
 				<IntlProvider defaultLocale="it" locale={locale} messages={messages}>
 					<Navbar />
-					<DropDownValueNearMe />
-					<NearMeSelectionSection />
+					<MainCard />
 					<Footer />
 				</IntlProvider>
 			</ThemeProvider>
@@ -29,4 +28,4 @@ const index5 = () => {
 	)
 }
 
-export default index5		
+export default index6		
