@@ -24,9 +24,10 @@ import {
   InlineCard, LocationDetailsText, 
   RatingText
 } from './style';
+import AccordianDetailsCard from '../AccordianDetailsCard';
 
 
-const MainCard = () => {
+const AccordianMainCard = () => {
 
   const CardData = [{
     cardTitle: 'Clinica Polivet',
@@ -57,7 +58,9 @@ const MainCard = () => {
       display: 'flex',
       width: '80%',
       margin: '0 auto',
-      paddingTop: '200px'
+      paddingTop: '200px',
+      flexDirection: 'column',
+      gap: '36px',
     }}>
       <CardSection>
         {CardData?.map((item) => (
@@ -155,8 +158,9 @@ const MainCard = () => {
           </Card>
         ))}
       </CardSection>
+      <AccordianDetailsCard /> 
     </div>
   )
 }
 
-export default MainCard
+export default AccordianMainCard
