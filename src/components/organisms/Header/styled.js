@@ -21,7 +21,7 @@ export const StyledHeader = styled.header`
   position: relative;
   display: flex;
   justify-content: center;
-  background-image: url(./assets/images/header-background2.svg);
+  background-image: url(../assets/images/header-backgroundNew.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;

@@ -6,7 +6,7 @@ const HeaderPetId = () => {
     <StyledHeader>
       <StyledContentSection>
         <TitleContainer>
-          <Title>Pet ID</Title>
+          <Title>Near me</Title>
           <Subtitle>I documento del tuo pet</Subtitle>
           <Subtitle>sempre con te</Subtitle>
         </TitleContainer>

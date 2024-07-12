@@ -32,7 +32,7 @@ import {
   CallToAction,
 } from './styled';
 
-const Header = ({ onChangeLanguage }) => {
+const Header = () => {
   const { messages, locale } = useIntl();
 
   return (

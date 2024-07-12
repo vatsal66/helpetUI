@@ -17,11 +17,19 @@ import Userprofile from '../../../assets/images/NavBar/user.svg';
 import BrazilFlagSvg from '@assets/icons/brazil-flag.svg';
 import ItalyFlagSvg from '@assets/icons/italy-flag.svg';
 import UKFlagSvg from '@assets/icons/uk-flag.svg';
+import { Link, navigate } from "gatsby";
+
+const normalizePath = (path) => path.replace(/\/+$/, "");
 
 const Navbar = () => {
   const { messages, locale } = useIntl();
   const [isExpanded, setIsExpanded] = useState(false); // State for dropdown toggle
   const [isExpandedCountry, setIsExpandedCountry] = useState(false)
+
+  const isActive = (path) => {
+    const pathName = typeof window !== 'undefined' ? window.location.pathname : '';
+    return normalizePath(pathName) === normalizePath(path);
+  };
 
   const toggleDropdown = () => {
     setIsExpanded(!isExpanded);
@@ -37,9 +45,13 @@ const Navbar = () => {
         <img src={companyLogo} alt="Company Logo" />
       </Logo>
       <Mainheader active={isExpanded}>
-        <Title active>{messages["header.header1"]}</Title>
-        <Title>{messages["header.header2"]}</Title>
-        <Title active>
+        <Title active={isActive("/")}>
+          <Link to="/" style={{color: '#151515', textDecoration: 'none'}}>{messages["header.header1"]}</Link>
+        </Title>
+        <Title active={isActive("/index2")}>
+          <Link to="/index2" style={{color: '#151515', textDecoration: 'none'}}>{messages["header.header2"]}</Link>
+        </Title>
+        <Title active={isActive("/index3") || isActive("/index4")}>
           <div onClick={toggleDropdown} style={{
             display: "flex",
             alignItems: "center",
@@ -53,9 +65,9 @@ const Navbar = () => {
             <div>
               <DropdownItem>{messages["header.header31.value1"]}</DropdownItem>
               <DropdownItem>{messages["header.header31.value1"]}</DropdownItem>
-              <DropdownItem>{messages["header.header31.value2"]}</DropdownItem>
+              <DropdownItem> <Link to="/index3" style={{color: '#151515', textDecoration: 'none'}}> {messages["header.header31.value2"]}</Link></DropdownItem>
               <DropdownItem>{messages["header.header31.value3"]}</DropdownItem>
-              <DropdownItem>{messages["header.header31.value4"]}</DropdownItem>
+              <DropdownItem> <Link to="/index4" style={{color: '#151515', textDecoration: 'none'}}>{messages["header.header31.value4"]}</Link></DropdownItem>
             </div>
           )}
         </Title>

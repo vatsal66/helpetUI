@@ -30,7 +30,7 @@ const IndexPage = () => {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <IntlProvider defaultLocale="it" locale={locale} messages={messages}>
-        <Helmet>
+        {/* <Helmet>
           <title>{`Helpet: ${messages['title']}`}</title>
           <meta charSet="utf-8" />
           <meta
@@ -59,7 +59,7 @@ const IndexPage = () => {
             content="Helpet: la nuova App per i tuoi Pet"
           />
           <meta name="twitter:image" content="/assets/images/og-image.png" />
-        </Helmet>
+        </Helmet> */}
         <Navbar onChangeLanguage={(lang) => setLocale(lang)} />
         <Header onChangeLanguage={(lang) => setLocale(lang)} />
         <Main />
