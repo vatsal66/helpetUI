@@ -31,7 +31,6 @@ const FourthHomeBlog = () => {
 
         </MainCard>
       </Container>
-			<img src='../assets/images/HomeBlog/Road.svg' style={{}}></img>
     </>
   )
 }

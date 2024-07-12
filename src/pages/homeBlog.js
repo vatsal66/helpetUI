@@ -6,7 +6,7 @@ import theme from '@styles/theme';
 import GlobalStyle from '@styles/GlobalStyle';
 import useLanguage from '@hooks/useLanguage';
 import { Footer } from '@components/common';
-import { FirstHomeBlog, FourthHomeBlog, SecondHomeBlog, ThirdHomeBlog } from '@components/homeBlog';
+import { FirstHomeBlog, FourthHomeBlog, SecondHomeBlog, ThirdHomeBlog, PaginationHomeBlog } from '@components/homeBlog';
 
 const homeBlog = () => {
 	const [messages, { locale, setLocale }] = useLanguage();
@@ -15,17 +15,18 @@ const homeBlog = () => {
 		<div style={{
 			background: '#EEFFF8'
 		}}>
-		<ThemeProvider theme={theme}>
-			<GlobalStyle />
-			<IntlProvider defaultLocale="it" locale={locale} messages={messages}>
-				<FirstHomeBlog />
-				<SecondHomeBlog />
-				<ThirdHomeBlog />
-				<FourthHomeBlog />
-				<Footer />
-			</IntlProvider>
-		</ThemeProvider>
-		
+			<ThemeProvider theme={theme}>
+				<GlobalStyle />
+				<IntlProvider defaultLocale="it" locale={locale} messages={messages}>
+					<FirstHomeBlog />
+					<SecondHomeBlog />
+					<ThirdHomeBlog />
+					<FourthHomeBlog />
+					<PaginationHomeBlog />
+					<Footer />
+				</IntlProvider>
+			</ThemeProvider>
+
 		</div>
 	)
 }
