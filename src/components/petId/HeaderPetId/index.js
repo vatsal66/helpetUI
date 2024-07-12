@@ -11,7 +11,7 @@ const HeaderPetId = () => {
           <Subtitle>sempre con te</Subtitle>
         </TitleContainer>
       </StyledContentSection>
-      
+
       <StyledSmallCloud top="110px" duration={80} left />
       <StyledSmallCloud top="75px" duration={90} right />
       <StyledBigCloud top="190px" duration={100} left />

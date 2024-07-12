@@ -79,8 +79,8 @@ export const CardDetailsLeftActive = styled.div`
   padding: 30px 50px;
   cursor: pointer;
   `;
-  
-  export const CardDetailsRightActive = styled.div`
+
+export const CardDetailsRightActive = styled.div`
   background-color: #F76908;
   border-radius: 65px;
   display: flex;
@@ -102,3 +102,9 @@ export const HeaderSubText = styled.div`
   color: #ffffff;
   font-weight: medium;
 `;
+
+export const SmallGraceStyle = {
+  position: 'absolute',
+  top: '-21px',
+  left: '35%',
+}

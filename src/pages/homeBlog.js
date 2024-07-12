@@ -9,7 +9,7 @@ import { Footer } from '@components/common';
 import { FirstHomeBlog, FourthHomeBlog, SecondHomeBlog, ThirdHomeBlog } from '@components/homeBlog';
 
 const homeBlog = () => {
-  const [messages, { locale, setLocale }] = useLanguage();
+	const [messages, { locale, setLocale }] = useLanguage();
 
 	return (
 		<div style={{
@@ -25,6 +25,7 @@ const homeBlog = () => {
 				<Footer />
 			</IntlProvider>
 		</ThemeProvider>
+		
 		</div>
 	)
 }

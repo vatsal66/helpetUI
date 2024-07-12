@@ -42,7 +42,7 @@ export const Subtitle = styled.h2`
 export const CardPetId = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 175px;
+  gap: 145px;
   width: 100%;
   height: 280px;
 `;
@@ -51,13 +51,12 @@ export const CardDetailsLeft = styled.div`
   background-color: #FCB300;
   border-radius: 65px;  
   display: flex;
-  width: 50%;
+  width: 100%;
   align-items: center;
   flex-direction: column;
   justify-content: space-evenly;
   padding: 30px 50px;
   cursor: pointer;
-  flex-direction: column;
   border: 5px solid #CC7E09 ;
 `;
 
@@ -65,7 +64,7 @@ export const CardDetailsRight = styled.div`
   background-color: #A00483;
   border-radius: 65px;
   display: flex;
-  width: 50%;
+  width: 100%;
   align-items: center;
   flex-direction: column;
   justify-content: space-evenly;
@@ -78,7 +77,7 @@ export const CardDetailsThird = styled.div`
   background-color: #00B388;
   border-radius: 65px;
   display: flex;
-  width: 50%;
+  width: 100%;
   align-items: center;
   flex-direction: column;
   justify-content: space-evenly;
@@ -91,7 +90,7 @@ export const CardDetailsLeftActive = styled.div`
   background-color: #FCB300;
   border-radius: 65px;  
   display: flex;
-  width: 50%;
+  width: 100%;
   align-items: flex-start;
   flex-direction: column;  
   padding: 30px 50px;
@@ -103,7 +102,7 @@ export const CardDetailsRightActive = styled.div`
   background-color: #A00483;
   border-radius: 65px;
   display: flex;
-  width: 50%;
+  width: 100%;
   align-items: flex-start;
   flex-direction: column;
   padding: 30px 50px;
@@ -115,7 +114,7 @@ export const CardDetailsThirdActive = styled.div`
   background-color: #00B388;
   border-radius: 65px;
   display: flex;
-  width: 50%;
+  width: 100%;
   align-items: flex-start;
   flex-direction: column;
   padding: 30px 50px;
@@ -135,3 +134,15 @@ export const HeaderSubText = styled.div`
   color: #ffffff;
   font-weight: 500;
 `;
+
+export const SmallGraceStyle = {
+  position: 'absolute',
+  top: '-45px',
+  left: '20%',
+}
+
+export const TreeStyle = {
+  position: 'absolute',
+  top: '-50px',
+  right: '-7%',
+}

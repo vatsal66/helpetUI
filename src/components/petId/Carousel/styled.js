@@ -79,8 +79,8 @@ export const HeaderText = styled.div`
   font-weight: 800;
   line-height: 35px;
 `;
-  
-  export const HeaderSubText = styled.div`
+
+export const HeaderSubText = styled.div`
   color: #FFFFFF;
   font-size: 24px;
   font-weight: 700;
@@ -92,3 +92,9 @@ export const InsideRight = styled.div`
   width: 40%;
   align-items: flex-end;
 `;
+
+export const SmallGraceStyle = {
+  position: 'absolute',
+  top: '-45px',
+  right: '3%',
+}

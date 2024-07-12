@@ -120,6 +120,7 @@ export const StyledHeader = styled.header`
     padding-bottom: 160px;
   }
 `;
+
 export const StyledContentSection = styled.div`
   display: flex;
   flex-direction: column;

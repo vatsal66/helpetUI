@@ -15,12 +15,14 @@ import {
   InsideLeft,
   InsideLeftTop,
   InsideRight,
+  SmallGraceStyle,
   Subtitle,
   Title,
   UpperSide
 } from './styled'
 import Slider from "react-slick";
-import './Carousel.css';
+
+import SmallGrace from '@assets/images/common/smallGrace.svg';
 
 function Arrow(props) {
   let className = props.type === "next" ? "nextArrow" : "prevArrow";
@@ -56,7 +58,7 @@ const Carousel = () => {
     slidesToScroll: 1,
     autoplay: true,
     speed: 2000,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 5000,
   };
 
 
@@ -72,40 +74,42 @@ const Carousel = () => {
         gap: '10px',
         alignItems: 'center',
         justifyContent: 'center',
-        paddingTop: '85px'
+        paddingTop: '100px'
       }}>
         <div style={{
           display: 'flex',
           flexDirection: 'column',
           width: '80%',
-          gap: '10px'
+          gap: '10px',
+          position: 'relative',
         }}>
-        <Title>Cos’è il Pet ID</Title>
-        <Subtitle>Quaerat sodales sapien euismod purus blandit a purus ipsum primis sodales sapien euismod purus blandit a purus sapien euismod purus blandit a purus blandit a purus sapien euismod purus blandit
-          a purus </Subtitle>
+          <SmallGrace style={SmallGraceStyle} />
+          <Title>Cos’è il Pet ID</Title>
+          <Subtitle>Quaerat sodales sapien euismod purus blandit a purus ipsum primis sodales sapien euismod purus blandit a purus sapien euismod purus blandit a purus blandit a purus sapien euismod purus blandit
+            a purus </Subtitle>
         </div>
       </div>
       <div style={{
         display: 'flex',
       }}>
-          <img 
-            src={LeftRoad} 
-            style={{
-              width: '10%',
-              height: 'fit-content',
-              margin: 0,
-              position: 'relative',
-              left: '5px',
-              top: '252px',
-              zIndex: 1
-            }} />
-        <div 
+        <img
+          src={LeftRoad}
+          style={{
+            width: '10%',
+            height: 'fit-content',
+            margin: 0,
+            position: 'relative',
+            left: '5px',
+            top: '252px',
+          }} />
+        <div
           className="slider-container"
           style={{
             width: '80%',
+            zIndex: 1
           }}>
-          <Slider 
-          {...settings}
+          <Slider
+            {...settings}
             nextArrow={<Arrow type="next" />}
             prevArrow={<Arrow type="prev" />}
           >
@@ -141,16 +145,60 @@ const Carousel = () => {
 
           </Slider>
         </div>
-          <img src={RightRoad} style={{
-              width: '10%',
-              height: 'fit-content',
-              margin: 0,
-              position: 'relative',
-              right: '5px',
-              top: '252px',
-              zIndex: 1
-            }} />
+        <img src={RightRoad} style={{
+          width: '10%',
+          height: 'fit-content',
+          margin: 0,
+          position: 'relative',
+          right: '5px',
+          top: '252px',
+        }} />
       </div>
+      <style>
+        {`
+          .arrow {
+            position: absolute;
+            color: #000000;
+            font-size: 2.5em;
+            font-weight: bold;
+            cursor: pointer;
+          }
+
+          .nextArrow {
+            top: 252px;
+            right: 50px;
+            z-index: 1;
+          }
+
+          .prevArrow {
+            top: 252px;
+            left: 50px;
+            z-index: 1;
+          }
+
+          .slick-dots {
+            justify-content: unset !important;
+            margin-left: calc(7% + 50px);
+            position: relative;
+            bottom: 85px;
+          }
+
+          .slick-dots li.slick-active button {
+            background-color: #CC7E09!important;
+            width: 25px;
+            border-radius: 30px;
+          }
+
+          .slick-dots li {
+            margin: 0 4px;
+          }
+
+          .slick-dots li button {
+            width: 12px;
+            height: 12px;
+          }
+        `}
+      </style>
     </div>
 
   )
