@@ -1,1 +1,2 @@
-export { default as MainCard } from './MainCard';
+export { default as AccordianMainCard } from './AccordianMainCard';
+export { default as AccordianDetailsCard } from './AccordianDetailsCard';

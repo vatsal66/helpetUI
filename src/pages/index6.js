@@ -7,7 +7,7 @@ import GlobalStyle from '@styles/GlobalStyle';
 import useLanguage from '@hooks/useLanguage';
 
 import { Footer, Navbar } from '@components/common';
-import { MainCard } from '@components/nearMeCardDetail';
+import { AccordianMainCard } from '@components/nearMeCardDetail';
 
 const index6 = () => {
 	const [messages, { locale }] = useLanguage();
@@ -20,7 +20,7 @@ const index6 = () => {
 				<GlobalStyle />
 				<IntlProvider defaultLocale="it" locale={locale} messages={messages}>
 					<Navbar />
-					<MainCard />
+					<AccordianMainCard />
 					<Footer />
 				</IntlProvider>
 			</ThemeProvider>

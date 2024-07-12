@@ -7,6 +7,17 @@ export const StyledContentSection = styled.div`
   max-width: 100%;
   z-index: 10;
   margin-top: 75px;
+
+  max-width: 1300px;
+  padding-top: 40px;
+
+  @media (min-width: 800px) {
+    margin: 0 auto 0;
+  }
+
+  @media (max-width: 799px) {
+    padding: 50px 36px;
+  }
 `;
 
 export const Container = styled.div`
@@ -14,69 +25,81 @@ export const Container = styled.div`
  margin-left: 75px;
  margin-right: 75px;
  `;
+
 export const StartComponents = styled.div`
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
+ `;
 
-  Col-span-1 {
-   grid-column: span 2;
-  }
-
-  Col-span-1 h5{
+ export const SideBarTitle = styled.h5`
   font-size: 28px;
   font-weight: 700;
   line-height: 30px;
-  }
+ `;
 
- Col-span-1 ul li {
-  list-style-type: none;
-  }
-
-  Col-span-1 ul li a{
+ export const SideBarTitleUl = styled.ul`
+   grid-column: span 2;
+ `
+ export const SideBarTitleLi = styled.li`
+  ist-style-type: none;
+ `
+ export const SideBarTitleA = styled.a`
   font-size: 20px;
   font-weight: 600;
   text-decoration-line: none;
   color:#000;
   line-height: 54px;
+ `;
+
+ export const ColRightSide = styled.div`
+ grid-column: span 3 / span 3;
+ font-weight: bold; 
+ padding: 32px;
+ border: 5px solid #007E60;
+ border-radius: 35px;
+ background-color: rgb(255, 255, 255);
+ width: fit-content;
+margin-left: 26px;
+  @media (max-width: 1441px) {
+    width: 895px
   }
+`;
 
-  Col-span-3 {
-  grid-column: span 3 / span 3;
-  weight: full;
-  padding: 32px;
-  border:2px soild ;
-  border-radius: 35px;
-  background-color: rgb(255 255 255);
-  }
-
-  Col-span-3 card1 {
-    overflow: hidden !important;
-    display: inline-block !important;
-    weight:500px !important;
-}
-
-   Col-span-3 card1 img{
-    border-radius: 35px ;
-    height: auto;
-    weight: auto;
-  }
-
-   Col-span-3 div{
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   gap: 12px;
-   }
-
-  col-span-3 h2{
+export const Card1 = styled.div`
+  overflow: hidden !important;
+  display: inline-block !important;
+  weight:500px !important;
+`
+export const CardHeader = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+`
+export const CardHeaderName = styled.div`
+  display: flex;
+  align-items: center;
+  // justify-content: space-between;
+  gap: 12px;
+`
+export const CardMainTitle = styled.h2`
   font-size: 26px;
   font-weight: 800;
   line-height: 34px;
-  }
-
-  col-span-3 p{
+  color: #343434;
+  font-family: nunito;
+`
+export const CardSubTitle = styled.div`
   font-size: 22px;
   font-weight: 400;
   line-height: 30px;
-  }
- `;
+  color: #343434;
+  font-family: nunito;
+  margin-top: 10px;
+`
+export const CardSubName = styled.p`
+  font-size: 20px;
+  color: #000000;
+  weight: 600px;
+`
