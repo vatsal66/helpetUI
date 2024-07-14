@@ -4,12 +4,13 @@ import React from 'react'
 import ArrowDown from '@assets/images/NearMeCard/arrowDown.svg'
 import { SubTitle, SummeryTitle, Title } from './style'
 
-const Accordian1 = () => {
+const Accordian1 = ({ handleChange, expanded }) => {
   return (
     <Accordion sx={{
       border: '5px solid #001A75!important',
       borderRadius: '45px!important',
-    }}>
+      zIndex: 2,
+    }} expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
       <AccordionSummary
         expandIcon={<ArrowDown />}
         aria-controls="panel1-content"

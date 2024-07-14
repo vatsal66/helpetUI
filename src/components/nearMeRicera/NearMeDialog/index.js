@@ -71,9 +71,9 @@ const NearMeDialog = ({ mapDialog, setMapDialog, renderRating }) => {
         onClose={() => setMapDialog(false)}
         fullWidth
         sx={{
-          width: '74%',
-          left: '13%',
-          right: '13%',
+          width: '80%',
+          left: '9.5%',
+          right: '10.5%',
           '& .MuiDialog-paper': {
             margin: 0,
             maxWidth: 'unset',

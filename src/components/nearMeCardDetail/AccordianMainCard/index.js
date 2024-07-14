@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import Store1 from '@assets/images/NearMeDetail/NewarMeDetailTabStore1.svg';
 import Doctor1 from '@assets/images/NearMeDetail/NewarMeDetailTabDoctor1.svg';
@@ -25,9 +25,12 @@ import {
   RatingText
 } from './style';
 import AccordianDetailsCard from '../AccordianDetailsCard';
+import NearMeCardDialog from '../NearMeCardDialog';
 
 
 const AccordianMainCard = () => {
+
+  const [mapDialog, setMapDialog] = useState(false)
 
   const CardData = [{
     cardTitle: 'Clinica Polivet',
@@ -54,6 +57,7 @@ const AccordianMainCard = () => {
   }
   
   return (
+    <>
     <div style={{
       display: 'flex',
       width: '80%',
@@ -143,7 +147,7 @@ const AccordianMainCard = () => {
               </div>
               </CardDetailsLeft>
               <CardCenter>
-                <img src={SmallMap} alt="" style={{ width: '299px', height: '213px' }}/>
+                <img src={SmallMap} alt="" style={{ width: '299px', height: '213px' }} onClick={() => setMapDialog(true)} />
               </CardCenter>
               <CardDetailsRight>
                 <div style={{
@@ -160,6 +164,8 @@ const AccordianMainCard = () => {
       </CardSection>
       <AccordianDetailsCard /> 
     </div>
+        {mapDialog && <NearMeCardDialog mapDialog={mapDialog} setMapDialog={setMapDialog} />}
+</>
   )
 }
 

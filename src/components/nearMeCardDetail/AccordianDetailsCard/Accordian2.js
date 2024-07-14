@@ -4,12 +4,13 @@ import React from 'react'
 import ArrowDown from '@assets/images/NearMeCard/arrowDown.svg'
 import { AccordianTextheader, RoundPoint, SubTitle, SummeryTitle, Title } from './style'
 
-const Accordian2 = () => {
+const Accordian2 = ({ handleChange, expanded }) => {
   return (
     <Accordion sx={{
       border: '5px solid #001A75!important',
       borderRadius: '45px!important',
-    }}>
+      zIndex: 2,
+    }} expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
       <AccordionSummary
         expandIcon={<ArrowDown />}
         aria-controls="panel2-content"
@@ -45,33 +46,33 @@ const Accordian2 = () => {
           flexDirection: 'column'
         }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', borderBottom: '2px solid #001A75', padding: '30px 10px' }}>
-            <div style={{ display: 'flex', gap: '12px', alignItems: 'center', width: '80%' }}>
+            <div style={{ display: 'flex', gap: '12px', alignItems: 'center', width: '75%' }}>
               <RoundPoint />
               <AccordianTextheader>Prima visita</AccordianTextheader>
             </div>
-            <div style={{ width: '20%' }}>
+            <div style={{ width: '25%' }}>
               <AccordianTextheader>
                 €30
               </AccordianTextheader>
             </div>
           </div>
           <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', borderBottom: '2px solid #001A75', padding: '30px 10px' }}> 
-            <div style={{ display: 'flex', gap: '12px', alignItems: 'center', width: '80%' }}>
+            <div style={{ display: 'flex', gap: '12px', alignItems: 'center', width: '75%' }}>
               <RoundPoint />
               <AccordianTextheader>Visita di controllo</AccordianTextheader>
             </div>
-            <div style={{ width: '20%' }}>
+            <div style={{ width: '25%' }}>
               <AccordianTextheader>
                 €30
               </AccordianTextheader>
             </div>
           </div>
           <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', padding: '30px 10px' }}>
-            <div style={{ display: 'flex', gap: '12px', alignItems: 'center', width: '80%' }}>
+            <div style={{ display: 'flex', gap: '12px', alignItems: 'center', width: '75%' }}>
               <RoundPoint />
               <AccordianTextheader>Estrazione dente</AccordianTextheader>
             </div>
-            <div style={{ width: '20%' }}>
+            <div style={{ width: '25%' }}>
               <AccordianTextheader>
                 €100 - €300+
               </AccordianTextheader>
@@ -85,11 +86,11 @@ const Accordian2 = () => {
           flexDirection: 'column',
         }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', borderBottom: '2px solid #001A75', padding: '30px 10px' }}>
-            <div style={{ display: 'flex', gap: '12px', alignItems: 'center', width: '80%' }}>
+            <div style={{ display: 'flex', gap: '12px', alignItems: 'center', width: '75%' }}>
               <RoundPoint />
               <AccordianTextheader>Pulizia denti</AccordianTextheader>
             </div>
-            <div style={{ width: '20%' }}>
+            <div style={{ width: '25%' }}>
               <AccordianTextheader>
                 €50 - €100+
               </AccordianTextheader>
