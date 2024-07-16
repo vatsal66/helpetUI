@@ -1,11 +1,15 @@
-import React from 'react'
-import ArrowLeftSvg from '@assets/images/PetId/arrowLeft.svg'
-import ArrowRighttSvg from '@assets/images/PetId/arrowRight.svg'
-import CarouselImage1 from '@assets/images/NearMe/carosal1.png'
-import CarouselImage2 from '@assets/images/NearMe/carosal2.png'
-import CarouselImage3 from '@assets/images/NearMe/carosal3.png'
-import CarouselImage4 from '@assets/images/NearMe/carosal4.png'
-import LeftRoad from '@assets/images/PetId/LeftRoadCarousel.png'
+import React from 'react';
+import Slider from "react-slick";
+
+import ArrowLeftSvg from '@assets/images/PetId/arrowLeft.svg';
+import ArrowRighttSvg from '@assets/images/PetId/arrowRight.svg';
+import CarouselImage1 from '@assets/images/NearMe/carosal1.png';
+import CarouselImage2 from '@assets/images/NearMe/carosal2.png';
+import CarouselImage3 from '@assets/images/NearMe/carosal3.png';
+import CarouselImage4 from '@assets/images/NearMe/carosal4.png';
+import LeftRoad from '@assets/images/PetId/LeftRoadCarousel.png';
+import RightRoad from '@assets/images/NearMe/RightRoadPlayStore.svg';
+import ThreeTree from '@assets/images/common/LargeThreeTree.svg';
 
 import {
   CarouselCard,
@@ -20,14 +24,10 @@ import {
   Subtitle,
   Title,
   TreeStyle,
-  UpperSide
-} from './styled'
-import Slider from "react-slick";
+  UpperSide,
+} from './styled';
 
-import RightRoad from '@assets/images/NearMe/RightRoadPlayStore.svg'
-import ThreeTree from '@assets/images/common/LargeThreeTree.svg'
-
-function Arrow(props) {
+function Arrow (props) {
   let className = props.type === "next" ? "nextArrow" : "prevArrow";
   className += " arrow";
   const char = props.type === "next" ? <ArrowRighttSvg /> : <ArrowLeftSvg />;
@@ -55,7 +55,7 @@ const dataJson = [{
   title: 'Compila i dati della prenotazione e ricevi la conferma direttamente in App',
   subTitle: 'Quaerat sodales sapien euismod purus blandit a purus ipsum primis in cubilia laoreet, sodales sapien euismod purus blandit a purus ipsum primis in cubilia laoreet',
   Image: CarouselImage4,
-}]
+}];
 
 const Carousel = () => {
   const settings = {
@@ -68,13 +68,12 @@ const Carousel = () => {
     autoplaySpeed: 5000,
   };
 
-
   return (
     <div style={{
       display: 'flex',
       flexDirection: 'column',
       gap: '35px',
-      position: 'relative'
+      position: 'relative',
     }}>
       <div style={{
         display: 'flex',
@@ -82,13 +81,13 @@ const Carousel = () => {
         gap: '10px',
         alignItems: 'center',
         justifyContent: 'center',
-        paddingTop: '85px'
+        paddingTop: '85px',
       }}>
         <div style={{
           display: 'flex',
           flexDirection: 'column',
           width: '80%',
-          gap: '10px'
+          gap: '10px',
         }}>
           <Title>Come prenotare un servizio in App</Title>
           <Subtitle>Quaerat sodales sapien euismod purus blandit a purus ipsum primis sodales sapien euismod purus blandit a purus sapien euismod purus blandit a purus blandit a purus sapien euismod purus blandit
@@ -112,7 +111,7 @@ const Carousel = () => {
           className="slider-container"
           style={{
             width: '80%',
-            zIndex: 1
+            zIndex: 1,
           }}>
           <Slider
             {...settings}
@@ -121,7 +120,7 @@ const Carousel = () => {
           >
             {dataJson?.map((item, index) => {
               return (
-                <CarouselCard>
+                <CarouselCard key={index}>
                   <CarouselCardCenter>
                     <InsideLeft>
                       <InsideLeftTop>
@@ -141,12 +140,12 @@ const Carousel = () => {
                     <InsideRight>
                       <img src={item?.Image} style={{
                         height: 'auto',
-                        width: '100%'
+                        width: '100%',
                       }} />
                     </InsideRight>
                   </CarouselCardCenter>
                 </CarouselCard>
-              )
+              );
             })}
 
           </Slider>
@@ -210,7 +209,7 @@ const Carousel = () => {
       <RightRoad style={RightRoadStyle} />
     </div>
 
-  )
-}
+  );
+};
 
-export default Carousel
+export default Carousel;

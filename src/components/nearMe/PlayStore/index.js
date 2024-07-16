@@ -1,13 +1,15 @@
-import React from 'react'
-import { leftImageStyle, RightRoadStyle, SmallGraceStyle, Thirdtitle, Title } from './styled'
-import { StoreBadges } from '@components/molecules'
+import React from 'react';
 import { useIntl } from 'react-intl';
 
-import LeftImage from '@assets/images/NearMe/LeftImagePlayStore.svg'
+import { StoreBadges } from '@components/molecules';
+
+import LeftImage from '@assets/images/NearMe/LeftImagePlayStore.svg';
 import SmallGrace from '@assets/images/common/smallGrace.svg';
 
+import { leftImageStyle, SmallGraceStyle, Thirdtitle, Title } from './styled';
+
 const PlayStore = () => {
-  const { messages, locale } = useIntl();
+  const { locale } = useIntl();
 
   return (
     <div style={{
@@ -23,7 +25,7 @@ const PlayStore = () => {
       <LeftImage style={leftImageStyle} />
       <SmallGrace style={SmallGraceStyle} />
     </div>
-  )
-}
+  );
+};
 
-export default PlayStore
+export default PlayStore;

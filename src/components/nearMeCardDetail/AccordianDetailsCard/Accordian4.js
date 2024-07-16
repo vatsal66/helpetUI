@@ -1,11 +1,11 @@
-import { Accordion, AccordionDetails, AccordionSummary } from '@mui/material'
-import React from 'react'
+import { Accordion, AccordionDetails, AccordionSummary } from '@mui/material';
+import React from 'react';
 
-import ArrowDown from '@assets/images/NearMeCard/arrowDown.svg'
-import { PaginationText, SubTitle, SubTitleAccordian4, SummeryTitle, Title, TitleAccordian4 } from './style'
-
+import ArrowDown from '@assets/images/NearMeCard/arrowDown.svg';
 import LeftArrow from '@assets/images/NearMeDetail/leftArrow.svg';
 import RightArrow from '@assets/images/NearMeDetail/rightArrow.svg';
+
+import { PaginationText, SubTitleAccordian4, SummeryTitle, Title, TitleAccordian4 } from './style';
 
 const Accordian4 = ({ handleChange, expanded }) => {
   return (
@@ -22,14 +22,14 @@ const Accordian4 = ({ handleChange, expanded }) => {
           padding: '10px 40px',
           '& .MuiAccordionSummary-content': {
             marginTop: '25px',
-            marginBottom: '25px'
+            marginBottom: '25px',
           },
           '& .MuiAccordionSummary-content.Mui-expanded': {
-            margin: '25px 0 0 0'
+            margin: '25px 0 0 0',
           },
           '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
-            margin: '25px 0 0 0'
-          }
+            margin: '25px 0 0 0',
+          },
         }}
       >
         <SummeryTitle>
@@ -41,7 +41,7 @@ const Accordian4 = ({ handleChange, expanded }) => {
         minHeight: '150px',
         display: 'flex',
         flexDirection: 'column',
-        gap: '12px'
+        gap: '12px',
       }}>
         <Title>
           10 Recensioni
@@ -50,7 +50,7 @@ const Accordian4 = ({ handleChange, expanded }) => {
           <div style={{ display: 'flex', width: '50%', flexDirection: 'column' }}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
               <div style={{ display: 'flex', gap: '12px' }}>
-                <div style={{ 
+                <div style={{
                   fontSize: '20px',
                   fontWeight: '900',
                   background: '#C1C8FF',
@@ -60,10 +60,10 @@ const Accordian4 = ({ handleChange, expanded }) => {
                   height: '50px',
                   display: 'flex',
                   justifyContent: 'center',
-                  alignItems: 'center'
+                  alignItems: 'center',
                 }}>
                   AR
-                </div> 
+                </div>
                 <div style={{ display: 'flex', flexDirection: 'column' }}>
                   <TitleAccordian4>
                     Antonio Rossi
@@ -75,7 +75,7 @@ const Accordian4 = ({ handleChange, expanded }) => {
               </div>
               <div style={{ width: '80%' }}>
                 <SubTitleAccordian4>
-                  Quaerat sodales sapien euismod purus blandit a purus ipsum primis in cubilia laoreet, sodales sapien euismod purus blandit a purus ipsum primis in cubilia laoreet 
+                  Quaerat sodales sapien euismod purus blandit a purus ipsum primis in cubilia laoreet, sodales sapien euismod purus blandit a purus ipsum primis in cubilia laoreet
                 </SubTitleAccordian4>
               </div>
             </div>
@@ -84,7 +84,7 @@ const Accordian4 = ({ handleChange, expanded }) => {
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
               <div style={{ display: 'flex', gap: '12px' }}>
-                <div style={{ 
+                <div style={{
                   fontSize: '20px',
                   fontWeight: '900',
                   background: '#C1C8FF',
@@ -94,10 +94,10 @@ const Accordian4 = ({ handleChange, expanded }) => {
                   height: '50px',
                   display: 'flex',
                   justifyContent: 'center',
-                  alignItems: 'center'
+                  alignItems: 'center',
                 }}>
                   AR
-                </div> 
+                </div>
                 <div style={{ display: 'flex', flexDirection: 'column' }}>
                   <TitleAccordian4>
                     Antonio Rossi
@@ -109,7 +109,7 @@ const Accordian4 = ({ handleChange, expanded }) => {
               </div>
               <div style={{ width: '80%' }}>
                 <SubTitleAccordian4>
-                  Quaerat sodales sapien euismod purus blandit a purus ipsum primis in cubilia laoreet, sodales sapien euismod purus blandit a purus ipsum primis in cubilia laoreet 
+                  Quaerat sodales sapien euismod purus blandit a purus ipsum primis in cubilia laoreet, sodales sapien euismod purus blandit a purus ipsum primis in cubilia laoreet
                 </SubTitleAccordian4>
               </div>
             </div>
@@ -117,7 +117,7 @@ const Accordian4 = ({ handleChange, expanded }) => {
           <div style={{ display: 'flex', width: '50%', flexDirection: 'column' }}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
               <div style={{ display: 'flex', gap: '12px' }}>
-                <div style={{ 
+                <div style={{
                   fontSize: '20px',
                   fontWeight: '900',
                   background: '#C1C8FF',
@@ -127,10 +127,10 @@ const Accordian4 = ({ handleChange, expanded }) => {
                   height: '50px',
                   display: 'flex',
                   justifyContent: 'center',
-                  alignItems: 'center'
+                  alignItems: 'center',
                 }}>
                   AR
-                </div> 
+                </div>
                 <div style={{ display: 'flex', flexDirection: 'column' }}>
                   <TitleAccordian4>
                     Antonio Rossi
@@ -142,7 +142,7 @@ const Accordian4 = ({ handleChange, expanded }) => {
               </div>
               <div style={{ width: '80%' }}>
                 <SubTitleAccordian4>
-                  Quaerat sodales sapien euismod purus blandit a purus ipsum primis in cubilia laoreet, sodales sapien euismod purus blandit a purus ipsum primis in cubilia laoreet 
+                  Quaerat sodales sapien euismod purus blandit a purus ipsum primis in cubilia laoreet, sodales sapien euismod purus blandit a purus ipsum primis in cubilia laoreet
                 </SubTitleAccordian4>
               </div>
             </div>
@@ -151,7 +151,7 @@ const Accordian4 = ({ handleChange, expanded }) => {
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
               <div style={{ display: 'flex', gap: '12px' }}>
-                <div style={{ 
+                <div style={{
                   fontSize: '20px',
                   fontWeight: '900',
                   background: '#C1C8FF',
@@ -161,10 +161,10 @@ const Accordian4 = ({ handleChange, expanded }) => {
                   height: '50px',
                   display: 'flex',
                   justifyContent: 'center',
-                  alignItems: 'center'
+                  alignItems: 'center',
                 }}>
                   AR
-                </div> 
+                </div>
                 <div style={{ display: 'flex', flexDirection: 'column' }}>
                   <TitleAccordian4>
                     Antonio Rossi
@@ -176,15 +176,15 @@ const Accordian4 = ({ handleChange, expanded }) => {
               </div>
               <div style={{ width: '80%' }}>
                 <SubTitleAccordian4>
-                  Quaerat sodales sapien euismod purus blandit a purus ipsum primis in cubilia laoreet, sodales sapien euismod purus blandit a purus ipsum primis in cubilia laoreet 
+                  Quaerat sodales sapien euismod purus blandit a purus ipsum primis in cubilia laoreet, sodales sapien euismod purus blandit a purus ipsum primis in cubilia laoreet
                 </SubTitleAccordian4>
               </div>
             </div>
           </div>
         </div>
-        <div style={{ 
+        <div style={{
           width: '100%',
-          display: 'flex', 
+          display: 'flex',
           justifyContent: 'center',
           margin: '65px auto 50px',
         }}>
@@ -193,13 +193,13 @@ const Accordian4 = ({ handleChange, expanded }) => {
             background: '#0017E5',
             borderRadius: '20px',
             display: 'flex',
-            width: 'fit-content'
+            width: 'fit-content',
           }}>
             <div style={{
               display: 'flex',
               alignItems: 'center',
               borderRight: '4px solid #001A75',
-              padding: '7px 15px'
+              padding: '7px 15px',
             }}>
               <LeftArrow />
             </div>
@@ -215,7 +215,7 @@ const Accordian4 = ({ handleChange, expanded }) => {
             <div style={{
               display: 'flex',
               alignItems: 'center',
-              padding: '7px 15px'
+              padding: '7px 15px',
             }}>
               <RightArrow />
             </div>
@@ -223,7 +223,7 @@ const Accordian4 = ({ handleChange, expanded }) => {
         </div>
       </AccordionDetails>
     </Accordion>
-  )
-}
+  );
+};
 
-export default Accordian4
+export default Accordian4;

@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Input, Button } from '@components/atoms';
 import { useIntl } from "react-intl";
+import { Link } from "gatsby";
 
-import { StoreBadges } from '@components/molecules';
+import { Button } from '@components/atoms';
 import { LanguageFlag } from '@components/quarks';
+
+import BrazilFlagSvg from '@assets/icons/brazil-flag.svg';
+import ItalyFlagSvg from '@assets/icons/italy-flag.svg';
+import UKFlagSvg from '@assets/icons/uk-flag.svg';
 
 import companyLogo from "../../../assets/images/NavBar/companyLogo.png";
 import FiChevronUp from "../../../assets/images/NavBar/ArrowUp.png";
@@ -14,17 +18,13 @@ import BottomArrow from "../../../assets/images/NavBar/BottomArrow.svg";
 import Userprofile from '../../../assets/images/NavBar/user.svg';
 
 // import { FiChevronDown, FiChevronUp } from "react-icons/fi"; // Import expand/collapse icons
-import BrazilFlagSvg from '@assets/icons/brazil-flag.svg';
-import ItalyFlagSvg from '@assets/icons/italy-flag.svg';
-import UKFlagSvg from '@assets/icons/uk-flag.svg';
-import { Link, navigate } from "gatsby";
 
 const normalizePath = (path) => path.replace(/\/+$/, "");
 
 const Navbar = () => {
-  const { messages, locale } = useIntl();
+  const { messages } = useIntl();
   const [isExpanded, setIsExpanded] = useState(false); // State for dropdown toggle
-  const [isExpandedCountry, setIsExpandedCountry] = useState(false)
+  const [isExpandedCountry, setIsExpandedCountry] = useState(false);
 
   const isActive = (path) => {
     const pathName = typeof window !== 'undefined' ? window.location.pathname : '';
@@ -36,8 +36,8 @@ const Navbar = () => {
   };
 
   const toggleCountryDropdown = () => {
-    setIsExpandedCountry(!isExpandedCountry)
-  }
+    setIsExpandedCountry(!isExpandedCountry);
+  };
 
   return (
     <Container>
@@ -46,17 +46,17 @@ const Navbar = () => {
       </Logo>
       <Mainheader active={isExpanded}>
         <Title active={isActive("/")}>
-          <Link to="/" style={{color: '#151515', textDecoration: 'none'}}>{messages["header.header1"]}</Link>
+          <Link to="/" style={{ color: '#151515', textDecoration: 'none' }}>{messages["header.header1"]}</Link>
         </Title>
-        <Title active={isActive("/index2")}>
-          <Link to="/index2" style={{color: '#151515', textDecoration: 'none'}}>{messages["header.header2"]}</Link>
+        <Title>
+          <Link style={{ color: '#151515', textDecoration: 'none' }}>{messages["header.header2"]}</Link>
         </Title>
-        <Title active={isActive("/index3") || isActive("/index4")}>
+        <Title active={isExpanded || isActive("/petid") || isActive("/librettosanitario") || isActive("/nearme") || isActive("/nearmedetail") || isActive("/nearmericerca")}>
           <div onClick={toggleDropdown} style={{
             display: "flex",
             alignItems: "center",
             justifyContent: 'space-between',
-            gap: '10px'
+            gap: '10px',
           }}>
             {messages["header.header3"]}
             {isExpanded ? <img src={FiChevronUp} alt="" /> : <FiChevronDown />}
@@ -64,16 +64,17 @@ const Navbar = () => {
           {isExpanded && (
             <div>
               <DropdownItem>{messages["header.header31.value1"]}</DropdownItem>
-              <DropdownItem>{messages["header.header31.value1"]}</DropdownItem>
-              <DropdownItem> <Link to="/index3" style={{color: '#151515', textDecoration: 'none'}}> {messages["header.header31.value2"]}</Link></DropdownItem>
-              <DropdownItem>{messages["header.header31.value3"]}</DropdownItem>
-              <DropdownItem> <Link to="/index4" style={{color: '#151515', textDecoration: 'none'}}>{messages["header.header31.value4"]}</Link></DropdownItem>
+              <DropdownItem active={isActive("/petid")}> <Link to="/petid" style={{ color: '#151515', textDecoration: 'none' }}> {messages["header.header31.value2"]}</Link></DropdownItem>
+              <DropdownItem active={isActive("/librettosanitario")}><Link to="/librettosanitario" style={{ color: '#151515', textDecoration: 'none' }}> {messages["header.header31.value3"]} </Link></DropdownItem>
+              <DropdownItem active={isActive("/nearme") || isActive("/nearmedetail") || isActive("/nearmericerca")}> <Link to="/nearme" style={{ color: '#151515', textDecoration: 'none' }}>{messages["header.header31.value4"]}</Link></DropdownItem>
             </div>
           )}
         </Title>
+        <Title active={isActive("/professional")}>
+          <Link to="/professional" style={{ color: '#151515', textDecoration: 'none' }}>{messages["header.header6"]}</Link>
+        </Title>
         <Title>{messages["header.header4"]}</Title>
         <Title>{messages["header.header5"]}</Title>
-        <Title>{messages["header.header6"]}</Title>
       </Mainheader>
       <Actions active={isExpandedCountry}>
         <CountryFlag active>
@@ -81,7 +82,7 @@ const Navbar = () => {
             display: "flex",
             alignItems: "center",
             justifyContent: 'space-between',
-            gap: '10px'
+            gap: '10px',
           }}>
             <LanguageFlag
               width={28}
@@ -160,18 +161,6 @@ const Actions = styled.div`
   gap: 8px
 `;
 
-const LoginButton = styled.button`
-  padding: 5px 10px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  &:hover {
-    background-color: #0069d9;
-  }
-`;
-
 const Title = styled.h1`
   color: ${({ theme }) => theme.colors.title};
   background: ${({ active }) => (active ? "#B5EBDB" : "none")};
@@ -183,6 +172,7 @@ const Title = styled.h1`
     active ? "0px 4px 7.8px 0px #00000040" : "none"};
   border-radius: ${({ active }) => (active ? "20px" : "none")};
   padding: ${({ active }) => (active ? "2px 15px" : "none")};
+  cursor: pointer;
 `;
 
 const CountryFlag = styled.h1`
@@ -208,6 +198,8 @@ const CountryTitle = styled.h1`
 const DropdownItem = styled.div`
   padding: 1.5px 3px;
   cursor: pointer;
+  font-weight: ${({ active }) => (active ? "800" : '600')};
+  font-size: 18px;
 `;
 
 const StyledButton = styled(Button)`

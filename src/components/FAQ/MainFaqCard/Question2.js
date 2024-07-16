@@ -1,11 +1,16 @@
-import React from 'react'
+import React from 'react';
+
+import KeyCardIcon from '@assets/images/FAQ/key.svg';
+
 import { CardMainTitle } from './style';
+import Question2Accordian4 from './Question2/Question2Accordian4';
+import Question2Accordian3 from './Question2/Question2Accordian3';
+import Question2Accordian2 from './Question2/Question2Accordian2';
+import Question2Accordian1 from './Question2/Question2Accordian1';
 
-import KeyCardIcon from '@assets/images/FAQ/key.svg'
-
-const Question2 = ({ activeMainCard, setActiveMainCard }) => {
+const Question2 = ({ activeMainCard, setActiveMainCard, handleChange, expanded }) => {
   return (
-    <div>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
       <div
         onClick={() => setActiveMainCard(activeMainCard === 'Question2' ? '' : 'Question2')}
         style={{
@@ -19,7 +24,7 @@ const Question2 = ({ activeMainCard, setActiveMainCard }) => {
           justifyContent: 'space-between',
           position: 'relative',
           alignItems: 'center',
-          cursor: 'pointer'
+          cursor: 'pointer',
         }}
       >
         <CardMainTitle>
@@ -35,21 +40,37 @@ const Question2 = ({ activeMainCard, setActiveMainCard }) => {
           border: '4px solid #AC4800',
           borderRadius: '50%',
           background: '#ffffff',
-          zIndex: 2
+          zIndex: 2,
         }}>
           <p style={{
             color: '#AC4800',
             fontWeight: 900,
             fontSize: '28px',
-            lineHeight: '28px'
+            lineHeight: '28px',
           }}>
             {activeMainCard === 'Question2' ? '-' : '+'}
           </p>
         </div>
         <KeyCardIcon style={{ position: 'absolute', bottom: 0, zIndex: 1, right: 0 }} />
       </div>
+      {activeMainCard === 'Question2' &&  (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+          <div>
+            <Question2Accordian1 handleChange={handleChange} expanded={expanded} />
+          </div>
+          <div>
+            <Question2Accordian2 handleChange={handleChange} expanded={expanded} />
+          </div>
+          <div>
+            <Question2Accordian3 handleChange={handleChange} expanded={expanded} />
+          </div>
+          <div>
+            <Question2Accordian4 handleChange={handleChange} expanded={expanded} />
+          </div>
+        </div>
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default Question2
+export default Question2;

@@ -1,11 +1,15 @@
-import React from 'react'
-import ArrowLeftSvg from '@assets/images/PetId/arrowLeft.svg'
-import ArrowRighttSvg from '@assets/images/PetId/arrowRight.svg'
-import CarouselImage1 from '@assets/images/PetId/carosal1.png'
-import CarouselImage2 from '@assets/images/PetId/carosal2.png'
-import CarouselImage3 from '@assets/images/PetId/carosal3.png'
-import LeftRoad from '@assets/images/PetId/LeftRoadCarousel.png'
-import RightRoad from '@assets/images/PetId/RightRoadCarousel.png'
+import React from 'react';
+import Slider from "react-slick";
+
+import ArrowLeftSvg from '@assets/images/PetId/arrowLeft.svg';
+import ArrowRighttSvg from '@assets/images/PetId/arrowRight.svg';
+import CarouselImage1 from '@assets/images/PetId/carosal1.png';
+import CarouselImage2 from '@assets/images/PetId/carosal2.png';
+import CarouselImage3 from '@assets/images/PetId/carosal3.png';
+import LeftRoad from '@assets/images/PetId/LeftRoadCarousel.png';
+import RightRoad from '@assets/images/PetId/RightRoadCarousel.png';
+import SmallGrace from '@assets/images/common/smallGrace.svg';
+
 import {
   CarouselCard,
   CarouselCardCenter,
@@ -18,13 +22,10 @@ import {
   SmallGraceStyle,
   Subtitle,
   Title,
-  UpperSide
-} from './styled'
-import Slider from "react-slick";
+  UpperSide,
+} from './styled';
 
-import SmallGrace from '@assets/images/common/smallGrace.svg';
-
-function Arrow(props) {
+function Arrow (props) {
   let className = props.type === "next" ? "nextArrow" : "prevArrow";
   className += " arrow";
   const char = props.type === "next" ? <ArrowRighttSvg /> : <ArrowLeftSvg />;
@@ -48,7 +49,7 @@ const dataJson = [{
   title: 'Aggiungi il passaporto del tuo pet',
   subTitle: 'Quaerat sodales sapien euismod purus blandit a purus ipsum primis in cubilia laoreet, sodales sapien euismod purus blandit a purus ipsum primis in cubilia laoreet',
   Image: CarouselImage3,
-}]
+}];
 
 const Carousel = () => {
   const settings = {
@@ -61,12 +62,11 @@ const Carousel = () => {
     autoplaySpeed: 5000,
   };
 
-
   return (
     <div style={{
       display: 'flex',
       flexDirection: 'column',
-      gap: '35px'
+      gap: '35px',
     }}>
       <div style={{
         display: 'flex',
@@ -74,7 +74,7 @@ const Carousel = () => {
         gap: '10px',
         alignItems: 'center',
         justifyContent: 'center',
-        paddingTop: '100px'
+        paddingTop: '100px',
       }}>
         <div style={{
           display: 'flex',
@@ -106,7 +106,7 @@ const Carousel = () => {
           className="slider-container"
           style={{
             width: '80%',
-            zIndex: 1
+            zIndex: 1,
           }}>
           <Slider
             {...settings}
@@ -115,7 +115,7 @@ const Carousel = () => {
           >
             {dataJson?.map((item, index) => {
               return (
-                <CarouselCard>
+                <CarouselCard key={index}>
                   <CarouselCardCenter>
                     <InsideLeft>
                       <InsideLeftTop>
@@ -135,12 +135,12 @@ const Carousel = () => {
                     <InsideRight>
                       <img src={item?.Image} style={{
                         height: 'auto',
-                        width: '100%'
+                        width: '100%',
                       }} />
                     </InsideRight>
                   </CarouselCardCenter>
                 </CarouselCard>
-              )
+              );
             })}
 
           </Slider>
@@ -201,7 +201,7 @@ const Carousel = () => {
       </style>
     </div>
 
-  )
-}
+  );
+};
 
-export default Carousel
+export default Carousel;

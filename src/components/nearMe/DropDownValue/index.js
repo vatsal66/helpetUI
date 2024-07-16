@@ -1,10 +1,12 @@
 import React from 'react';
+import { Link } from 'gatsby';
+
+import SmallGrace from '@assets/images/common/smallGrace.svg';
+
 import DropDown from './DropDown';
 import { Subtitle, Title, TitleContainer, SubmitButton, SmallGraceStyle, SmallGrace2Style } from './styled';
 import DropDown2 from './DropDown2';
 import DropDown3 from './DropDown3';
-
-import SmallGrace from '@assets/images/common/smallGrace.svg';
 
 const List1 = [
   { id: 1, suggestion: "Dentista veterinario" },
@@ -31,13 +33,13 @@ const DropDownValue = () => {
       display: 'flex',
       width: '80%',
       margin: '0 auto',
-      position: 'relative'
+      position: 'relative',
     }}>
       <TitleContainer>
         <div style={{
           display: 'flex',
           flexDirection: 'column',
-          gap: '10px'
+          gap: '10px',
         }}>
           <Title>Cos’è il Pet ID</Title>
           <Subtitle>Quaerat sodales sapien euismod purus blandit a purus ipsum primis sodales sapien euismod purus blandit a purus sapien euismod purus blandit a purus blandit a purus sapien euismod purus blandit
@@ -61,7 +63,7 @@ const DropDownValue = () => {
             <DropDown3 suggestionsList={List3} />
           </div>
           <div style={{ width: ' 15%' }}>
-            <SubmitButton>Cerca</SubmitButton>
+            <SubmitButton><Link to="/nearmericerca" style={{ color: 'inherit', textDecoration: 'none' }}>Cerca</Link></SubmitButton>
           </div>
         </div>
       </TitleContainer>
@@ -69,6 +71,6 @@ const DropDownValue = () => {
       <SmallGrace style={SmallGrace2Style} />
     </div>
   );
-}
+};
 
 export default DropDownValue;

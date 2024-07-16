@@ -122,7 +122,6 @@ export const CardDetailsThirdActive = styled.div`
   border: 5px solid #007E60 ;
 `;
 
-
 export const HeaderText = styled.div`
   font-size: 28px;
   color: #ffffff;
@@ -139,10 +138,10 @@ export const SmallGraceStyle = {
   position: 'absolute',
   top: '-45px',
   left: '20%',
-}
+};
 
 export const TreeStyle = {
   position: 'absolute',
   top: '-50px',
   right: '-7%',
-}
+};

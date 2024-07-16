@@ -1,18 +1,20 @@
 import React, { useState } from "react";
-import CloseIcon from '@assets/images/NearMe/close.svg'
-import OpenIcon from '@assets/images/NearMe/open.svg'
-import { DropDownContainer, DropDownList, InputBox, InputMenu, ListData } from "./styled";
+
+import CloseIcon from '@assets/images/NearMe/close.svg';
+import OpenIcon from '@assets/images/NearMe/open.svg';
+
+import { DropDownContainer, DropDownList, InputBox, ListData } from "./styled";
 
 const DropDown = ({ suggestionsList }) => {
   const [keyword, setKeyword] = useState("");
-  const [openState, setOpenState] = useState(false)
+  const [openState, setOpenState] = useState(false);
 
   const getSearchTerm = (event) => {
     setKeyword(event.target.value);
     setOpenState(
       suggestionsList.filter((e) => e.suggestion.toLowerCase().includes(event.target.value.toLowerCase()))?.length === 0
         ? false
-        : true
+        : true,
     );
   };
 
@@ -35,13 +37,13 @@ const DropDown = ({ suggestionsList }) => {
             caretColor: '#ac4800',
           }}
         />
-        {openState ? <CloseIcon onClick={() => setOpenState(!openState)} /> : <OpenIcon onClick={() => setOpenState(!openState)} />}
+        {openState ? <CloseIcon style={{ cursor: 'pointer' }} onClick={() => setOpenState(!openState)} /> : <OpenIcon style={{ cursor: 'pointer' }} onClick={() => setOpenState(!openState)} />}
       </InputBox>
       {openState && (
         <DropDownList>
           {suggestionsList.filter((e) => e.suggestion.toLowerCase().includes(keyword.toLowerCase()))
-            .map((eachItem) => (
-              <ListData>{eachItem?.suggestion}</ListData>
+            .map((eachItem, index) => (
+              <ListData key={index}>{eachItem?.suggestion}</ListData>
             ))}
         </DropDownList>
       )}

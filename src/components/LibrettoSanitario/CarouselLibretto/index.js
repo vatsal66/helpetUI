@@ -1,13 +1,16 @@
-import React, { createElement } from 'react'
-import ArrowLeftSvg from '@assets/images/PetId/arrowLeft.svg'
-import ArrowRighttSvg from '@assets/images/PetId/arrowRight.svg'
-import CarouselImage1 from '@assets/images/Librettosanitario/carosal1.png'
-import CarouselIcon1 from '@assets/images/Librettosanitario/CarouselIcon1.png'
-import CarouselIcon2 from '@assets/images/Librettosanitario/CarouselIcon2.png'
-import CarouselIcon3 from '@assets/images/Librettosanitario/CarouselIcon3.png'
-import CarouselIcon4 from '@assets/images/Librettosanitario/CarouselIcon4.png'
-import CarouselIcon5 from '@assets/images/Librettosanitario/CarouselIcon5.png'
-import CarouselIcon6 from '@assets/images/Librettosanitario/CarouselIcon6.png'
+import React from 'react';
+import Slider from "react-slick";
+
+import ArrowLeftSvg from '@assets/images/PetId/arrowLeft.svg';
+import ArrowRighttSvg from '@assets/images/PetId/arrowRight.svg';
+import CarouselImage1 from '@assets/images/Librettosanitario/carosal1.png';
+import CarouselIcon1 from '@assets/images/Librettosanitario/CarouselIcon1.png';
+import CarouselIcon2 from '@assets/images/Librettosanitario/CarouselIcon2.png';
+import CarouselIcon3 from '@assets/images/Librettosanitario/CarouselIcon3.png';
+import CarouselIcon4 from '@assets/images/Librettosanitario/CarouselIcon4.png';
+import CarouselIcon5 from '@assets/images/Librettosanitario/CarouselIcon5.png';
+import CarouselIcon6 from '@assets/images/Librettosanitario/CarouselIcon6.png';
+import SmallGrace from '@assets/images/common/smallGrace.svg';
 
 import {
   CarouselCard,
@@ -21,12 +24,9 @@ import {
   SmallGraceStyle,
   Subtitle,
   Title,
-  UpperSide
-} from './styled'
-import Slider from "react-slick";
-import SmallGrace from '@assets/images/common/smallGrace.svg';
+} from './styled';
 
-function Arrow(props) {
+function Arrow (props) {
   let className = props.type === "next" ? "nextArrow" : "prevArrow";
   className += " arrow";
   const char = props.type === "next" ? <ArrowRighttSvg /> : <ArrowLeftSvg />;
@@ -68,7 +68,7 @@ const dataJson = [{
   subTitle: 'Nella sezione dedicata al Pet ID in basso a sinistra nella barra di navigazione avrai accesso a tutta la documentazione relativa al tuo amico a quattro zampe.',
   Image: CarouselImage1,
   HeaderIcon: CarouselIcon6,
-}]
+}];
 
 const CarouselLibretto = () => {
   const settings = {
@@ -84,7 +84,7 @@ const CarouselLibretto = () => {
     <div style={{
       display: 'flex',
       flexDirection: 'column',
-      gap: '35px'
+      gap: '35px',
     }}>
       <div style={{
         display: 'flex',
@@ -92,7 +92,7 @@ const CarouselLibretto = () => {
         gap: '10px',
         alignItems: 'center',
         justifyContent: 'center',
-        paddingTop: '85px'
+        paddingTop: '85px',
       }}>
         <div style={{
           display: 'flex',
@@ -108,50 +108,50 @@ const CarouselLibretto = () => {
         </div>
       </div>
 
-        <div
-          className="slider-container"
-          style={{
-            width: '80%',
-            margin: '0 auto'
-          }}>
-          <Slider
-            {...settings}
-            nextArrow={<Arrow type="next" />}
-            prevArrow={<Arrow type="prev" />}
-          >
-            {dataJson?.map((item, index) => {
-              return (
-                <CarouselCard>
-                  <CarouselCardCenter>
+      <div
+        className="slider-container"
+        style={{
+          width: '80%',
+          margin: '0 auto',
+        }}>
+        <Slider
+          {...settings}
+          nextArrow={<Arrow type="next" />}
+          prevArrow={<Arrow type="prev" />}
+        >
+          {dataJson?.map((item, index) => {
+            return (
+              <CarouselCard key={index}>
+                <CarouselCardCenter>
                   <InsideRight>
-                      <img src={item?.Image} style={{
-                        height: 'auto',
-                        width: '100%'
-                      }} />
-                    </InsideRight>
+                    <img src={item?.Image} style={{
+                      height: 'auto',
+                      width: '100%',
+                    }} />
+                  </InsideRight>
 
-                    <InsideLeft>
-                      <InsideLeftTop>
-                        <CenterSide>
-                          <div style={{ display: 'flex', alignItems: 'center', gap: '35px' }}>
+                  <InsideLeft>
+                    <InsideLeftTop>
+                      <CenterSide>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '35px' }}>
                           <img src={item.HeaderIcon} />
-                            <HeaderText>
-                              {item?.title}
-                            </HeaderText>
-                          </div>
-                          <HeaderSubText>
-                            {item?.subTitle}
-                          </HeaderSubText>
-                        </CenterSide>
-                      </InsideLeftTop>
-                    </InsideLeft>
-                  </CarouselCardCenter>
-                </CarouselCard>
-              )
-            })}
+                          <HeaderText>
+                            {item?.title}
+                          </HeaderText>
+                        </div>
+                        <HeaderSubText>
+                          {item?.subTitle}
+                        </HeaderSubText>
+                      </CenterSide>
+                    </InsideLeftTop>
+                  </InsideLeft>
+                </CarouselCardCenter>
+              </CarouselCard>
+            );
+          })}
 
-          </Slider>
-        </div>
+        </Slider>
+      </div>
       <style>
         {`
           .arrow {
@@ -178,7 +178,7 @@ const CarouselLibretto = () => {
       </style>
     </div>
 
-  )
-}
+  );
+};
 
-export default CarouselLibretto
+export default CarouselLibretto;

@@ -1,29 +1,23 @@
-import React, { useState } from 'react'
-import { CardMainTitle } from './style';
+import React from 'react';
 
-import DoorCardIcon from '@assets/images/FAQ/door.svg'
+import DoorCardIcon from '@assets/images/FAQ/door.svg';
+
+import { CardMainTitle } from './style';
 import Question1Accordian1 from './Question1/Question1Accordian1';
 import Question1Accordian2 from './Question1/Question1Accordian2';
 import Question1Accordian3 from './Question1/Question1Accordian3';
 import Question1Accordian4 from './Question1/Question1Accordian4';
 
-const Question1 = ({ activeMainCard, setActiveMainCard }) => {
+const Question1 = ({ activeMainCard, setActiveMainCard, handleChange, expanded }) => {
 
-  const [expanded, setExpanded] = useState('');
-
-  const handleChange = (panel) => (event, newExpanded) => {
-    setExpanded(newExpanded ? panel : false);
-  };
-
-  
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-      <div 
+      <div
         onClick={() => setActiveMainCard(activeMainCard === 'Question1' ? '' : 'Question1')}
         style={{
           width: '100%',
           borderRadius: '35px',
-          border: '5px solid #A00483', 
+          border: '5px solid #A00483',
           background: '#C54EAE',
           height: '194px',
           display: 'flex',
@@ -31,7 +25,7 @@ const Question1 = ({ activeMainCard, setActiveMainCard }) => {
           justifyContent: 'space-between',
           position: 'relative',
           alignItems: 'center',
-          cursor: 'pointer'
+          cursor: 'pointer',
         }}>
         <CardMainTitle>
           Accesso e Registrazione
@@ -46,13 +40,13 @@ const Question1 = ({ activeMainCard, setActiveMainCard }) => {
           border: '4px solid #A00483',
           borderRadius: '50%',
           background: '#ffffff',
-          zIndex: 2
+          zIndex: 2,
         }}>
           <p style={{
             color: '#A00483',
             fontWeight: 900,
             fontSize: '28px',
-            lineHeight: '28px'
+            lineHeight: '28px',
           }}>
             {activeMainCard === 'Question1' ? '-' : '+'}
           </p>
@@ -76,7 +70,7 @@ const Question1 = ({ activeMainCard, setActiveMainCard }) => {
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default Question1
+export default Question1;

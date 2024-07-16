@@ -97,4 +97,4 @@ export const SmallGraceStyle = {
   position: 'absolute',
   top: '-45px',
   right: '3%',
-}
+};

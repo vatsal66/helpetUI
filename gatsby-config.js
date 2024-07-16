@@ -1,5 +1,16 @@
+/* eslint-disable no-useless-escape */
+
 const path = require('path');
 require('dotenv').config();
+
+const gatsbyRequiredRules = path.join(
+  process.cwd(),
+  "node_modules",
+  "gatsby",
+  "dist",
+  "utils",
+  "eslint-rules",
+);
 
 module.exports = {
   siteMetadata: {
@@ -71,6 +82,19 @@ module.exports = {
       options: {
         id: `GTM-TDKK397`,
         dataLayerName: `helpet`,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-eslint",
+      options: {
+        // Gatsby required rules directory
+        rulePaths: [gatsbyRequiredRules],
+        // Default settings that may be omitted or customized
+        stages: ["develop"],
+        extensions: ["js", "jsx", "ts", "tsx"],
+        exclude: ["node_modules", "bower_components", ".cache", "public"],
+        // Any additional eslint-webpack-plugin options below
+        // ...
       },
     },
   ],

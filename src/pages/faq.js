@@ -1,20 +1,22 @@
-import React from 'react'
+/* eslint-disable react-hooks/rules-of-hooks */
+import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { IntlProvider } from 'react-intl';
 
-import theme from '@styles/theme';
-import GlobalStyle from '@styles/GlobalStyle';
-import useLanguage from '@hooks/useLanguage';
-
 import { Footer, Navbar } from '@components/common';
 import { MainFaqCard } from '@components/FAQ';
+
+import useLanguage from '@hooks/useLanguage';
+
+import theme from '@styles/theme';
+import GlobalStyle from '@styles/GlobalStyle';
 
 const faq = () => {
   const [messages, { locale }] = useLanguage();
 
   return (
     <div style={{
-      background: '#EEFFF8'
+      background: '#EEFFF8',
     }}>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
@@ -25,9 +27,9 @@ const faq = () => {
         </IntlProvider>
       </ThemeProvider>
     </div>
-  )
-}
+  );
+};
 
-export default faq
+export default faq;
 
 // 38

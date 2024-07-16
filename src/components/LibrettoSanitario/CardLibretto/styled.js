@@ -133,7 +133,6 @@ export const CardDetailsThirdActive = styled.div`
   z-index: 2;
 `;
 
-
 export const HeaderText = styled.div`
   font-size: 28px;
   color: #ffffff;
@@ -150,4 +149,4 @@ export const SmallGraceStyle = {
   position: 'absolute',
   top: '0px',
   left: '50%',
-}
+};

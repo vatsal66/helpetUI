@@ -1,23 +1,21 @@
-import { Dialog, DialogContent } from '@mui/material'
-import React from 'react'
+import { Dialog, DialogContent } from '@mui/material';
+import React from 'react';
 
 import DialogCloseIcon from '@assets/images/NearMeDetail/DialogClose.svg';
 import DialogMapIcon from '@assets/images/NearMeDetail/DialogMap.svg';
-
 import Store1 from '@assets/images/NearMeDetail/NewarMeDetailTabStore1.svg';
 import Store2 from '@assets/images/NearMeDetail/NewarMeDetailTabStore2.svg';
 import Store3 from '@assets/images/NearMeDetail/NewarMeDetailTabStore3.svg';
 import Store4 from '@assets/images/NearMeDetail/NewarMeDetailTabStore4.svg';
-
 import Doctor1 from '@assets/images/NearMeDetail/NewarMeDetailTabDoctor1.svg';
 import Doctor4 from '@assets/images/NearMeDetail/NewarMeDetailTabDoctor4.svg';
 
-import { 
+import {
   Card, CardDetails,
   CardDetailsDesc, CardDetailsLeft, CardDetailsRight,
   CardDetailsTitle, CardHeader, CardRated,
   CardSection, CardTitle,
-  closeIconStyle, doctorBackgroundStyle, doctorStyle, InlineCard, Title
+  closeIconStyle, doctorBackgroundStyle, doctorStyle, InlineCard, Title,
 } from './styled';
 
 const CardData = [{
@@ -60,7 +58,7 @@ const CardData = [{
   middleContent: 'Vedi disponibilità',
   storeBackground: <Store4 style={doctorBackgroundStyle} />,
   doctorImage: <Doctor4 style={doctorStyle} />,
-}]
+}];
 
 const NearMeDialog = ({ mapDialog, setMapDialog, renderRating }) => {
 
@@ -79,8 +77,8 @@ const NearMeDialog = ({ mapDialog, setMapDialog, renderRating }) => {
             maxWidth: 'unset',
             width: '100%',
             background: 'none',
-            boxShadow: 'none'
-          }
+            boxShadow: 'none',
+          },
         }}
       >
         <DialogContent sx={{
@@ -91,73 +89,73 @@ const NearMeDialog = ({ mapDialog, setMapDialog, renderRating }) => {
           border: '5px solid #007E60',
           borderRadius: '50px',
           background: '#ffffff',
-          gap: '24px'
+          gap: '24px',
         }}>
-          <DialogCloseIcon style={closeIconStyle}/>
+          <DialogCloseIcon style={closeIconStyle} onClick={() => setMapDialog(false)}/>
           <div style={{
             width: '40%',
-            overflowY: 'scroll'
+            overflowY: 'scroll',
           }}>
             <Title>Dentista veterinario: 18 risultati trovati</Title>
-              <CardSection>
-                {CardData?.map((item) => (
-                  <Card>
-                    <CardHeader>
-                      <CardTitle>
-                        {item?.cardTitle}
-                      </CardTitle>
-                    </CardHeader>
-                    <CardDetails>
-                      <CardDetailsLeft>
+            <CardSection>
+              {CardData?.map((item,index) => (
+                <Card key={index}>
+                  <CardHeader>
+                    <CardTitle>
+                      {item?.cardTitle}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardDetails>
+                    <CardDetailsLeft>
                       <div style={{
-                          display: 'flex',
-                          justifyContent: 'space-between',
-                        }}>
-                          <div>
-                            <CardDetailsTitle>
-                              {item?.cardName}
-                            </CardDetailsTitle>
-                            <CardDetailsDesc>
-                              {item?.cardNameDetail}
-                            </CardDetailsDesc>
-                            <div style={{ display: 'flex', flexDirection: 'column', gap: '5px', }}>
-                              <CardRated>
-                                {renderRating(item.rating)}
-                              </CardRated>
-                            </div>
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                      }}>
+                        <div>
+                          <CardDetailsTitle>
+                            {item?.cardName}
+                          </CardDetailsTitle>
+                          <CardDetailsDesc>
+                            {item?.cardNameDetail}
+                          </CardDetailsDesc>
+                          <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
+                            <CardRated>
+                              {renderRating(item.rating)}
+                            </CardRated>
                           </div>
+                        </div>
 
-                          <div style={{
-                            border: '3px solid #001A75',
-                            backgroundColor: '#0017E5',
-                            padding: '2px 8px',
-                            borderRadius: '13px',
-                            height: 'fit-content',
-                            display: 'flex',
-                            alignSelf: 'flex-end',
-                          }}>
-                            <InlineCard>
-                              {item?.middleContent}
-                            </InlineCard>
-                          </div>
-                        </div>
-                      </CardDetailsLeft>
-                      <CardDetailsRight>
                         <div style={{
-                          position: 'absolute',
-                          bottom: '40px',
+                          border: '3px solid #001A75',
+                          backgroundColor: '#0017E5',
+                          padding: '2px 8px',
+                          borderRadius: '13px',
+                          height: 'fit-content',
+                          display: 'flex',
+                          alignSelf: 'flex-end',
                         }}>
-                          {item?.storeBackground}
-                          {item?.doctorImage}
+                          <InlineCard>
+                            {item?.middleContent}
+                          </InlineCard>
                         </div>
-                      </CardDetailsRight>
-                    </CardDetails>
-                  </Card>
-                ))}
-              </CardSection>
+                      </div>
+                    </CardDetailsLeft>
+                    <CardDetailsRight>
+                      <div style={{
+                        position: 'absolute',
+                        bottom: '40px',
+                      }}>
+                        {item?.storeBackground}
+                        {item?.doctorImage}
+                      </div>
+                    </CardDetailsRight>
+                  </CardDetails>
+                </Card>
+              ))}
+            </CardSection>
           </div>
           <div style={{
-            width: '60%'
+            width: '60%',
           }}>
             <DialogMapIcon />
           </div>
@@ -196,13 +194,13 @@ const NearMeDialog = ({ mapDialog, setMapDialog, renderRating }) => {
         `}
       </style>
     </>
-  )
-}
+  );
+};
 
-export default NearMeDialog
+export default NearMeDialog;
 
 // ::-webkit-scrollbar-thumb:hover {
-//   background: #b30000; 
+//   background: #b30000;
 // }
 
 // ::-webkit-scrollbar-button:end:increment {

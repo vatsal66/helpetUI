@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Thirdtitle = styled.h2`
   text-align: center;
   margin: 260px 0 220px 0;
-`
+`;
 
 export const Title = styled.h1`
   color: #000000;
@@ -19,10 +19,10 @@ export const Title = styled.h1`
 export const leftImageStyle = {
   position: 'absolute',
   top: '-145px',
-}
+};
 
 export const SmallGraceStyle = {
   position: 'absolute',
   bottom: '-100px',
   right: '20%',
-}
+};

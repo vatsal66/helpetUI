@@ -1,19 +1,18 @@
 import React, { useState } from 'react';
-import { useIntl } from 'react-intl';
+
+import Collapse from '@assets/images/Footer/collapse.svg';
+import Expand from '@assets/images/Footer/expand.svg';
 
 import {
   ContentWrapper,
   Content,
   Text,
   TextInside,
-  Right,
   FooterBottom,
-  Link,
   Copyright,
   CopyrightDetails,
   StoreIcon,
   IconsWrapper,
-  Label,
   StyledApple,
   StyledPlay,
   StyledSocialLogo,
@@ -23,11 +22,7 @@ import {
   DropDownList,
 } from './styled';
 
-import Collapse from '@assets/images/Footer/collapse.svg'
-import Expand from '@assets/images/Footer/expand.svg'
-
 const Footer = () => {
-  const { messages } = useIntl();
   const [isExpanded, setIsExpanded] = useState(false);
   const [isExpanded2, setIsExpanded2] = useState(false);
 
@@ -43,7 +38,7 @@ const Footer = () => {
     <div id="footer" style={{
       background: '#ffffff',
       position: 'relative',
-      zIndex: 2
+      zIndex: 2,
     }}>
       <ContentWrapper>
         <Content>
@@ -93,12 +88,12 @@ const Footer = () => {
                       : <Collapse />}
                     Note legali
                   </div>
-                    {isExpanded2 && (
-                      <div>
-                        <DropDownList>Informativa sulla Privacy</DropDownList>
-                        <DropDownList>Termini di utilizzo</DropDownList>
-                      </div>
-                    )}
+                  {isExpanded2 && (
+                    <div>
+                      <DropDownList>Informativa sulla Privacy</DropDownList>
+                      <DropDownList>Termini di utilizzo</DropDownList>
+                    </div>
+                  )}
                   </Text>
                 </div>
               </Contact>
@@ -143,7 +138,7 @@ const Footer = () => {
         <FooterBottom>
           <Copyright>All Copyrights reserved - HelpetApp@2020</Copyright>
           <CopyrightDetails>
-            Helpet Srl – Sede Legale Viale Volga snc – Cap. 70132 –  Bari – Soc. 10.000,00  € – Reg. Imp. di Bari al n. BA - 633972 –  C.F: 15386071003 – Partita IVA 15386071003 – PEC: helpetitalia@legalmail.it – Società soggetta al controllo di IVASS, iscritta al R.U.I  con il codice E000728380  e si avvale per l’attività assicurativa e la compliance di J&B Broker Srls, società soggetta al controllo di IVASS, iscritta al R.U.I con il codice B000619911. – ©2023.
+            Helpet Srl – Sede Legale Viale Volga snc – Cap. 70132 –  Bari – Soc. 10.000,00 € – Reg. Imp. di Bari al n. BA - 633972 – C.F: 15386071003 – Partita IVA 15386071003 – PEC: helpetitalia@legalmail.it – Società soggetta al controllo di IVASS, iscritta al R.U.I con il codice E000728380 e si avvale per l’attività assicurativa e la compliance di J&B Broker Srls, società soggetta al controllo di IVASS, iscritta al R.U.I con il codice B000619911. – ©2023.
           </CopyrightDetails>
         </FooterBottom>
       </ContentWrapper>

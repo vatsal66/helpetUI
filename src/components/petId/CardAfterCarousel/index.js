@@ -1,18 +1,19 @@
-import React, { useState } from 'react'
-import { 
+import React, { useState } from 'react';
+
+import Card1Icon from '@assets/images/PetId/Card1Icon.svg';
+import Card2Icon from '@assets/images/PetId/Card2Icon.svg';
+import Card3Icon from '@assets/images/PetId/Card3Icon.svg';
+import SmallGrace from '@assets/images/common/smallGrace.svg';
+import Tree from '@assets/images/common/Tree.svg';
+
+import {
   Subtitle, Title, TitleContainer,
   CardPetId, CardDetailsLeft, CardDetailsRight,
   CardDetailsLeftActive, CardDetailsRightActive,
   HeaderText, HeaderSubText,
   CardDetailsThirdActive, CardDetailsThird,
-  SmallGraceStyle, TreeStyle
-} from './styled'
-
-import Card1Icon from '@assets/images/PetId/Card1Icon.svg'
-import Card2Icon from '@assets/images/PetId/Card2Icon.svg'
-import Card3Icon from '@assets/images/PetId/Card3Icon.svg'
-import SmallGrace from '@assets/images/common/smallGrace.svg';
-import Tree from '@assets/images/common/Tree.svg';
+  SmallGraceStyle, TreeStyle,
+} from './styled';
 
 const CardAfterCarousel = () => {
   const [firstCardActive, setFirstCardActive] = useState(false);
@@ -43,19 +44,18 @@ const CardAfterCarousel = () => {
     setThirdCardActive(false);
   };
 
-
   return (
     <div style={{
       width: '80%',
       margin: '0 auto',
-      paddingTop: '75px'
+      paddingTop: '75px',
     }}>
       <TitleContainer>
         <div style={{
           display: 'flex',
           flexDirection: 'column',
           gap: '10px',
-          position: 'relative'
+          position: 'relative',
         }}>
           <Tree style={TreeStyle} />
           <SmallGrace style={SmallGraceStyle} />
@@ -131,7 +131,7 @@ const CardAfterCarousel = () => {
         </CardPetId>
       </TitleContainer>
     </div>
-  )
-}
+  );
+};
 
-export default CardAfterCarousel
+export default CardAfterCarousel;

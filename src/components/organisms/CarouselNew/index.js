@@ -12,22 +12,17 @@ import Health from '@assets/images/health.svg';
 import PetShop from '@assets/images/petshop.svg';
 import Veterinary from '@assets/images/veterinary.svg';
 import Park from '@assets/images/park.svg';
-import Transport from '@assets/images/transport.svg';
 import Taxi from '@assets/images/HomePage/taxi.svg';
 import Emergency from '@assets/images/emergency.svg';
 import Grooming from '@assets/images/grooming.svg';
-import Grass from '@assets/images/grass.svg';
 import Next from '@assets/images/HomePage/Right.svg';
 import Prev from '@assets/images/HomePage/Left.svg';
-import CardDetail from '@assets/icons/card-detail.svg';
 
 import {
   Container,
   NavContainer,
   NavButton,
-  CarouselFooter,
   Description,
-  GrassWrapper,
   InnerWrapper,
   SliderContainer,
   TypeText,
@@ -78,9 +73,9 @@ const Carousel = () => {
   return (
     <Container className="services">
       <Description>
-          <TypeText>{messages['carousel.title']}</TypeText>
-          {messages['carousel.description']}
-        </Description>
+        <TypeText>{messages['carousel.title']}</TypeText>
+        {messages['carousel.description']}
+      </Description>
       <InnerWrapper>
         <NavContainer>
           <NavButton onClick={() => sliderPrev()}>
@@ -91,16 +86,17 @@ const Carousel = () => {
           </NavButton>
         </NavContainer>
         <SliderContainer>
-        {isRendered && (
-          <Slider ref={sliderRef} {...sliderSettings}>
-            {Object.entries(items).map((item) => (
-              <CarouselItem key={item[0]} tag={item[0]}>
-                {item[1]()}
-              </CarouselItem>
-            ))}
-          </Slider>
-        )}
+          {isRendered && (
+            <Slider ref={sliderRef} {...sliderSettings}>
+              {Object.entries(items).map((item) => (
+                <CarouselItem key={item[0]} tag={item[0]}>
+                  {item[1]()}
+                </CarouselItem>
+              ))}
+            </Slider>
+          )}
         </SliderContainer>
+        <div style={{ height: '100px', backgroundColor: '#00B388', position: 'relative', bottom: '125px', zIndex: '-1' }}></div>
       </InnerWrapper>
     </Container>
   );

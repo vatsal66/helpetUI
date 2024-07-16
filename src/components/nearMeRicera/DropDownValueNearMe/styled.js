@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const TitleContainer = styled.div`
   display: flex;
@@ -16,7 +16,7 @@ export const TitleContainer = styled.div`
       width: 140px;
     }
   }
-`
+`;
 
 export const Title = styled.h1`
   color: #000000;
@@ -27,7 +27,7 @@ export const Title = styled.h1`
   @media (max-width: 799px) {
     font-size: 26px;
   }
-`
+`;
 export const Subtitle = styled.h2`
   color: #343434;
   font-size: 24px;
@@ -38,14 +38,14 @@ export const Subtitle = styled.h2`
   @media (max-width: 799px) {
     font-size: 16px;
   }
-`
+`;
 
 export const InputBox = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 25px;
-`
+`;
 
 export const DropDownContainer = styled.div`
   display: flex;
@@ -55,7 +55,7 @@ export const DropDownContainer = styled.div`
   border-radius: 35px;
   padding: 10px 0;
   gap: 10px;
-`
+`;
 
 export const InputMenu = styled.input`
   background-color: unset;
@@ -73,7 +73,7 @@ export const InputMenu = styled.input`
   :-ms-input-placeholder {
      color: red;
   }
-`
+`;
 
 export const ListData = styled.p`
   color: #ac4800;
@@ -95,15 +95,14 @@ export const ListData = styled.p`
       border-right: none;
     }
   }
-`
-
+`;
 
 export const DropDownList = styled.div`
   display: flex;
   flex-direction: column;
   border-radius: 0 0 7px 7px;
   overflow: hidden;
-`
+`;
 
 export const SubmitButton = styled.button`
   border: 5px solid #ac4800;
@@ -117,4 +116,4 @@ export const SubmitButton = styled.button`
   align-items: center;
   justify-content: center;
   padding: 23px 0;
-`
+`;

@@ -3,28 +3,14 @@ import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
 
 import { StoreBadges } from '@components/molecules';
-import { LanguageFlag } from '@components/quarks';
-
-import HelpetLogo from '@assets/images/helpet-logo.svg';
-import BrazilFlagSvg from '@assets/icons/brazil-flag.svg';
-import ItalyFlagSvg from '@assets/icons/italy-flag.svg';
-import UKFlagSvg from '@assets/icons/uk-flag.svg';
 
 import {
   StyledHeader,
   StyledContentSection,
   TitleContainer,
-  FlagsContainer,
   Title,
   Subtitle,
   ImagesContainer,
-  PetHouseBg,
-  StyledPetHouse,
-  StyledHeaderGrassLeft,
-  StyledHeaderLightGrassRight,
-  StyledHeaderGrassRight,
-  StyledHeaderLightGrassLeft,
-  StyledCat,
   StyledSmallCloud,
   StyledBigCloud,
   StyledBottomTrain,

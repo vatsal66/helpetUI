@@ -1,15 +1,16 @@
-import React, { useState } from 'react'
-import Accordian1 from './Accordian1'
-import Accordian2 from './Accordian2'
-import Accordian3 from './Accordian3'
-import Accordian4 from './Accordian4'
-import AppButton from '../AppButton'
+import React, { useState } from 'react';
 
 import RightRoad from '@assets/images/common/rightRoadWithcar.svg';
 import SmallGrace from '@assets/images/common/smallGrace.svg';
 import Tree from '@assets/images/common/Tree.svg';
 
-import { SmallGraceStyle, SmallGraceStyle1, SmallGraceStyle2, TreeStyle } from './style'
+import Accordian1 from './Accordian1';
+import Accordian2 from './Accordian2';
+import Accordian3 from './Accordian3';
+import Accordian4 from './Accordian4';
+import { SmallGraceStyle, SmallGraceStyle1, SmallGraceStyle2, TreeStyle } from './style';
+
+import AppButton from '../AppButton';
 
 const AccordianDetailsCard = () => {
   const [expanded, setExpanded] = useState('');
@@ -38,16 +39,16 @@ const AccordianDetailsCard = () => {
         <div>
           <Accordian4 handleChange={handleChange} expanded={expanded} />
         </div>
-        <div style={{ 
-            position: 'absolute',
-            right: '-20%',
-            top: '869px',
-            zIndex: 1,
-            height: (expanded === false || expanded === '') && '700px',
-            overflow: 'hidden'
-          }}>
+        <div style={{
+          position: 'absolute',
+          right: '-20%',
+          top: '869px',
+          zIndex: 1,
+          height: (expanded === false || expanded === '') && '700px',
+          overflow: 'hidden',
+        }}>
           <RightRoad  />
-          </div>
+        </div>
       </div>
       <div style={{
         display: 'flex',
@@ -58,7 +59,7 @@ const AccordianDetailsCard = () => {
         <AppButton />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AccordianDetailsCard
+export default AccordianDetailsCard;

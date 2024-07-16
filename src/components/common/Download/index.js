@@ -1,15 +1,17 @@
-import React from 'react'
-import { Thirdtitle, Title } from './styled'
-import { StoreBadges } from '@components/molecules'
+import React from 'react';
 import { useIntl } from 'react-intl';
 
+import { StoreBadges } from '@components/molecules';
+
+import { Thirdtitle, Title } from './styled';
+
 const Download = () => {
-  const { messages, locale } = useIntl();
+  const { locale } = useIntl();
 
   return (
     <div style={{
       width: '80%',
-      margin: '0 auto'
+      margin: '0 auto',
     }}>
       <Thirdtitle>
         <Title>Per usufruire anche tu</Title>
@@ -18,7 +20,7 @@ const Download = () => {
       </Thirdtitle>
     </div>
 
-  )
-}
+  );
+};
 
-export default Download
+export default Download;

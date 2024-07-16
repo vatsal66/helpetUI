@@ -41,7 +41,7 @@ const PartnerForm = () => {
       it: () => (
         <StyledInput
           placeholderMessageId="phone"
-          mask="+3\9 999 999 9999"
+          mask="+39 999 999 9999"
           value={phone}
           onChangeText={(value) => handleTextChange('phone', value)}
         />
@@ -49,7 +49,7 @@ const PartnerForm = () => {
       'pt-BR': () => (
         <StyledInput
           placeholderMessageId="phone"
-          mask="+55 (99) \9 9999-9999"
+          mask="+55 (99) 9999-9999"
           value={phone}
           onChangeText={(value) => handleTextChange('phone', value)}
         />

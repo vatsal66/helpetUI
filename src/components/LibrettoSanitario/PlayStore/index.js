@@ -1,14 +1,17 @@
-import React from 'react'
-import { LeftTruck, RightTruck, SmallGraceStyle, Thirdtitle, Title, TreeStyle } from './styled'
-import { StoreBadges } from '@components/molecules'
+import React from 'react';
 import { useIntl } from 'react-intl';
+
+import { StoreBadges } from '@components/molecules';
+
 import RightPath from '@assets/images/Librettosanitario/RightPath.svg';
 import Truck from '@assets/images/Librettosanitario/PlayStoreTruck.svg';
 import Tree from '@assets/images/common/Tree.svg';
 import SmallGrace from '@assets/images/common/smallGrace.svg';
 
+import { LeftTruck, RightTruck, SmallGraceStyle, Thirdtitle, Title, TreeStyle } from './styled';
+
 const PlayStore = () => {
-  const { messages, locale } = useIntl();
+  const { locale } = useIntl();
 
   return (
     <div style={{
@@ -26,7 +29,7 @@ const PlayStore = () => {
       <Truck style={LeftTruck} />
       <RightPath style={RightTruck} />
     </div>
-  )
-}
+  );
+};
 
-export default PlayStore
+export default PlayStore;

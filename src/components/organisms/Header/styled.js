@@ -295,7 +295,6 @@ export const StyledBottomTrain = styled(trainBottom)`
   }
 `;
 
-
 export const StyledBottomTrainHome = styled(trainBottomHome)`
   position: absolute;
   bottom: ${({ bottom }) => bottom};

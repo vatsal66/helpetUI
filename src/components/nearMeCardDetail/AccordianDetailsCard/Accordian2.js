@@ -1,8 +1,9 @@
-import { Accordion, AccordionDetails, AccordionSummary } from '@mui/material'
-import React from 'react'
+import { Accordion, AccordionDetails, AccordionSummary } from '@mui/material';
+import React from 'react';
 
-import ArrowDown from '@assets/images/NearMeCard/arrowDown.svg'
-import { AccordianTextheader, RoundPoint, SubTitle, SummeryTitle, Title } from './style'
+import ArrowDown from '@assets/images/NearMeCard/arrowDown.svg';
+
+import { AccordianTextheader, RoundPoint, SummeryTitle } from './style';
 
 const Accordian2 = ({ handleChange, expanded }) => {
   return (
@@ -19,14 +20,14 @@ const Accordian2 = ({ handleChange, expanded }) => {
           padding: '10px 40px',
           '& .MuiAccordionSummary-content': {
             marginTop: '25px',
-            marginBottom: '25px'
+            marginBottom: '25px',
           },
           '& .MuiAccordionSummary-content.Mui-expanded': {
-            margin: '25px 0 0 0'
+            margin: '25px 0 0 0',
           },
           '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
-            margin: '25px 0 0 0'
-          }
+            margin: '25px 0 0 0',
+          },
         }}
       >
         <SummeryTitle>
@@ -37,13 +38,13 @@ const Accordian2 = ({ handleChange, expanded }) => {
         padding: '8px 40px 20px 40px',
         minHeight: '150px',
         display: 'flex',
-        gap: '50px'
+        gap: '50px',
       }}>
         <div style={{
           display: 'flex',
           alignItems: 'center',
           width: '50%',
-          flexDirection: 'column'
+          flexDirection: 'column',
         }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', borderBottom: '2px solid #001A75', padding: '30px 10px' }}>
             <div style={{ display: 'flex', gap: '12px', alignItems: 'center', width: '75%' }}>
@@ -56,7 +57,7 @@ const Accordian2 = ({ handleChange, expanded }) => {
               </AccordianTextheader>
             </div>
           </div>
-          <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', borderBottom: '2px solid #001A75', padding: '30px 10px' }}> 
+          <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', borderBottom: '2px solid #001A75', padding: '30px 10px' }}>
             <div style={{ display: 'flex', gap: '12px', alignItems: 'center', width: '75%' }}>
               <RoundPoint />
               <AccordianTextheader>Visita di controllo</AccordianTextheader>
@@ -99,7 +100,7 @@ const Accordian2 = ({ handleChange, expanded }) => {
         </div>
       </AccordionDetails>
     </Accordion>
-  )
-}
+  );
+};
 
-export default Accordian2
+export default Accordian2;

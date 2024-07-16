@@ -7,6 +7,6 @@ const sendMail = (api, key) => async body => {
     },
     body: JSON.stringify(body),
   });
-}
+};
 
 export default sendMail;

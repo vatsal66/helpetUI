@@ -126,7 +126,6 @@ export const CopyrightDetails = styled.div`
   padding: 0 10%;
 `;
 
-
 export const StoreIcon = styled.a`
   align-items: center;
   background-color: ${({ theme }) => theme.colors.background};
@@ -192,5 +191,3 @@ export const Contact = styled.div`
     width: 100%;
   }
 `;
-
-

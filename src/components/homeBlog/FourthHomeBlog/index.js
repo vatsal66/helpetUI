@@ -1,6 +1,6 @@
-import React from 'react'
-import { Card1, CardHeader, CardHeaderName, CardMainTitle, CardSubName, CardSubTitle, ColRightSide, Container, ImageWrapper, MainCard, StartComponents, StyledContentSection } from './styled'
+import React from 'react';
 
+import { CardHeader, CardHeaderName, CardMainTitle, CardSubName, CardSubTitle, ColRightSide, Container, ImageWrapper, MainCard } from './styled';
 
 const FourthHomeBlog = () => {
   return (
@@ -32,7 +32,7 @@ const FourthHomeBlog = () => {
         </MainCard>
       </Container>
     </>
-  )
-}
+  );
+};
 
-export default FourthHomeBlog
+export default FourthHomeBlog;

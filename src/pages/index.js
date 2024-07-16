@@ -1,11 +1,11 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { IntlProvider } from 'react-intl';
-import { Helmet } from 'react-helmet';
+// import { Helmet } from 'react-helmet';
 
 import {
   Header,
-  Carousel,
+  // Carousel,
   CarouselNew,
   FormSection,
   Benefits,
@@ -13,7 +13,6 @@ import {
   CookiesWarning,
   Main,
 } from '@components/organisms';
-
 import {
   Footer,
   Navbar,

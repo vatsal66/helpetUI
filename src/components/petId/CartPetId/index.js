@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
-import { Subtitle, Title, TitleContainer, CardPetId, CardDetailsLeft, CardDetailsRight, CardDetailsLeftActive, CardDetailsRightActive, HeaderText, HeaderSubText, SmallGraceStyle } from './styled'
-import ScannerIcon from '@assets/images/PetId/microchip.svg'
-import PlaneIcon from '@assets/images/PetId/union.svg'
+import React, { useState } from 'react';
+
+import ScannerIcon from '@assets/images/PetId/microchip.svg';
+import PlaneIcon from '@assets/images/PetId/union.svg';
 import SmallGrace from '@assets/images/common/smallGrace.svg';
+
+import { Subtitle, Title, TitleContainer, CardPetId, CardDetailsLeft, CardDetailsRight, CardDetailsLeftActive, CardDetailsRightActive, HeaderText, HeaderSubText, SmallGraceStyle } from './styled';
 
 const CartPetId = () => {
   const [firstCardActive, setFirstCardActive] = useState(false);
@@ -28,7 +30,7 @@ const CartPetId = () => {
     <div style={{
       width: '80%',
       margin: '0 auto',
-      paddingTop: '50px'
+      paddingTop: '50px',
     }}>
       <TitleContainer>
         <div style={{
@@ -86,7 +88,7 @@ const CartPetId = () => {
         </CardPetId>
       </TitleContainer>
     </div>
-  )
-}
+  );
+};
 
-export default CartPetId
+export default CartPetId;

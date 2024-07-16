@@ -12,10 +12,9 @@ describe('<Checkbox />', () => {
     onClick: jest.fn(),
   };
 
-
   beforeEach(() => {
     component = renderWithTheme(
-      <Checkbox {...props} />
+      <Checkbox {...props} />,
     );
   });
 

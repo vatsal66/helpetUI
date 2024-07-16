@@ -181,7 +181,6 @@ const GlobalStyle = createGlobalStyle`
 
 export default GlobalStyle;
 
-
-  // html {
-  //   overflow-x: hidden;
-  // }
+// html {
+//   overflow-x: hidden;
+// }

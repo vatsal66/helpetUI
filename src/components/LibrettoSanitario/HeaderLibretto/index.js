@@ -1,5 +1,6 @@
-import React from 'react'
-import { StyledBigCloud, StyledContentSection, StyledHeader, StyledSmallCloud, Subtitle, Title, TitleContainer } from './styled'
+import React from 'react';
+
+import { StyledBigCloud, StyledContentSection, StyledHeader, StyledSmallCloud, Subtitle, Title, TitleContainer } from './styled';
 
 const HeaderPetId = () => {
   return (
@@ -17,7 +18,7 @@ const HeaderPetId = () => {
       <StyledBigCloud top="190px" duration={100} left />
       <StyledBigCloud top="150px" duration={70} right />
     </StyledHeader>
-  )
-}
+  );
+};
 
-export default HeaderPetId
+export default HeaderPetId;

@@ -1,11 +1,17 @@
-import React from 'react'
+import React from 'react';
+
+import PetIdCardIcon from '@assets/images/FAQ/petId.svg';
+
 import { CardMainTitle } from './style';
+import Question3Accordian4 from './Question3/Question3Accordian4';
+import Question3Accordian3 from './Question3/Question3Accordian3';
+import Question3Accordian2 from './Question3/Question3Accordian2';
+import Question3Accordian1 from './Question3/Question3Accordian1';
 
-import PetIdCardIcon from '@assets/images/FAQ/petId.svg'
+const Question3 = ({ activeMainCard, setActiveMainCard, handleChange, expanded }) => {
 
-const Question3 = ({ activeMainCard, setActiveMainCard }) => {
   return (
-    <div>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
       <div
         onClick={() => setActiveMainCard(activeMainCard === 'Question3' ? '' : 'Question3')}
         style={{
@@ -19,7 +25,7 @@ const Question3 = ({ activeMainCard, setActiveMainCard }) => {
           justifyContent: 'space-between',
           position: 'relative',
           alignItems: 'center',
-          cursor: 'pointer'
+          cursor: 'pointer',
         }}>
         <CardMainTitle>
           Pet ID
@@ -34,21 +40,37 @@ const Question3 = ({ activeMainCard, setActiveMainCard }) => {
           border: '4px solid #62007A',
           borderRadius: '50%',
           background: '#ffffff',
-          zIndex: 2
+          zIndex: 2,
         }}>
           <p style={{
             color: '#62007A',
             fontWeight: 900,
             fontSize: '28px',
-            lineHeight: '28px'
+            lineHeight: '28px',
           }}>
             {activeMainCard === 'Question3' ? '-' : '+'}
           </p>
         </div>
         <PetIdCardIcon style={{ position: 'absolute', bottom: '-5px', zIndex: 1, right: '135px' }} />
       </div>
+      {activeMainCard === 'Question3' &&  (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+          <div>
+            <Question3Accordian1 handleChange={handleChange} expanded={expanded} />
+          </div>
+          <div>
+            <Question3Accordian2 handleChange={handleChange} expanded={expanded} />
+          </div>
+          <div>
+            <Question3Accordian3 handleChange={handleChange} expanded={expanded} />
+          </div>
+          <div>
+            <Question3Accordian4 handleChange={handleChange} expanded={expanded} />
+          </div>
+        </div>
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default Question3
+export default Question3;

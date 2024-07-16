@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import Slider from '@mui/material/Slider';
 
 import Tree from '@assets/images/common/Tree.svg';
@@ -14,13 +14,13 @@ const RangeSlider = () => {
   };
 
   const onMinValueChange = (event) => {
-    const data = event.target.value.replace(/[€\s]/g, '')
+    const data = event.target.value.replace(/[€\s]/g, '');
     const newValue = Math.min(Number(data), value[1]);
     setValue([newValue, value[1]]);
   };
 
   const onMaxValueChange = (event) => {
-    const data = event.target.value.replace(/[€\s]/g, '')
+    const data = event.target.value.replace(/[€\s]/g, '');
     const newValue = Math.max(Number(data), value[0]);
     setValue([value[0], newValue]);
   };
@@ -34,7 +34,7 @@ const RangeSlider = () => {
       gap: '15px',
       display: 'flex',
       flexDirection: 'column',
-      position: 'relative'
+      position: 'relative',
     }}>
       <Slider
         value={value}
@@ -47,22 +47,22 @@ const RangeSlider = () => {
             width: '25px',
             height: '25px',
             background: '#F76908',
-            border: '4px solid #AC4800'
+            border: '4px solid #AC4800',
           },
           '& .MuiSlider-track': {
             height: '16px',
-            color: '#FF8310'
+            color: '#FF8310',
           },
           '& .MuiSlider-rail': {
             height: '16px',
             color: '#ffffff',
             opacity: 'unset',
-          }
+          },
         }}
       />
       <div style={{
         display: 'flex',
-        gap: '15px'
+        gap: '15px',
       }}>
         <input
           value={`${value[0]} €`}
@@ -78,7 +78,7 @@ const RangeSlider = () => {
             fontWeight: '700',
             caretColor: '#AC4800',
             padding: '8px 0',
-            textAlign: 'center'
+            textAlign: 'center',
           }}
         />
         <input
@@ -95,7 +95,7 @@ const RangeSlider = () => {
             fontWeight: '700',
             caretColor: '#AC4800',
             padding: '8px 0',
-            textAlign: 'center'
+            textAlign: 'center',
           }}
         />
       </div>
@@ -104,7 +104,7 @@ const RangeSlider = () => {
       <SmallGrace style={SmallGraceStyle} />
 
     </div>
-  )
-}
+  );
+};
 
-export default RangeSlider
+export default RangeSlider;

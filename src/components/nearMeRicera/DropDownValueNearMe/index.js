@@ -1,4 +1,5 @@
 import React from 'react';
+
 import DropDown from './DropDown';
 import { Subtitle, Title, TitleContainer, SubmitButton } from './styled';
 import DropDown2 from './DropDown2';
@@ -29,13 +30,13 @@ const DropDownValueNearMe = () => {
       display: 'flex',
       width: '80%',
       margin: '0 auto',
-      paddingTop: '200px'
+      paddingTop: '200px',
     }}>
       <TitleContainer>
         <div style={{
           display: 'flex',
           flexDirection: 'column',
-          gap: '10px'
+          gap: '10px',
         }}>
           <Title>Cos’è il Pet ID</Title>
           <Subtitle>Quaerat sodales sapien euismod purus blandit a purus ipsum primis sodales sapien euismod purus blandit a purus sapien euismod purus blandit a purus blandit a purus sapien euismod purus blandit
@@ -65,6 +66,6 @@ const DropDownValueNearMe = () => {
       </TitleContainer>
     </div>
   );
-}
+};
 
 export default DropDownValueNearMe;

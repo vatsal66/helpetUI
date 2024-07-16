@@ -1,4 +1,5 @@
 import styled, { css, keyframes } from 'styled-components';
+
 import SmallCloud from '@assets/images/cloud-small.svg';
 import BigCloud from '@assets/images/cloud-big.svg';
 

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Thirdtitle = styled.h2`
   text-align: center;
-`
+`;
 export const Title = styled.h1`
   color: #000000;
   font-size: 28px;

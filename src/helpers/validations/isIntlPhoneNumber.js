@@ -1,3 +1,4 @@
+/* eslint-disable no-shadow */
 const isIntlPhoneNumber = (locale, string) => {
   const matchLocalePhoneNumber = {
     it: string => {
@@ -6,7 +7,7 @@ const isIntlPhoneNumber = (locale, string) => {
     },
     'pt-BR': string => {
       const regEx = /\+55 (\(\d{2}\)) 9 (\d{4})-(\d{4})$/;
-      return regEx.test(string)
+      return regEx.test(string);
     },
     en: string => {
       const regEx = /\+1 (\(\d{3}\)) (\d{3})-(\d{4})$/;
@@ -15,6 +16,6 @@ const isIntlPhoneNumber = (locale, string) => {
   };
 
   return matchLocalePhoneNumber[locale](string);
-}
+};
 
 export default isIntlPhoneNumber;

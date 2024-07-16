@@ -3,7 +3,7 @@ const isAlpha = (string, min = 3, max) => {
     return false;
   }
 
-  const regEx = /^([A-Za-z ])*$/
+  const regEx = /^([A-Za-z ])*$/;
   return regEx.test(string);
 };
 

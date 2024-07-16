@@ -1,4 +1,4 @@
-import styled, { css, keyframes } from 'styled-components';
+import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
@@ -43,29 +43,29 @@ export const Card1 = styled.div`
   overflow: hidden !important;
   display: inline-block !important;
   weight:500px !important;
-`
+`;
 export const CardHeaderName = styled.div`
   display: flex;
   align-items: center;
   gap: 12px;
 
-`
+`;
 export const CardMainTitle = styled.h2`
 font-size: 26px;
 font-weight: 800;
 line-height: 34px;
 color: #343434;
 font-family: nunito;
-`
+`;
 export const CardSubTitle = styled.div`
  font-size: 22px;
   font-weight: 400;
   line-height: 30px;
   color: #343434;
   font-family: nunito;
-`
+`;
 export const CardSubName = styled.p`
   font-size: 20px;
   color: #000000;
   weight: 600px !important;
-`
+`;

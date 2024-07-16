@@ -1,18 +1,17 @@
-import React from 'react'
-import { LeftTruck, RightTruck, SmallGraceStyle, Thirdtitle, Title, TreeStyle } from './styled'
-import { StoreBadges } from '@components/molecules'
+import React from 'react';
 import { useIntl } from 'react-intl';
-import RightPath from '@assets/images/Librettosanitario/RightPath.svg';
-import Truck from '@assets/images/Librettosanitario/PlayStoreTruck.svg';
-import Tree from '@assets/images/common/Tree.svg';
-import SmallGrace from '@assets/images/common/smallGrace.svg';
 
-import ThreeTree from '@assets/images/common/LargeThreeTree.svg'
-import LeftRoad from '@assets/images/PetId/LeftLongRoad.svg'
-import RightImage from '@assets/images/PetId/PetIdRight.svg'
+import { StoreBadges } from '@components/molecules';
+
+import SmallGrace from '@assets/images/common/smallGrace.svg';
+import ThreeTree from '@assets/images/common/LargeThreeTree.svg';
+import LeftRoad from '@assets/images/PetId/LeftLongRoad.svg';
+import RightImage from '@assets/images/PetId/PetIdRight.svg';
+
+import { LeftTruck, RightTruck, SmallGraceStyle, Thirdtitle, Title, TreeStyle } from './styled';
 
 const PlayStore = () => {
-  const { messages, locale } = useIntl();
+  const { locale } = useIntl();
 
   return (
     <div style={{
@@ -31,7 +30,7 @@ const PlayStore = () => {
       <LeftRoad style={LeftTruck} />
       <RightImage style={RightTruck} />
     </div>
-  )
-}
+  );
+};
 
-export default PlayStore
+export default PlayStore;

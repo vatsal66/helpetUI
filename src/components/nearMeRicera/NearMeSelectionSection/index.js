@@ -1,4 +1,35 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { Link } from 'gatsby';
+
+import SmallMap from '@assets/images/NearMeDetail/smallMap.png';
+import Adozioni from '@assets/images/NearMeDetail/Filter/Adozioni.svg';
+import Benessere from '@assets/images/NearMeDetail/Filter/Benessere.svg';
+import Cibo from '@assets/images/NearMeDetail/Filter/Cibo.svg';
+import Emergenza from '@assets/images/NearMeDetail/Filter/Emergenza.svg';
+import Hotel from '@assets/images/NearMeDetail/Filter/Hotel.svg';
+import HotelPetFriendly from '@assets/images/NearMeDetail/Filter/HotelPetFriendly.svg';
+import Petshop from '@assets/images/NearMeDetail/Filter/Petshop.svg';
+import Salute from '@assets/images/NearMeDetail/Filter/Salute.svg';
+import ServiziPet from '@assets/images/NearMeDetail/Filter/ServiziPet.svg';
+import Spiaggia from '@assets/images/NearMeDetail/Filter/Spiaggia.svg';
+import Svago from '@assets/images/NearMeDetail/Filter/Svago.svg';
+import TaxiDog from '@assets/images/NearMeDetail/Filter/TaxiDog.svg';
+import RatedSvg from '@assets/images/NearMeDetail/rated.svg';
+import WithoutRatedSvg from '@assets/images/NearMeDetail/withoutRated.svg';
+import LocationSvg from '@assets/images/NearMeDetail/location.svg';
+import ClockSvg from '@assets/images/NearMeDetail/clock.svg';
+import Store1 from '@assets/images/NearMeDetail/NewarMeDetailTabStore1.svg';
+import Store2 from '@assets/images/NearMeDetail/NewarMeDetailTabStore2.svg';
+import Store3 from '@assets/images/NearMeDetail/NewarMeDetailTabStore3.svg';
+import Store4 from '@assets/images/NearMeDetail/NewarMeDetailTabStore4.svg';
+import Doctor1 from '@assets/images/NearMeDetail/NewarMeDetailTabDoctor1.svg';
+import Doctor4 from '@assets/images/NearMeDetail/NewarMeDetailTabDoctor4.svg';
+import LeftArrow from '@assets/images/NearMeDetail/leftArrow.svg';
+import RightArrow from '@assets/images/NearMeDetail/rightArrow.svg';
+import LeftRoad from '@assets/images/PetId/LeftLongRoad.svg';
+import RightImage from '@assets/images/PetId/PetIdRight.svg';
+import SmallGrace from '@assets/images/common/smallGrace.svg';
+
 import {
   Card,
   CardDetailsLeft, CardDetailsDesc,
@@ -19,43 +50,7 @@ import {
   RightTruck,
   smallGraceStyle,
   smallGraceStyleFilte,
-} from './styled'
-
-
-import SmallMap from '@assets/images/NearMeDetail/smallMap.png';
-
-import Adozioni from '@assets/images/NearMeDetail/Filter/Adozioni.svg';
-import Benessere from '@assets/images/NearMeDetail/Filter/Benessere.svg';
-import Cibo from '@assets/images/NearMeDetail/Filter/Cibo.svg';
-import Emergenza from '@assets/images/NearMeDetail/Filter/Emergenza.svg';
-import Hotel from '@assets/images/NearMeDetail/Filter/Hotel.svg';
-import HotelPetFriendly from '@assets/images/NearMeDetail/Filter/HotelPetFriendly.svg';
-import Petshop from '@assets/images/NearMeDetail/Filter/Petshop.svg';
-import Salute from '@assets/images/NearMeDetail/Filter/Salute.svg';
-import ServiziPet from '@assets/images/NearMeDetail/Filter/ServiziPet.svg';
-import Spiaggia from '@assets/images/NearMeDetail/Filter/Spiaggia.svg';
-import Svago from '@assets/images/NearMeDetail/Filter/Svago.svg';
-import TaxiDog from '@assets/images/NearMeDetail/Filter/TaxiDog.svg';
-
-import RatedSvg from '@assets/images/NearMeDetail/rated.svg';
-import WithoutRatedSvg from '@assets/images/NearMeDetail/withoutRated.svg';
-
-import LocationSvg from '@assets/images/NearMeDetail/location.svg';
-import ClockSvg from '@assets/images/NearMeDetail/clock.svg';
-import Store1 from '@assets/images/NearMeDetail/NewarMeDetailTabStore1.svg';
-import Store2 from '@assets/images/NearMeDetail/NewarMeDetailTabStore2.svg';
-import Store3 from '@assets/images/NearMeDetail/NewarMeDetailTabStore3.svg';
-import Store4 from '@assets/images/NearMeDetail/NewarMeDetailTabStore4.svg';
-
-import Doctor1 from '@assets/images/NearMeDetail/NewarMeDetailTabDoctor1.svg';
-import Doctor4 from '@assets/images/NearMeDetail/NewarMeDetailTabDoctor4.svg';
-
-import LeftArrow from '@assets/images/NearMeDetail/leftArrow.svg';
-import RightArrow from '@assets/images/NearMeDetail/rightArrow.svg';
-
-import LeftRoad from '@assets/images/PetId/LeftLongRoad.svg'
-import RightImage from '@assets/images/PetId/PetIdRight.svg'
-import SmallGrace from '@assets/images/common/smallGrace.svg';
+} from './styled';
 
 import RangeSlider from '../RangeSlider';
 import NearMeDialog from '../NearMeDialog';
@@ -114,14 +109,14 @@ const NearMeSelectionSection = () => {
     middleContent: 'Vedi disponibilità',
     storeBackground: <Store4 style={doctorBackgroundStyle} />,
     doctorImage: <Doctor4 style={doctorStyle} />,
-  }]
+  }];
 
   const renderRating = (rating) => {
     const totalRating = 5;
     const rated = Array(rating).fill(<RatedSvg />);
     const withoutRated = Array(totalRating - rating).fill(<WithoutRatedSvg />);
     return [...rated, ...withoutRated];
-  }
+  };
 
   const filterData = [{
     title: 'Adozioni',
@@ -187,7 +182,7 @@ const NearMeSelectionSection = () => {
 
   const handleDialogOpen = () => {
     setMapDialog(true);
-  }
+  };
 
   return (
     <>
@@ -200,18 +195,18 @@ const NearMeSelectionSection = () => {
           margin: '80px auto 0 auto',
           display: 'flex',
           gap: '70px',
-          position: 'relative'
+          position: 'relative',
         }}>
           <div style={{
             width: '40%',
             display: 'flex',
-            flexDirection: 'column'
+            flexDirection: 'column',
           }}>
             <div>
-              <img src={SmallMap} alt="" onClick={() => handleDialogOpen()} />
+              <img style={{ cursor: 'pointer' }} src={SmallMap} alt="" onClick={() => handleDialogOpen()} />
             </div>
             <div>
-              <FilterHeader style={{position: 'relative'}}>
+              <FilterHeader style={{ position: 'relative' }}>
                 Filtri:
                 <SmallGrace style={smallGraceStyleFilte} />
               </FilterHeader>
@@ -224,15 +219,15 @@ const NearMeSelectionSection = () => {
                 gap: '18px',
                 width: '90%',
               }}>
-                {filterData?.map((item) => (
-                  <div style={{
+                {filterData?.map((item, index) => (
+                  <div key={index} style={{
                     border: `5px solid ${item?.borderColor}`,
                     background: item?.backgroundColor,
                     display: 'flex',
                     gap: '12px',
                     borderRadius: '45px',
                     padding: '12px 15px',
-                    alignItems: 'center'
+                    alignItems: 'center',
                   }}>
                     {item?.titleSvg}
                     <FilterValue>
@@ -253,74 +248,76 @@ const NearMeSelectionSection = () => {
             </div>
           </div>
           <div style={{
-            width: '60%'
+            width: '60%',
           }}>
             <Title>Dentista veterinario: 18 risultati trovati</Title>
             <CardSection>
-              {CardData?.map((item) => (
-                <Card>
-                  <CardHeader>
-                    <CardTitle>
-                      {item?.cardTitle}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardDetails>
-                    <CardDetailsLeft>
-                      <CardDetailsTitle>
-                        {item?.cardName}
-                      </CardDetailsTitle>
-                      <CardDetailsDesc>
-                        {item?.cardNameDetail}
-                      </CardDetailsDesc>
-                      <div style={{
-                        display: 'flex',
-                        justifyContent: 'space-between',
-                      }}>
-                        <div>
-                          <div style={{ display: 'flex', flexDirection: 'column', gap: '5px', }}>
-                            <CardRated>
-                              {renderRating(item.rating)}
-                            </CardRated>
+              {CardData?.map((item, index) => (
+                <Card key={index}>
+                  <Link to="/nearmedetail" style={{ color: 'inherit', textDecoration: 'none' }}>
+                    <CardHeader>
+                      <CardTitle>
+                        {item?.cardTitle}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardDetails>
+                      <CardDetailsLeft>
+                        <CardDetailsTitle>
+                          {item?.cardName}
+                        </CardDetailsTitle>
+                        <CardDetailsDesc>
+                          {item?.cardNameDetail}
+                        </CardDetailsDesc>
+                        <div style={{
+                          display: 'flex',
+                          justifyContent: 'space-between',
+                        }}>
+                          <div>
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
-                              <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
-                                <LocationSvg />
-                                <LocationDetailsText>
-                                  {item?.location}
-                                </LocationDetailsText>
-                              </div>
-                              <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
-                                <ClockSvg />
-                                <ClockDetailsText>
-                                  {item?.time}
-                                </ClockDetailsText>
+                              <CardRated>
+                                {renderRating(item.rating)}
+                              </CardRated>
+                              <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
+                                  <LocationSvg />
+                                  <LocationDetailsText>
+                                    {item?.location}
+                                  </LocationDetailsText>
+                                </div>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
+                                  <ClockSvg />
+                                  <ClockDetailsText>
+                                    {item?.time}
+                                  </ClockDetailsText>
+                                </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                        <div>
-                          <div style={{
-                            border: '5px solid #001A75',
-                            backgroundColor: '#0017E5',
-                            padding: '3px 16px',
-                            borderRadius: '25px',
-                          }}>
-                            <InlineCard>
-                              {item?.middleContent}
-                            </InlineCard>
+                          <div>
+                            <div style={{
+                              border: '5px solid #001A75',
+                              backgroundColor: '#0017E5',
+                              padding: '3px 16px',
+                              borderRadius: '25px',
+                            }}>
+                              <InlineCard>
+                                {item?.middleContent}
+                              </InlineCard>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </CardDetailsLeft>
-                    <CardDetailsRight>
-                      <div style={{
-                        position: 'absolute',
-                        bottom: '50px',
-                      }}>
-                        {item?.storeBackground}
-                        {item?.doctorImage}
-                      </div>
-                    </CardDetailsRight>
-                  </CardDetails>
+                      </CardDetailsLeft>
+                      <CardDetailsRight>
+                        <div style={{
+                          position: 'absolute',
+                          bottom: '50px',
+                        }}>
+                          {item?.storeBackground}
+                          {item?.doctorImage}
+                        </div>
+                      </CardDetailsRight>
+                    </CardDetails>
+                  </Link>
                 </Card>
               ))}
             </CardSection>
@@ -328,7 +325,7 @@ const NearMeSelectionSection = () => {
           <SmallGrace style={smallGraceStyle} />
         </div>
         <div style={{
-          position: 'relative'
+          position: 'relative',
         }}>
           <div style={{
             width: '80%',
@@ -342,14 +339,14 @@ const NearMeSelectionSection = () => {
               borderRadius: '20px',
               padding: '0 10px',
               display: 'flex',
-              width: 'fit-content'
-            }}>            
+              width: 'fit-content',
+            }}>
               <div style={{
                 display: 'flex',
                 alignItems: 'center',
                 borderRight: '4px solid #007E60',
                 gap: '10px',
-                paddingRight: '10px'
+                paddingRight: '10px',
               }}>
                 <LeftArrow />
                 <PaginationText>
@@ -372,7 +369,7 @@ const NearMeSelectionSection = () => {
                 display: 'flex',
                 alignItems: 'center',
                 gap: '10px',
-                paddingLeft: '10px'
+                paddingLeft: '10px',
               }}>
                 <PaginationText>
                   Successivo
@@ -389,7 +386,7 @@ const NearMeSelectionSection = () => {
       </div>
     </>
 
-  )
-}
+  );
+};
 
-export default NearMeSelectionSection
+export default NearMeSelectionSection;

@@ -1,4 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+
+import Card1Icon from '@assets/images/Librettosanitario/Card1Icon.svg';
+import Card2Icon from '@assets/images/Librettosanitario/Card2Icon.svg';
+import Card3Icon from '@assets/images/Librettosanitario/Card3Icon.svg';
+import CardLibrettoRoad from '@assets/images/Librettosanitario/CardLibrettoRoad.png';
+import SmallGrace from '@assets/images/common/smallGrace.svg';
+
 import {
   Subtitle,
   Title,
@@ -13,41 +20,36 @@ import {
   CardDetailsThirdActive,
   CardDetailsThird,
   SmallGraceStyle,
-} from './styled'
-import Card1Icon from '@assets/images/Librettosanitario/Card1Icon.svg'
-import Card2Icon from '@assets/images/Librettosanitario/Card2Icon.svg'
-import Card3Icon from '@assets/images/Librettosanitario/Card3Icon.svg'
-import CardLibrettoRoad from '@assets/images/Librettosanitario/CardLibrettoRoad.png'
-import SmallGrace from '@assets/images/common/smallGrace.svg';
+} from './styled';
 
 const CardLibretto = () => {
-  const [firstCardActive, setFirstCardActive] = useState(false)
-  const [secondCardActive, setSecondCardActive] = useState(false)
-  const [thirdCardActive, setThirdCardActive] = useState(false)
+  const [firstCardActive, setFirstCardActive] = useState(false);
+  const [secondCardActive, setSecondCardActive] = useState(false);
+  const [thirdCardActive, setThirdCardActive] = useState(false);
 
   const handleMouseEnter = () => {
-    setFirstCardActive(true)
-  }
+    setFirstCardActive(true);
+  };
 
   const handleMouseLeave = () => {
-    setFirstCardActive(false)
-  }
+    setFirstCardActive(false);
+  };
 
   const handleMouseEnterSecond = () => {
-    setSecondCardActive(true)
-  }
+    setSecondCardActive(true);
+  };
 
   const handleMouseLeaveSecond = () => {
-    setSecondCardActive(false)
-  }
+    setSecondCardActive(false);
+  };
 
   const handleMouseEnterThird = () => {
-    setThirdCardActive(true)
-  }
+    setThirdCardActive(true);
+  };
 
   const handleMouseLeaveThird = () => {
-    setThirdCardActive(false)
-  }
+    setThirdCardActive(false);
+  };
 
   return (
     <div
@@ -69,7 +71,7 @@ const CardLibretto = () => {
           <SmallGrace style={SmallGraceStyle} />
           <Title>Vantaggi</Title>
           <Subtitle>
-            Quaerat sodales sapien euismod purus blandit a purus ipsum primis sodales sapien euismod purus blandit a purus sapien euismod purus blandit a purus blandit a purus sapien euismod purus blandit a purus 
+            Quaerat sodales sapien euismod purus blandit a purus ipsum primis sodales sapien euismod purus blandit a purus sapien euismod purus blandit a purus blandit a purus sapien euismod purus blandit a purus
           </Subtitle>
         </div>
         <CardPetId>
@@ -80,7 +82,7 @@ const CardLibretto = () => {
             >
               <HeaderText>Praticità</HeaderText>
               <HeaderSubText>
-              Quaerat sodales sapien euismod purus blandit a purus ipsum primis sodales sapien euismod purus blandit a purus purus blandit a purus 
+              Quaerat sodales sapien euismod purus blandit a purus ipsum primis sodales sapien euismod purus blandit a purus purus blandit a purus
               </HeaderSubText>
             </CardDetailsLeftActive>
           ) : (
@@ -136,7 +138,7 @@ const CardLibretto = () => {
         </CardPetId>
       </TitleContainer>
     </div>
-  )
-}
+  );
+};
 
-export default CardLibretto
+export default CardLibretto;
