@@ -1,8 +1,9 @@
 import React from 'react';
 
 import RightImage from '@assets/images/Professional/ProfessionalRightImage.svg';
+import SmallGrace from '@assets/images/common/smallGrace.svg';
 
-import { Circular, ListContent, SubTitle, Title } from './styled';
+import { Circular, ListContent, SmallGraceStyle, SubTitle, Title } from './styled';
 
 const ProfessionalMainSection = () => {
   return (
@@ -12,6 +13,7 @@ const ProfessionalMainSection = () => {
       width: '80%',
       margin: '0 auto',
       gap: '25px',
+      position: 'relative',
     }}>
       <div style={{ width: '50%' }}>
         <div style={{ width: '90%', display: 'flex', flexDirection: 'column', gap: '10px' }}>
@@ -53,6 +55,7 @@ const ProfessionalMainSection = () => {
           <RightImage />
         </div>
       </div>
+      <SmallGrace style={SmallGraceStyle} />
     </div>
   );
 };

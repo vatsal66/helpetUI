@@ -1,9 +1,19 @@
 import React from 'react';
-import { Autocomplete, Button, TextField } from '@mui/material';
+import { Autocomplete, TextField } from '@mui/material';
 
 import { Checkbox } from '@components/atoms';
 
-import { BorderLine, InputField, InputTile, MiddleCard, Title } from './styled';
+import CardLibrettoRoad from '@assets/images/Librettosanitario/CardLibrettoRoad.png';
+import RightRoad from '@assets/images/common/RightRoadWithTopCar.svg';
+import LargeThreeTree from '@assets/images/common/LargeThreeTree.svg';
+import SmallGrace from '@assets/images/common/smallGrace.svg';
+import ArrowDownwardIcon from '@assets/images/Professional/professional.svg';
+
+import {
+  BorderLine, InputField, InputTile,
+  LargeThreeTreeStyle,
+  MiddleCard, RightRoadStyle, SaveButton, SmallGraceStyle, Title,
+} from './styled';
 
 const ProfessionalForm = () => {
   return (
@@ -13,135 +23,154 @@ const ProfessionalForm = () => {
       width: '55%',
       margin: '0 auto',
       flexDirection: 'column',
+      gap: '40px',
+      marginBottom: '500px',
+      position: 'relative',
+      zIndex: 2,
     }}>
       <Title>
         Per maggiori informazioni compila il form!
       </Title>
-      <MiddleCard>
-        <div style={{ display: 'flex', gap: '40px', width: '100%' }}>
-          <InputField>
-            <InputTile>
+      <div style={{ position: 'relative' }}>
+
+        <MiddleCard>
+          <div style={{ display: 'flex', gap: '40px', width: '100%' }}>
+            <InputField>
+              <InputTile>
               Nome*
-            </InputTile>
-            <input
-              placeholder="es. Marco"
-              className="custom-placeholder"
-            />
-          </InputField>
-          <InputField>
-            <InputTile>
+              </InputTile>
+              <input
+                placeholder="es. Marco"
+                className="custom-placeholder"
+              />
+            </InputField>
+            <InputField>
+              <InputTile>
               Cognome*
-            </InputTile>
-            <input
-              placeholder="es. Rossi"
-              className="custom-placeholder"
-            />
-          </InputField>
-          <InputField>
-            <InputTile>
+              </InputTile>
+              <input
+                placeholder="es. Rossi"
+                className="custom-placeholder"
+              />
+            </InputField>
+            <InputField>
+              <InputTile>
               Data di nascita*
-            </InputTile>
-            <input
-              placeholder="GG/MM/AAAA"
-              className="custom-placeholder"
-            />
-          </InputField>
-        </div>
+              </InputTile>
+              <input
+                placeholder="GG/MM/AAAA"
+                className="custom-placeholder"
+              />
+            </InputField>
+          </div>
 
-        <BorderLine />
+          <BorderLine />
 
-        <div style={{ display: 'flex', gap: '40px', width: '100%' }}>
-          <InputField>
-            <InputTile>
+          <div style={{ display: 'flex', gap: '40px', width: '100%' }}>
+            <InputField>
+              <InputTile>
               Professione*
-            </InputTile>
-            <input
-              placeholder="es. Veterinario"
-              className="custom-placeholder"
-            />
-          </InputField>
-          <InputField>
-            <InputTile>
+              </InputTile>
+              <input
+                placeholder="es. Veterinario"
+                className="custom-placeholder"
+              />
+            </InputField>
+            <InputField>
+              <InputTile>
               Nome attività*
-            </InputTile>
-            <input
-              placeholder="es. Clinica PetCure"
-              className="custom-placeholder"
-            />
-          </InputField>
-          <InputField>
-            <InputTile>
+              </InputTile>
+              <input
+                placeholder="es. Clinica PetCure"
+                className="custom-placeholder"
+              />
+            </InputField>
+            <InputField>
+              <InputTile>
               Sede attività*
-            </InputTile>
-            <Autocomplete
-              value={null}
-              placeholder="es. Via Po, 102 - Rasto"
-              options={[]}
-              sx={{
-                '& .MuiOutlinedInput-root': {
-                  fontFamily: 'Nunito',
-                  padding: '0!important',
-                  background: '#ffffff',
-                  borderRadius: '10px',
-                  lineHeight: 'unset',
-                  border: 'unset',
-                  '& .MuiAutocomplete-input': {
-                    padding: '12.5px 12px',
+              </InputTile>
+              <Autocomplete
+                value={null}
+                popupIcon={<ArrowDownwardIcon />}
+                placeholder="es. Via Po, 102 - Rasto"
+                options={[]}
+                sx={{
+                  '& .MuiOutlinedInput-root': {
+                    fontFamily: 'Nunito',
+                    padding: '0!important',
+                    background: '#ffffff',
                     borderRadius: '10px',
-                    fontSize: '16px',
-                    fontWeight: 600,
                     lineHeight: 'unset',
-                    height: 'unset',
-                    caretColor: '#AAAABA',
-                    color: '#AAAABA',
-                    border: '3px solid #A00483',
-                  },
-                  '& .MuiOutlinedInput-notchedOutline': {
                     border: 'unset',
-                    padding: 0,
+                    '& .MuiAutocomplete-input': {
+                      padding: '12.5px 12px',
+                      borderRadius: '10px',
+                      fontSize: '16px',
+                      fontWeight: 600,
+                      lineHeight: 'unset',
+                      height: 'unset',
+                      caretColor: '#AAAABA',
+                      color: '#AAAABA',
+                      border: '3px solid #A00483',
+                    },
+                    '& .MuiOutlinedInput-notchedOutline': {
+                      border: 'unset',
+                      padding: 0,
+                    },
+                    '& .MuiAutocomplete-endAdornment': {
+                      right: '15px',
+                    },
                   },
-                },
-              }}
-              // className="custom-placeholder"
-              renderInput={(params) => <TextField {...params} label="" />}
-            />
-          </InputField>
-        </div>
+                }}
+                // className="custom-placeholder"
+                renderInput={(params) => <TextField {...params} label="" />}
+              />
+            </InputField>
+          </div>
 
-        <BorderLine />
+          <BorderLine />
 
-        <div style={{ display: 'flex', gap: '40px', width: '100%' }}>
-          <InputField>
-            <InputTile>
+          <div style={{ display: 'flex', gap: '40px', width: '100%' }}>
+            <InputField>
+              <InputTile>
               Telefono*
-            </InputTile>
-            <input
-              placeholder="es +39 000 000 0000"
-              className="custom-placeholder"
-            />
-          </InputField>
-          <InputField>
-            <InputTile>
+              </InputTile>
+              <input
+                placeholder="es +39 000 000 0000"
+                className="custom-placeholder"
+              />
+            </InputField>
+            <InputField>
+              <InputTile>
               Email*
-            </InputTile>
-            <input
-              placeholder="es info@email.com"
-              className="custom-placeholder"
+              </InputTile>
+              <input
+                placeholder="es info@email.com"
+                className="custom-placeholder"
+              />
+            </InputField>
+            <InputField />
+          </div>
+          <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '30px',
+            marginTop: '50px',
+          }}>
+            <Checkbox
+              label="Salva il mio nome e l’email in questo browser per la prossima volta che commento"
+              onClick={() => {}}
             />
-          </InputField>
-          <InputField />
+            <SaveButton>Invia</SaveButton>
+          </div>
+
+        </MiddleCard>
+
+        <div style={{ position: 'absolute', left: '-50%', top: 'calc(50% - 34px)', zIndex: 1 }}>
+          <img src={CardLibrettoRoad} alt=""  />
         </div>
-        <div style={{
-          display: 'flex',
-          flexDirection: 'column',
-        }}>
-          <Checkbox
-            label="Salva il mio nome e l’email in questo browser per la prossima volta che commento"
-            onClick={() => {}}
-          />
-          <Button className={{ width: 'fit-content' }} padding={[12, 47]}>Invia</Button>
-        </div>
-      </MiddleCard>
+      </div>
+
       <style>
         {`
           .custom-placeholder {
@@ -161,6 +190,10 @@ const ProfessionalForm = () => {
           }
         `}
       </style>
+
+      <RightRoad style={RightRoadStyle}/>
+      <LargeThreeTree style={LargeThreeTreeStyle}/>
+      <SmallGrace style={SmallGraceStyle}/>
     </div>
   );
 };

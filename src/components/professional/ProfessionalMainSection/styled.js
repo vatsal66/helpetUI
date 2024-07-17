@@ -27,3 +27,9 @@ export const Circular = styled.div`
   width: 22px;
   height: 22px;
 `;
+
+export const SmallGraceStyle = {
+  position: 'absolute',
+  left: '-8%',
+  bottom: '-30px',
+};
