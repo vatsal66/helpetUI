@@ -1,5 +1,11 @@
 import React from 'react';
 
+import Blog3Svg from '@assets/images/HomeBlog/Blog2.svg';
+import Blog4Svg from '@assets/images/HomeBlog/Blog2.svg';
+import Icon1Svg from '@assets/images/HomeBlog/Icon1.svg';
+import Icon2Svg from '@assets/images/HomeBlog/Icon2.svg';
+import Icon3Svg from '@assets/images/HomeBlog/Icon3.svg';
+
 import { Card1, CardHeader, CardHeaderName, CardMainTitle, CardSubName, CardSubTitle, ColRightSide, Container, StartComponents, StyledContentSection } from './styled';
 
 const ThirdHomeBlog = () => {
@@ -9,19 +15,19 @@ const ThirdHomeBlog = () => {
         <StartComponents>
           <ColRightSide>
             <Card1>
-              <img src='../assets/images/HomeBlog/Blog-3.svg' style={{ borderRadius: '35px' }}></img>
+              <Blog3Svg style={{ width: '100%', borderRadius: '35px' }} />
             </Card1>
             <CardHeader>
               <CardHeaderName>
-                <img src='../assets/images/HomeBlog/Icon-1.svg'></img>
+                <Icon1Svg />
                 <CardSubName>Agosto 4, 2023</CardSubName>
               </CardHeaderName>
               <CardHeaderName>
-                <img src='../assets/images/HomeBlog/Icon-2.svg'></img>
+                <Icon2Svg />
                 <CardSubName>helpetapp</CardSubName>
               </CardHeaderName>
               <CardHeaderName>
-                <img src='../assets/images/HomeBlog/Icon-3.svg'></img>
+                <Icon3Svg />
                 <CardSubName>0</CardSubName>
               </CardHeaderName>
             </CardHeader>
@@ -32,19 +38,19 @@ const ThirdHomeBlog = () => {
         <StartComponents>
           <ColRightSide>
             <Card1>
-              <img src='../assets/images/HomeBlog/Blog-4.svg' style={{ borderRadius: '35px', height: 'auto', weight: 'auto' }}></img>
+              <Blog4Svg style={{ width: '100%', borderRadius: '35px' }} />
             </Card1>
             <CardHeader>
               <CardHeaderName>
-                <img src='../assets/images/HomeBlog/Icon-1.svg'></img>
+                <Icon1Svg />
                 <CardSubName>Agosto 4, 2023</CardSubName>
               </CardHeaderName>
               <CardHeaderName>
-                <img src='../assets/images/HomeBlog/Icon-2.svg'></img>
+                <Icon2Svg />
                 <CardSubName>helpetapp</CardSubName>
               </CardHeaderName>
               <CardHeaderName>
-                <img src='../assets/images/HomeBlog/Icon-3.svg'></img>
+                <Icon3Svg />
                 <CardSubName>0</CardSubName>
               </CardHeaderName>
             </CardHeader>
@@ -53,7 +59,6 @@ const ThirdHomeBlog = () => {
           </ColRightSide>
         </StartComponents>
       </Container>
-
     </StyledContentSection>
   );
 };

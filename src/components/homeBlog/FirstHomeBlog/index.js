@@ -1,71 +1,62 @@
 import React from 'react';
 
-import { Card1, CardHeader, CardHeaderName, CardMainTitle, CardSubName, CardSubTitle, ColRightSide, Container, SideBarTitle, SideBarTitleA, SideBarTitleLi, SideBarTitleUl, StartComponents, StyledContentSection } from './styled';
+import Blog1Svg from '@assets/images/HomeBlog/Blog1.svg';
+import Icon1Svg from '@assets/images/HomeBlog/Icon1.svg';
+import Icon2Svg from '@assets/images/HomeBlog/Icon2.svg';
+import Icon3Svg from '@assets/images/HomeBlog/Icon3.svg';
+
+import {
+  CardHeader, CardHeaderName,
+  CardMainTitle, CardSubName, CardSubTitle,
+  ColRightSide, SideBarTitle,
+  SideBarTitleLi, SideBarTitleListHeader,
+  StartComponents, StyledContentSection,
+} from './styled';
 
 const HeaderPetId = () => {
   return (
-    <div>
+    <div style={{
+      padding: '240px 0 0 0',
+    }}>
       <StyledContentSection>
-        <Container>
-          <StartComponents>
-            <div>
-              <SideBarTitle>Categorie</SideBarTitle>
-              <SideBarTitleUl>
-                <SideBarTitleLi>
-                  <SideBarTitleA href='#'>Curiosita (8)</SideBarTitleA>
-                </SideBarTitleLi>
-                <SideBarTitleLi>
-                  <SideBarTitleA href='#'>Documenti (1)</SideBarTitleA>
-                </SideBarTitleLi>
-                <SideBarTitleLi>
-                  <SideBarTitleA href='#'>Eventi (2)</SideBarTitleA>
-                </SideBarTitleLi>
-                <SideBarTitleLi>
-                  <SideBarTitleA href='#'>Estate (1)</SideBarTitleA>
-                </SideBarTitleLi>
-                <SideBarTitleLi>
-                  <SideBarTitleA href='#'>Features (3)</SideBarTitleA>
-                </SideBarTitleLi>
-                <SideBarTitleLi>
-                  <SideBarTitleA href='#'>Notizie (2)</SideBarTitleA>
-                </SideBarTitleLi>
-                <SideBarTitleLi>
-                  <SideBarTitleA href='#'>Nutrizione (2)</SideBarTitleA>
-                </SideBarTitleLi>
-                <SideBarTitleLi>
-                  <SideBarTitleA href='#'>Salute e Benessere (23)</SideBarTitleA>
-                </SideBarTitleLi>
-                <SideBarTitleLi>
-                  <SideBarTitleA href='#'>Uncategorized (1)</SideBarTitleA>
-                </SideBarTitleLi>
-                <SideBarTitleLi>
-                  <SideBarTitleA href='#'>Viaggi (4)</SideBarTitleA>
-                </SideBarTitleLi>
-              </SideBarTitleUl>
-            </div>
+        <StartComponents>
+          <div style={{ width: '25%', display: 'flex', flexDirection: 'column', gap: '20px' }}>
+            <SideBarTitle>Categorie</SideBarTitle>
+            <SideBarTitleListHeader>
+              <SideBarTitleLi>Curiosita (8)</SideBarTitleLi>
+              <SideBarTitleLi>Documenti (1)</SideBarTitleLi>
+              <SideBarTitleLi>Eventi (2)</SideBarTitleLi>
+              <SideBarTitleLi>Estate (1)</SideBarTitleLi>
+              <SideBarTitleLi>Features (3)</SideBarTitleLi>
+              <SideBarTitleLi>Notizie (2)</SideBarTitleLi>
+              <SideBarTitleLi>Nutrizione (2)</SideBarTitleLi>
+              <SideBarTitleLi>Salute e Benessere (23)</SideBarTitleLi>
+              <SideBarTitleLi>Uncategorized (1)</SideBarTitleLi>
+              <SideBarTitleLi>Viaggi (4)</SideBarTitleLi>
+            </SideBarTitleListHeader>
+          </div>
+          <div style={{ width: '75%' }}>
             <ColRightSide>
-              <Card1>
-                <img src='../assets/images/HomeBlog/Blog-1.svg' style={{ borderRadius: '35px', height: 'auto', weight: 'auto' }}></img>
-              </Card1>
+              <Blog1Svg style={{ width: '100%', borderRadius: '35px' }}/>
               <CardHeader>
                 <CardHeaderName>
-                  <img src='../assets/images/HomeBlog/Icon-1.svg'></img>
+                  <Icon1Svg />
                   <CardSubName>Agosto 4, 2023</CardSubName>
                 </CardHeaderName>
                 <CardHeaderName>
-                  <img src='../assets/images/HomeBlog/Icon-2.svg'></img>
+                  <Icon2Svg />
                   <CardSubName>helpetapp</CardSubName>
                 </CardHeaderName>
                 <CardHeaderName>
-                  <img src='../assets/images/HomeBlog/Icon-3.svg'></img>
+                  <Icon3Svg />
                   <CardSubName>0</CardSubName>
                 </CardHeaderName>
               </CardHeader>
               <CardMainTitle>Cintura di sicurezza per cani:Che cose cosa dica la legge?</CardMainTitle>
               <CardSubTitle>Stai per intraprendere un viaggio in auto con il tuo pelosetto? Se non puoi farlo viaggiare nel vano bagagliaio, allora è bene assicurarti di utilizzare una cintura di sicurezza per cani in modo da ancorarlo ai sedili posteriori.</CardSubTitle>
             </ColRightSide>
-          </StartComponents>
-        </Container>
+          </div>
+        </StartComponents>
 
       </StyledContentSection>
     </div>

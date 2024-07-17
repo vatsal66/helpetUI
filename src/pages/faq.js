@@ -31,5 +31,3 @@ const faq = () => {
 };
 
 export default faq;
-
-// 38

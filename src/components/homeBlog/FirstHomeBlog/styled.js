@@ -4,32 +4,12 @@ export const StyledContentSection = styled.div`
   display: flex;
   flex-direction: column;
   width: 80%;
-  max-width: 100%;
-  z-index: 10;
-  margin-top: 75px;
-
-  max-width: 1300px;
-  padding-top: 40px;
-
-  @media (min-width: 800px) {
-    margin: 0 auto 0;
-  }
-
-  @media (max-width: 799px) {
-    padding: 50px 36px;
-  }
+  margin: 0 auto;
 `;
 
-export const Container = styled.div`
- max-width: 100%;
- margin-left: 75px;
- margin-right: 75px;
- `;
-
 export const StartComponents = styled.div`
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
- `;
+  display: flex;
+`;
 
 export const SideBarTitle = styled.h5`
   font-size: 28px;
@@ -37,46 +17,35 @@ export const SideBarTitle = styled.h5`
   line-height: 30px;
  `;
 
-export const SideBarTitleUl = styled.ul`
-   grid-column: span 2;
- `;
-export const SideBarTitleLi = styled.li`
-  ist-style-type: none;
- `;
-export const SideBarTitleA = styled.a`
+export const SideBarTitleListHeader = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+`;
+
+export const SideBarTitleLi = styled.div`
   font-size: 20px;
   font-weight: 600;
-  text-decoration-line: none;
-  color:#000;
-  line-height: 54px;
- `;
+  color: #000;
+`;
 
 export const ColRightSide = styled.div`
- grid-column: span 3 / span 3;
- font-weight: bold; 
- padding: 32px;
- border: 5px solid #007E60;
- border-radius: 35px;
- background-color: rgb(255, 255, 255);
- width: fit-content;
-margin-left: 26px;
-  @media (max-width: 1441px) {
-    width: 895px
-  }
+  font-weight: bold; 
+  padding: 30px;
+  border: 5px solid #007E60;
+  border-radius: 40px;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
 `;
 
-export const Card1 = styled.div`
-  overflow: hidden !important;
-  display: inline-block !important;
-  weight:500px !important;
-`;
 export const CardHeader = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  margin-bottom: 20px;
+  margin: 30px 0 25px 0;
 `;
+
 export const CardHeaderName = styled.div`
   display: flex;
   align-items: center;

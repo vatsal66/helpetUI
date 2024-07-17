@@ -2,15 +2,14 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { IntlProvider } from 'react-intl';
 
-import { BlogHeader, Footer } from '@components/common';
-import { FirstHomeBlog, FourthHomeBlog, SecondHomeBlog, ThirdHomeBlog, PaginationHomeBlog } from '@components/homeBlog';
+import { BlogHeader } from '@components/common';
 
 import useLanguage from '@hooks/useLanguage';
 
 import theme from '@styles/theme';
 import GlobalStyle from '@styles/GlobalStyle';
 
-const homeBlog = () => {
+const homeBlogDetails = () => {
   const [messages, { locale }] = useLanguage();
 
   return (
@@ -21,12 +20,6 @@ const homeBlog = () => {
         <GlobalStyle />
         <IntlProvider defaultLocale="it" locale={locale} messages={messages}>
           <BlogHeader />
-          <FirstHomeBlog />
-          <SecondHomeBlog />
-          <ThirdHomeBlog />
-          <FourthHomeBlog />
-          <PaginationHomeBlog />
-          <Footer />
         </IntlProvider>
       </ThemeProvider>
 
@@ -34,4 +27,4 @@ const homeBlog = () => {
   );
 };
 
-export default homeBlog;
+export default homeBlogDetails;

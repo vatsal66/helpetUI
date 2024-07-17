@@ -1,5 +1,10 @@
 import React from 'react';
 
+import Blog2Svg from '@assets/images/HomeBlog/Blog2.svg';
+import Icon1Svg from '@assets/images/HomeBlog/Icon1.svg';
+import Icon2Svg from '@assets/images/HomeBlog/Icon2.svg';
+import Icon3Svg from '@assets/images/HomeBlog/Icon3.svg';
+
 import { CardHeader, CardHeaderName, CardMainTitle, CardSubName, CardSubTitle, ColRightSide, Container, ImageWrapper, MainCard } from './styled';
 
 const FourthHomeBlog = () => {
@@ -8,20 +13,20 @@ const FourthHomeBlog = () => {
       <Container>
         <MainCard>
           <ImageWrapper>
-            <img src="../assets/images/HomeBlog/Blog-2.svg" alt="Dog with passport" style={{ width: '100%', height: 'auto' }} />
+            <Blog2Svg style={{ width: '100%', borderRadius: '35px' }} />
           </ImageWrapper>
           <ColRightSide>
             <CardHeader>
               <CardHeaderName>
-                <img src='../assets/images/HomeBlog/Icon-1.svg'></img>
+                <Icon1Svg />
                 <CardSubName>Luglio 18, 2023</CardSubName>
               </CardHeaderName>
               <CardHeaderName>
-                <img src='../assets/images/HomeBlog/Icon-2.svg'></img>
+                <Icon2Svg />
                 <CardSubName>helpetapp</CardSubName>
               </CardHeaderName>
               <CardHeaderName>
-                <img src='../assets/images/HomeBlog/Icon-3.svg'></img>
+                <Icon3Svg />
                 <CardSubName>0</CardSubName>
               </CardHeaderName>
             </CardHeader>

@@ -73,7 +73,9 @@ const Navbar = () => {
         <Title active={isActive("/professional")}>
           <Link to="/professional" style={{ color: '#151515', textDecoration: 'none' }}>{messages["header.header6"]}</Link>
         </Title>
-        <Title>{messages["header.header4"]}</Title>
+        <Title active={isActive("/homeBlog")}>
+          <Link to="/homeBlog" style={{ color: '#151515', textDecoration: 'none' }}>{messages["header.header4"]}</Link>
+        </Title>
         <Title>{messages["header.header5"]}</Title>
       </Mainheader>
       <Actions active={isExpandedCountry}>

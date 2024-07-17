@@ -1,16 +1,17 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { IntlProvider } from 'react-intl';
 
-import { BlogHeader, Footer } from '@components/common';
-import { FirstHomeBlog, FourthHomeBlog, SecondHomeBlog, ThirdHomeBlog, PaginationHomeBlog } from '@components/homeBlog';
+import { Footer, Navbar } from '@components/common';
+import { HeaderNoPage } from '@components/NoPageFound';
 
 import useLanguage from '@hooks/useLanguage';
 
 import theme from '@styles/theme';
 import GlobalStyle from '@styles/GlobalStyle';
 
-const homeBlog = () => {
+const nothing = () => {
   const [messages, { locale }] = useLanguage();
 
   return (
@@ -20,18 +21,13 @@ const homeBlog = () => {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <IntlProvider defaultLocale="it" locale={locale} messages={messages}>
-          <BlogHeader />
-          <FirstHomeBlog />
-          <SecondHomeBlog />
-          <ThirdHomeBlog />
-          <FourthHomeBlog />
-          <PaginationHomeBlog />
+          <Navbar />
+          <HeaderNoPage />
           <Footer />
         </IntlProvider>
       </ThemeProvider>
-
     </div>
   );
 };
 
-export default homeBlog;
+export default nothing;
