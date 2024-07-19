@@ -1,78 +1,48 @@
-import React from 'react';
+import React from "react";
+import { Router } from "@reach/router";
 import { ThemeProvider } from 'styled-components';
 import { IntlProvider } from 'react-intl';
-// import { Helmet } from 'react-helmet';
-
-import {
-  Header,
-  // Carousel,
-  CarouselNew,
-  FormSection,
-  Benefits,
-  Newsletter,
-  CookiesWarning,
-  Main,
-} from '@components/organisms';
-import {
-  Footer,
-  Navbar,
-} from '@components/common';
 
 import useLanguage from '@hooks/useLanguage';
 
 import theme from '@styles/theme';
 import GlobalStyle from '@styles/GlobalStyle';
-const IndexPage = () => {
-  const [messages, { locale, setLocale }] = useLanguage();
+
+import NotFoundPage from "../module/404";
+import HomePage from "../module/HomePage";
+import FAQ from "../module/faq";
+import HomeBlog from "../module/homeBlog";
+import HomeBlogDetails from "../module/homeBlogDetails";
+import Librettosanitario from "../module/librettosanitario";
+import Nearme from "../module/nearme";
+import Nearmedetail from "../module/nearmedetail";
+import Nearmericerca from "../module/nearmericerca";
+import Petid from "../module/petid";
+import Professional from "../module/professional";
+
+const App = () => {
+  const [messages, { locale }] = useLanguage();
 
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <IntlProvider defaultLocale="it" locale={locale} messages={messages}>
-        {/* <Helmet>
-          <title>{`Helpet: ${messages['title']}`}</title>
-          <meta charSet="utf-8" />
-          <meta
-            name="description"
-            content="Un'applicazione pensata per gestire al meglio le necessità del tuo amico a quattro zampe. Tanti servizi utili sempre a portata di mano."
-          />
-
-          <meta property="og:type" content="website" />
-          <meta
-            property="og:title"
-            content="Helpet: la nuova App per i tuoi Pet"
-          />
-          <meta
-            property="og:description"
-            content="Un'applicazione pensata per gestire al meglio le necessità del tuo amico a quattro zampe. Tanti servizi utili sempre a portata di mano."
-          />
-          <meta property="og:image" content="/assets/images/og-image.png" />
-          <meta property="og:image:alt" content="Helpetapp" />
-          <meta property="og:url" content="https://helpetapp.com" />
-          <meta property="og:site_name" content="Helpet" />
-
-          <meta name="twitter:card" content="photo" />
-          <meta name="twitter:url" content="https://helpetapp.com" />
-          <meta
-            name="twitter:title"
-            content="Helpet: la nuova App per i tuoi Pet"
-          />
-          <meta name="twitter:image" content="/assets/images/og-image.png" />
-        </Helmet> */}
-        <Navbar onChangeLanguage={(lang) => setLocale(lang)} />
-        <Header onChangeLanguage={(lang) => setLocale(lang)} />
-        <Main />
-
-        {/* <Carousel /> */}
-        <CarouselNew />
-        <Benefits />
-        <FormSection />
-        <Newsletter />
-        <Footer />
-        <CookiesWarning />
+        <Router>
+          <HomePage path="/" />
+          <Petid path="/petid" />
+          <Librettosanitario path="/librettosanitario" />
+          <Nearme path="/nearme" />
+          <Nearmedetail path="/nearmedetail" />
+          <Nearmericerca path="/nearmericerca" />
+          <FAQ path="/faq" />
+          <Professional path="/professional" />
+          <HomeBlog path="/homeBlog" />
+          <HomeBlogDetails path="/homeBlogDetails" />
+          <NotFoundPage default />
+        </Router>
       </IntlProvider>
     </ThemeProvider>
   );
 };
 
-export default IndexPage;
+export default App;

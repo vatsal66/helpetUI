@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Input, InputAdornment } from "@mui/material";
+import { Link } from "gatsby";
 
 import { Button } from '@components/atoms';
 import { LanguageFlag } from '@components/quarks';
@@ -27,12 +28,15 @@ const Navbar = () => {
     }}>
       <Container>
         <Logo>
-          <CompanyLogo />
+          <Link to="/">
+            <CompanyLogo />
+          </Link>
         </Logo>
         <Actions active={isExpandedCountry}>
           <Title>Torna al sito</Title>
           <Input
             className="custom-placeholder"
+            disableUnderline={true}
             startAdornment={
               <InputAdornment position="start">
                 <SearchIcon />
@@ -91,6 +95,7 @@ const Navbar = () => {
             color: #343434;
             font-size: 20px;
             font-weight: 700;
+            font-family: Nunito;
             caret-color: #343434;
             padding: 8px;
             width: 300px;

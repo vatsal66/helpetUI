@@ -27,6 +27,12 @@ export const SideBarTitleLi = styled.div`
   font-size: 20px;
   font-weight: 600;
   color: #000;
+  cursor: pointer;
+  background: ${({ active }) => (active ? "#B5EBDB" : "none")};
+  border: ${({ active }) => (active ? "3px solid #064641" : "none")};
+  border-radius: 12px;
+  width: fit-content;
+  padding: 0 12px
 `;
 
 export const ColRightSide = styled.div`
@@ -49,26 +55,39 @@ export const CardHeader = styled.div`
 export const CardHeaderName = styled.div`
   display: flex;
   align-items: center;
-  // justify-content: space-between;
   gap: 12px;
 `;
+
 export const CardMainTitle = styled.h2`
   font-size: 26px;
   font-weight: 800;
   line-height: 34px;
   color: #343434;
-  font-family: nunito;
 `;
+
 export const CardSubTitle = styled.div`
   font-size: 22px;
   font-weight: 400;
   line-height: 30px;
   color: #343434;
-  font-family: nunito;
   margin-top: 10px;
 `;
+
 export const CardSubName = styled.p`
   font-size: 20px;
   color: #000000;
   weight: 600px;
+`;
+
+export const DetailButton = styled.button`
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+  border: 5px solid #A00483;
+  background: #C54EAE;
+  border-radius: 25px;
+  padding: 11px 16px;
+  font-size: 20px;
+  font-weight: 800;
+  color: #ffffff;
 `;

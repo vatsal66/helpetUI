@@ -9,11 +9,19 @@ export const PaginationText = styled.p`
 
 export const LeftTruck = {
   position: 'absolute',
-  top: '75px',
+  top: '50%',
+  bottom: '50%',
+  margin: 'auto 0',
 };
 
-export const RightTruck = {
-  right: '6%',
+export const TopRightRoadStyle = {
   position: 'absolute',
-  bottom: '40%',
+  top: '-5px',
+  right: '-13%',
+};
+
+export const SmallGraceStyle = {
+  position: 'absolute',
+  top: '150px',
+  right: '35%',
 };

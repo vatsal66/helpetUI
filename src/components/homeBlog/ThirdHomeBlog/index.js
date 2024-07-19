@@ -1,65 +1,74 @@
 import React from 'react';
 
-import Blog3Svg from '@assets/images/HomeBlog/Blog2.svg';
-import Blog4Svg from '@assets/images/HomeBlog/Blog2.svg';
+import Blog3Svg from '@assets/images/HomeBlog/Blog3.png';
+import Blog4Svg from '@assets/images/HomeBlog/Blog4.png';
 import Icon1Svg from '@assets/images/HomeBlog/Icon1.svg';
 import Icon2Svg from '@assets/images/HomeBlog/Icon2.svg';
 import Icon3Svg from '@assets/images/HomeBlog/Icon3.svg';
+import SmallGrace from '@assets/images/common/smallGrace.svg';
 
-import { Card1, CardHeader, CardHeaderName, CardMainTitle, CardSubName, CardSubTitle, ColRightSide, Container, StartComponents, StyledContentSection } from './styled';
+import { CardHeader, CardHeaderName, CardMainTitle, CardSubName, CardSubTitle, ColRightSide, Container, DetailButton, SmallGraceStyle, StartComponents } from './styled';
 
 const ThirdHomeBlog = () => {
   return (
-    <StyledContentSection>
-      <Container>
-        <StartComponents>
-          <ColRightSide>
-            <Card1>
-              <Blog3Svg style={{ width: '100%', borderRadius: '35px' }} />
-            </Card1>
-            <CardHeader>
-              <CardHeaderName>
-                <Icon1Svg />
-                <CardSubName>Agosto 4, 2023</CardSubName>
-              </CardHeaderName>
-              <CardHeaderName>
-                <Icon2Svg />
-                <CardSubName>helpetapp</CardSubName>
-              </CardHeaderName>
-              <CardHeaderName>
-                <Icon3Svg />
-                <CardSubName>0</CardSubName>
-              </CardHeaderName>
-            </CardHeader>
-            <CardMainTitle>Cintura di sicurezza per cani:Che cose cosa dica la legge?</CardMainTitle>
-            <CardSubTitle>Vuoi viaggiare in aereo con il tuo fedele amico a quattro zampe? Lo sapevi che alcune compagnie aeree accettano a bordo i cani?</CardSubTitle>
-          </ColRightSide>
-        </StartComponents>
-        <StartComponents>
-          <ColRightSide>
-            <Card1>
-              <Blog4Svg style={{ width: '100%', borderRadius: '35px' }} />
-            </Card1>
-            <CardHeader>
-              <CardHeaderName>
-                <Icon1Svg />
-                <CardSubName>Agosto 4, 2023</CardSubName>
-              </CardHeaderName>
-              <CardHeaderName>
-                <Icon2Svg />
-                <CardSubName>helpetapp</CardSubName>
-              </CardHeaderName>
-              <CardHeaderName>
-                <Icon3Svg />
-                <CardSubName>0</CardSubName>
-              </CardHeaderName>
-            </CardHeader>
-            <CardMainTitle>Dove Andare in Vacanza con il Cane: le 10 Migliori Mete in Italia e in Europa</CardMainTitle>
-            <CardSubTitle>Se sei un amante degli animali e desideri trascorrere le tue vacanze in compagnia del tuo fedele amico a quattro zampe, allora...</CardSubTitle>
-          </ColRightSide>
-        </StartComponents>
-      </Container>
-    </StyledContentSection>
+    <Container>
+      <StartComponents>
+        <ColRightSide>
+          <div style={{ position: 'relative' }}>
+            <img src={Blog3Svg} style={{ width: '100%', borderRadius: '35px' }} />
+            <DetailButton>Viaggi</DetailButton>
+          </div>
+          <CardHeader>
+            <CardHeaderName>
+              <Icon1Svg />
+              <CardSubName>Luglio 18, 2023</CardSubName>
+            </CardHeaderName>
+            <CardHeaderName>
+              <Icon2Svg />
+              <CardSubName>helpetapp</CardSubName>
+            </CardHeaderName>
+            <CardHeaderName>
+              <Icon3Svg />
+              <CardSubName>12</CardSubName>
+            </CardHeaderName>
+          </CardHeader>
+          <CardMainTitle>Cane in Aereo: Quali sono le Regole 2023 e i Consigli</CardMainTitle>
+          <CardSubTitle>Vuoi viaggiare in aereo con il tuo fedele amico a quattro zampe? Lo sapevi che alcune compagnie aeree accettano a bordo i cani?</CardSubTitle>
+        </ColRightSide>
+      </StartComponents>
+      <StartComponents>
+        <ColRightSide>
+          <div style={{ position: 'relative' }}>
+            <img src={Blog4Svg} style={{ width: '100%', borderRadius: '35px' }} />
+            <DetailButton>Viaggi</DetailButton>
+          </div>
+          <CardHeader>
+            <CardHeaderName>
+              <Icon1Svg />
+              <CardSubName>Luglio 18, 2023</CardSubName>
+            </CardHeaderName>
+            <CardHeaderName>
+              <Icon2Svg />
+              <CardSubName>helpetapp</CardSubName>
+            </CardHeaderName>
+            <CardHeaderName>
+              <Icon3Svg />
+              <CardSubName>12</CardSubName>
+            </CardHeaderName>
+          </CardHeader>
+          <CardMainTitle>
+            <div>
+              Dove Andare in Vacanza con il Cane:
+            </div>
+            <div>
+              le 10 Migliori Mete in Italia e in Europa
+            </div>
+          </CardMainTitle>
+          <CardSubTitle>Se sei un amante degli animali e desideri trascorrere le tue vacanze in compagnia del tuo fedele amico a quattro zampe, allora...</CardSubTitle>
+        </ColRightSide>
+      </StartComponents>
+      <SmallGrace style={SmallGraceStyle}/>
+    </Container>
   );
 };
 

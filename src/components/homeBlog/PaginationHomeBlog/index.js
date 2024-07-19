@@ -3,8 +3,10 @@ import React from 'react';
 import LeftArrow from '@assets/images/NearMeDetail/leftArrow.svg';
 import RightArrow from '@assets/images/NearMeDetail/rightArrow.svg';
 import LeftImg from '@assets/images/HomeBlog/HomeBlogPaginationImg.svg';
+import TopRightRoad from '@assets/images/common/topRight.svg';
+import SmallGrace from '@assets/images/common/smallGrace.svg';
 
-import { PaginationText, LeftTruck } from './styled';
+import { PaginationText, LeftTruck, TopRightRoadStyle, SmallGraceStyle } from './styled';
 
 const PaginationHomeBlog = () => {
   return (
@@ -15,17 +17,15 @@ const PaginationHomeBlog = () => {
       }}>
         <div style={{
           width: '80%',
-          margin: '80px auto 0 auto',
+          margin: '0 auto',
           display: 'flex',
           gap: '70px',
           position: 'relative',
         }}>
-
           <div style={{
             position: 'relative',
             width: '100%',
           }}>
-            <LeftImg style={LeftTruck} />
             <div style={{
               width: '80%',
               margin: '279px auto 216px auto',
@@ -71,7 +71,7 @@ const PaginationHomeBlog = () => {
                   paddingLeft: '10px',
                 }}>
                   <PaginationText>
-                                        Successivo
+                    Successivo
                   </PaginationText>
                   <RightArrow />
                 </div>
@@ -79,8 +79,9 @@ const PaginationHomeBlog = () => {
             </div>
 
             <LeftImg style={LeftTruck} />
-            {/* <RightImage style={RightTruck} /> */}
           </div>
+          <SmallGrace style={SmallGraceStyle}/>
+          <TopRightRoad style={TopRightRoadStyle} />
         </div>
       </div>
     </>
