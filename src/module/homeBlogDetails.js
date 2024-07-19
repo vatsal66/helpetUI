@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { BlogHeader } from '@components/common';
-import { SingleBlog } from '@components/homeBlogDetails';
+import { BlogHeader, Footer } from '@components/common';
+import { BlogDetailscarousel, SingleBlog, BlogDetailsForm } from '@components/homeBlogDetails';
 
 const homeBlogDetails = () => {
 
@@ -11,6 +11,9 @@ const homeBlogDetails = () => {
     }}>
       <BlogHeader />
       <SingleBlog />
+      <BlogDetailscarousel />
+      <BlogDetailsForm />
+      <Footer />
     </div>
   );
 };
