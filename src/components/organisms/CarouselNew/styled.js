@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.section`
   position: relative;
+  margin-top: 4%;
 `;
 
 export const InnerWrapper = styled.div`
@@ -14,11 +15,10 @@ export const SliderContainer = styled.div`
 
 export const NavContainer = styled.div`
   display: flex;
-  height: 100px;
   justify-content: space-between;
   margin: 0 2%;
   position: relative;
-  top: 250px;
+  top: 160px;
 }
 `;
 
@@ -44,7 +44,7 @@ export const Description = styled.div`
   border-radius: 30px;
   color: #343434;
   font-size: 20px;
-  margin: 0 auto;
+  margin: 0 20%;
   padding: 28px 44px;
   position: relative;
   text-align: center;

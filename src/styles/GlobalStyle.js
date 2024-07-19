@@ -58,7 +58,6 @@ const GlobalStyle = createGlobalStyle`
     overflow: hidden;
     margin: 0;
     padding: 0;
-    padding-top: 20px !important;
   }
 
   .services .slick-list {

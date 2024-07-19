@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import Slider from 'react-slick';
-import { useIntl } from 'react-intl';
+// import { useIntl } from 'react-intl';
 
 import { CarouselItem } from '@components/molecules';
 
@@ -13,7 +13,7 @@ import PetShop from '@assets/images/petshop.svg';
 import Veterinary from '@assets/images/veterinary.svg';
 import Park from '@assets/images/park.svg';
 import Taxi from '@assets/images/HomePage/taxi.svg';
-import Emergency from '@assets/images/emergency.svg';
+import Emergency from '@assets/images/HomePage/emergency.svg';
 import Grooming from '@assets/images/grooming.svg';
 import Next from '@assets/images/HomePage/Right.svg';
 import Prev from '@assets/images/HomePage/Left.svg';
@@ -29,11 +29,11 @@ import {
 } from './styled';
 
 const Carousel = () => {
-  const { messages } = useIntl();
+  // const { messages } = useIntl();
   const sliderRef = useRef();
   const sliderSettings = {
     arrows: false,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
     className: 'center',
     centerMode: true,
@@ -73,8 +73,10 @@ const Carousel = () => {
   return (
     <Container className="services">
       <Description>
-        <TypeText>{messages['carousel.title']}</TypeText>
-        {messages['carousel.description']}
+        {/* <TypeText>{messages['carousel.title']}</TypeText>
+        {messages['carousel.description']} */}
+        <TypeText>Scopri tutte le strutture nella nostra mappa</TypeText>
+        Quaerat sodales sapien euismod purus blandit a purus ipsum primis sodales sapien euismod purus blandit a purus sapien euismod purus blandit a purus blandit a purus sapien euismo
       </Description>
       <InnerWrapper>
         <NavContainer>
