@@ -4,7 +4,8 @@ export const StyledLabel = styled.label`
   position: relative;
   cursor: pointer;
   display: inline-flex;
-  padding-left: 25px;
+  padding-left: 35px;
+  line-height: 27px;
   font-size: ${({ labelFontSize }) => labelFontSize}px;
   user-select: none;
   color: ${({ labelColor, theme }) => labelColor ?? theme.colors.white};
@@ -32,8 +33,8 @@ export const StyledSpan = styled.span`
   left: 0;
   top: 1px;
   position: absolute;
-  height: 18px;
-  width: 18px;
+  height: 24px;
+  width: 24px;
   background-color: ${({ uncheckedColor }) => uncheckedColor};
   border-radius: 4px;
 

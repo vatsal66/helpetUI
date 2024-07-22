@@ -73,13 +73,16 @@ const NewsletterForm = () => {
         <Checkbox
           label={messages['newsletter.checkboxTermsOfUse']}
           onClick={handlePressCheckbox}
+          labelColor='#000000'
+          checkedColor='#007E60'
         />
       </InputContainer>
       <ButtonWrapper>
         <Button
-          padding={[16, 52]}
+          padding={[10, 40]}
           upperCase
-          disabled={!(isFormChecked && isValidForm())}
+          // disabled={!(isFormChecked && isValidForm())}
+          backgroundColor='#44D3A8'
         >
           {messages['newsletter.button']}
         </Button>

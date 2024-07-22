@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Input, InputAdornment } from "@mui/material";
@@ -14,8 +15,9 @@ import SearchIcon from "@assets/images/common/search.svg";
 import UpArrow from "@assets/images/NavBar/UpArrow.svg";
 import BottomArrow from "@assets/images/NavBar/BottomArrow.svg";
 
-const Navbar = () => {
+const Navbar = ({ activeSideCategory, handleSearch }) => {
   const [isExpandedCountry, setIsExpandedCountry] = useState(false);
+  const [inputValue, setInputValue] = useState('');
 
   const toggleCountryDropdown = () => {
     setIsExpandedCountry(!isExpandedCountry);
@@ -33,17 +35,19 @@ const Navbar = () => {
           </Link>
         </Logo>
         <Actions active={isExpandedCountry}>
-          <Title>Torna al sito</Title>
+          <Title active={activeSideCategory !== ""}>Torna al sito</Title>
           <Input
-            className="custom-placeholder"
+            className="blog-header"
             disableUnderline={true}
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
             startAdornment={
               <InputAdornment position="start">
                 <SearchIcon />
               </InputAdornment>
             }
           />
-          <StyledButton>Cerca</StyledButton>
+          <StyledButton onClick={() => handleSearch(inputValue)}>Cerca</StyledButton>
           <CountryFlag active>
             <div onClick={toggleCountryDropdown} style={{
               display: "flex",
@@ -87,7 +91,7 @@ const Navbar = () => {
       </Container>
       <style>
         {`
-          .custom-placeholder {
+          .blog-header {
             background-color: #ffffff;
             border: 4px solid #A00483;
             border-radius: 14px;
@@ -102,7 +106,7 @@ const Navbar = () => {
             height: 40px;
             margin-left: 52px;
           }
-          .custom-placeholder::placeholder {
+          .blog-header::placeholder {
             color: #343434;
           }
         `}

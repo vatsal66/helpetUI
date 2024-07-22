@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { SocialLogo } from '@components/molecules';
 
 export const Container = styled.section`
-  background-color: ${({ theme }) => theme.colors.salmon};
+  background-color: #FFFFFF;
   padding: 12px 36px;
 
   @media (max-width: 800px) {
@@ -12,15 +12,16 @@ export const Container = styled.section`
 `;
 
 export const TitleContainer = styled.div`
+padding: 2%;
   @media (min-width: 1200px) {
     margin-right: 80px;
   }
 `;
 
 export const Title = styled.h2`
-  color: ${({ theme }) => theme.colors.white};
+  color: #064641;
   font-size: 30px;
-  font-weight: 600;
+  font-weight: 800; 
 
   @media (max-width: 1024px) {
     margin-bottom: 26px;
@@ -29,8 +30,8 @@ export const Title = styled.h2`
 `;
 
 export const Subtitle = styled.h3`
-  color: ${({ theme }) => theme.colors.white};
-  font-weight: 500;
+  color: #007E60;
+  font-weight: 800;
   font-size: 16px;
 
   @media (max-width: 1024px) {

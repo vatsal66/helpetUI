@@ -5,8 +5,9 @@ import {
   Header,
   // Carousel,
   CarouselNew,
-  FormSection,
-  Benefits,
+  // FormSection,
+  AboutUs,
+  // Benefits,
   Newsletter,
   CookiesWarning,
   Main,
@@ -59,9 +60,11 @@ const HomePage = () => {
 
       {/* <Carousel /> */}
       <CarouselNew />
-      <Benefits />
-      <FormSection />
+      {/* <Benefits />
+      <FormSection /> */}
+      <AboutUs />
       <Newsletter />
+      <div  style={{ height: '150px', backgroundColor: 'rgb(0,179,136)' }}/>
       <Footer />
       <CookiesWarning />
     </>

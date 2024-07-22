@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { navigate } from 'gatsby';
 
 import {
   SideBarTitle,
   SideBarTitleLi, SideBarTitleListHeader,
 } from './styled';
 
-const Categories = () => {
-  const [activeSideCategory, setActiveSideCategory] = useState('');
+const Categories = ({ activeSideCategory, setActiveSideCategory }) => {
 
   const categoryList = [
     { name: 'Curiosita (8)' },
@@ -29,7 +29,10 @@ const Categories = () => {
           <SideBarTitleLi
             key={index}
             active={activeSideCategory === item?.name}
-            onClick={() => setActiveSideCategory(item?.name)}
+            onClick={() => {
+              setActiveSideCategory(item?.name);
+              navigate('/homeBlog');
+            }}
           >
             {item?.name}
           </SideBarTitleLi>

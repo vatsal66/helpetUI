@@ -15,7 +15,8 @@ export const MiddleCard = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-  z-index: 2
+  z-index: 2;
+  gap: 24px;
 `;
 
 export const InputField = styled.div`
@@ -39,22 +40,11 @@ export const SaveButton = styled.button`
   background: #A00483;
   border: 4px solid #74005E;
   border-radius: 14px;
+  cursor: pointer;
 `;
 
-export const RightRoadStyle = {
+export const RightImageHomeStyle = {
   position: 'absolute',
-  right: '-50%',
-  bottom: '-570px',
-};
-
-export const LargeThreeTreeStyle = {
-  position: 'absolute',
-  left: '-30%',
-  bottom: '-270px',
-};
-
-export const SmallGraceStyle = {
-  position: 'absolute',
-  right: '-25%',
-  top: '50%',
+  bottom: '100px',
+  right: '-20%',
 };

@@ -32,7 +32,7 @@ export const Inline = styled.div`
 `;
 
 export const StyledInput = styled(Input)`
-  padding: 14px 16px;
+  padding: 6px 14px;
   width: 100%;
 
   @media (min-width: 800px) {

@@ -33,11 +33,42 @@ export const CardHeaderName = styled.div`
 export const CardSubName = styled.p`
   font-size: 20px;
   color: #000000;
-  weight: 600px;
+  font-weight: 600px;
 `;
 
 export const CardSubTitle = styled.p`
   font-size: 22px;
   color: #343434;
-  weight: 600px;
+  font-weight: 600;
+  position: relative;
 `;
+
+export const LeftTItle = styled.p`
+  font-size: 28px;
+  font-weight: 700;
+  margin: 55px 0 20px 0;
+`;
+
+export const ThreeTreeStyle = {
+  position: 'absolute',
+  left: '-40%',
+  top: '40px',
+};
+
+export const SmallGraceStyleBottom = {
+  position: 'absolute',
+  left: '-15%',
+  top: '100px',
+};
+
+export const SmallGraceRightStyle = {
+  position: 'absolute',
+  right: '-8%',
+  bottom: '40px',
+};
+
+export const SmallGraceLeftTopStyle = {
+  position: 'absolute',
+  left: '-23%',
+  bottom: '-125px',
+};

@@ -41,10 +41,10 @@ const Header = () => {
         {/* <StyledHeaderLightGrassRight width={299} /> */}
         {/* <StyledCat width={109} /> */}
       </ImagesContainer>
-      <StyledSmallCloud top="110px" duration={80} left />
-      <StyledSmallCloud top="75px" duration={90} right />
-      <StyledBigCloud top="190px" duration={100} left />
-      <StyledBigCloud top="150px" duration={70} right />
+      <StyledSmallCloud top="450px" duration={60} left />
+      <StyledSmallCloud top="270px" duration={90} right />
+      <StyledBigCloud top="110px" duration={100} left />
+      {/* <StyledBigCloud top="150px" duration={70} right /> */}
       <StyledBottomTrain bottom="0px"/>
       <StyledBottomTrainHome bottom="0px"/>
     </StyledHeader>

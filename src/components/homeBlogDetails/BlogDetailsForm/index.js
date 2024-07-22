@@ -1,29 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Checkbox } from '@components/atoms';
 
-import CardLibrettoRoad from '@assets/images/Librettosanitario/CardLibrettoRoad.png';
-import RightRoad from '@assets/images/common/RightRoadWithTopCar.svg';
-import LargeThreeTree from '@assets/images/common/LargeThreeTree.svg';
-import SmallGrace from '@assets/images/common/smallGrace.svg';
+import LeftRoad from '@assets/images/BlogDetails/blogDetailsLeftRoad.svg';
+import RightRoad from '@assets/images/BlogDetails/blogDetailsRightRoad.svg';
+import RightImageHome from '@assets/images/PetId/PetIdRight.svg';
 
 import {
   InputField, InputTile,
-  LargeThreeTreeStyle,
-  MiddleCard, RightRoadStyle, SaveButton, SmallGraceStyle, Title,
+  Title, MiddleCard, SaveButton,
+  RightImageHomeStyle,
 } from './styled';
 
+import SubmitDialog from '../SubmitDialog';
+
 const BlogDetailsForm = () => {
+  const [submitDialog, setSubmitDialog] = useState(false);
   return (
     <div style={{
-      padding: '150px 0 350 0',
+      padding: '150px 0 330px 0',
       display: 'flex',
       width: '55%',
       margin: '0 auto',
       flexDirection: 'column',
       gap: '40px',
       position: 'relative',
-      zIndex: 2,
     }}>
       <Title>
         Lascia un commento
@@ -37,10 +38,9 @@ const BlogDetailsForm = () => {
               Commento*
               </InputTile>
               <textarea
-                className="custom-placeholder"
+                className="custom-placeholders"
                 cols="40"
                 rows="5"
-                height="87px"
               />
             </InputField>
           </div>
@@ -68,20 +68,19 @@ const BlogDetailsForm = () => {
             display: 'flex',
             flexDirection: 'column',
             gap: '30px',
-            marginTop: '30px',
+            marginTop: '8px',
           }}>
             <Checkbox
               label="Salva il mio nome e l’email in questo browser per la prossima volta che commento"
               onClick={() => {}}
             />
-            <SaveButton>Invia commento</SaveButton>
+            <SaveButton onClick={() => setSubmitDialog(true)}>Invia commento</SaveButton>
           </div>
 
         </MiddleCard>
 
-        <div style={{ position: 'absolute', left: '-50%', top: 'calc(50% - 34px)', zIndex: 1 }}>
-          <img src={CardLibrettoRoad} alt=""  />
-        </div>
+        <LeftRoad style={{ position: 'absolute', zIndex: 1, left: '-210px', top: 'calc(50% - 38px)' }}/>
+        <RightRoad style={{ position: 'absolute', zIndex: 1, left: '90%', top: 'calc(50% - 38px)' }}/>
       </div>
 
       <style>
@@ -103,12 +102,29 @@ const BlogDetailsForm = () => {
           .custom-placeholder::placeholder {
             color: #AAAABA;
           }
+          .custom-placeholders {
+            background-color: #ffffff;
+            border: unset;
+            border-radius: 10px;
+            outline: none;
+            color: #AAAABA;
+            font-size: 16px;
+            font-weight: 700;
+            caret-color: #AAAABA;
+            padding: 14px 12px;
+            width: 100%;
+            margin-left: 0;
+            height: 87px;
+          }
+          .custom-placeholders::placeholder {
+            color: #AAAABA;
+          }
         `}
       </style>
 
-      <RightRoad style={RightRoadStyle}/>
-      <LargeThreeTree style={LargeThreeTreeStyle}/>
-      <SmallGrace style={SmallGraceStyle}/>
+      <RightImageHome style={RightImageHomeStyle}/>
+
+      {submitDialog && <SubmitDialog submitDialog={submitDialog} setSubmitDialog={setSubmitDialog}/>}
     </div>
   );
 };
